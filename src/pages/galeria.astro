@@ -1,0 +1,301 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const galleryItems = [
+  {
+    id: 1,
+    type: 'image',
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Concierto de Navidad 2023',
+    category: 'conciertos',
+    description: 'Presentación especial en el Teatro Nacional Manuel Bonilla'
+  },
+  {
+    id: 2,
+    type: 'image',
+    src: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Orquesta Armonía para la Vida',
+    category: 'clases',
+    description: 'Ensayo de la orquesta juvenil'
+  },
+  {
+    id: 3,
+    type: 'video',
+    src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Coro Voces por la Paz - Himno Nacional',
+    category: 'eventos',
+    description: 'Interpretación del Himno Nacional de Honduras'
+  },
+  {
+    id: 4,
+    type: 'image',
+    src: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    thumbnail: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Taller de Iniciación Musical',
+    category: 'clases',
+    description: 'Niños aprendiendo los primeros pasos en la música'
+  },
+  {
+    id: 5,
+    type: 'image',
+    src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Festival de Arpas 2023',
+    category: 'eventos',
+    description: 'Estudiantes de la Escuela de Arpas "En Armonía"'
+  },
+  {
+    id: 6,
+    type: 'video',
+    src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Graduación 2023',
+    category: 'eventos',
+    description: 'Ceremonia de graduación de estudiantes'
+  },
+  {
+    id: 7,
+    type: 'image',
+    src: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Concierto Benéfico',
+    category: 'conciertos',
+    description: 'Evento para recaudar fondos para becas'
+  },
+  {
+    id: 8,
+    type: 'image',
+    src: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    thumbnail: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Clases de Piano',
+    category: 'clases',
+    description: 'Estudiantes en clases individuales de piano'
+  },
+  {
+    id: 9,
+    type: 'video',
+    src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
+    title: 'Programa JugArte',
+    category: 'clases',
+    description: 'Estimulación temprana a través de la música'
+  }
+];
+
+const categories = ['todos', 'conciertos', 'clases', 'eventos'];
+---
+
+<Layout title="Galería - FARECOH" description="Explora nuestra galería de fotos y videos. Revive los mejores momentos de conciertos, clases y eventos de FARECOH.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[400px] bg-gradient-to-r from-secondary to-primary">
+      <div class="hero-content text-center text-white">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif">Galería FARECOH</h1>
+          <p class="mb-5 text-xl">Revive los momentos más especiales de nuestra comunidad musical</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold mb-4">Filtrar por Categoría</h2>
+          <div class="flex flex-wrap justify-center gap-2" id="category-filters">
+            <button class="btn btn-sm btn-primary filter-btn active" data-category="todos">Todos</button>
+            <button class="btn btn-sm btn-outline filter-btn" data-category="conciertos">Conciertos</button>
+            <button class="btn btn-sm btn-outline filter-btn" data-category="clases">Clases</button>
+            <button class="btn btn-sm btn-outline filter-btn" data-category="eventos">Eventos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+          {galleryItems.map(item => (
+            <div class="gallery-item cursor-pointer" data-category={item.category} data-id={item.id}>
+              <div class="card bg-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <figure class="relative h-64 overflow-hidden">
+                  <img src={item.thumbnail} alt={item.title} class="w-full h-full object-cover" />
+                  {item.type === 'video' && (
+                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                      <div class="btn btn-circle btn-primary btn-lg">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  )}
+                  <div class="absolute top-2 right-2">
+                    <div class="badge badge-primary">{item.type === 'video' ? 'Video' : 'Foto'}</div>
+                  </div>
+                </figure>
+                <div class="card-body p-4">
+                  <h3 class="card-title text-lg">{item.title}</h3>
+                  <p class="text-sm text-gray-600">{item.description}</p>
+                  <div class="badge badge-outline mt-2">{item.category}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Load More Button -->
+    <section class="py-8 bg-base-100">
+      <div class="container mx-auto px-4 text-center">
+        <button class="btn btn-primary btn-lg" id="load-more">
+          Cargar Más
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6 font-serif">¿Quieres Ser Parte de Estos Momentos?</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Únete a FARECOH y crea tus propios recuerdos musicales. Inscríbete en nuestros programas y vive la experiencia.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/programas" class="btn btn-accent btn-lg">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+            </svg>
+            Ver Programas
+          </a>
+          
+          <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            Inscríbete
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for viewing images/videos -->
+  <dialog id="media-modal" class="modal">
+    <div class="modal-box w-11/12 max-w-4xl">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-10">✕</button>
+      </form>
+      <div id="modal-content" class="w-full">
+        <!-- Content will be loaded here -->
+      </div>
+      <div class="mt-4">
+        <h3 id="modal-title" class="font-bold text-xl text-primary"></h3>
+        <p id="modal-description" class="text-gray-600 mt-2"></p>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+  
+  <Footer />
+</Layout>
+
+<script define:vars={{ galleryItems }}>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItemsElements = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('media-modal');
+    const modalContent = document.getElementById('modal-content');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const category = this.dataset.category;
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('btn-primary', 'active'));
+        filterButtons.forEach(btn => btn.classList.add('btn-outline'));
+        this.classList.remove('btn-outline');
+        this.classList.add('btn-primary', 'active');
+        
+        // Filter gallery items
+        galleryItemsElements.forEach(item => {
+          if (category === 'todos' || item.dataset.category === category) {
+            item.style.display = 'block';
+            item.classList.add('animate-fade-in');
+          } else {
+            item.style.display = 'none';
+            item.classList.remove('animate-fade-in');
+          }
+        });
+      });
+    });
+
+    // Modal functionality
+    galleryItemsElements.forEach(item => {
+      item.addEventListener('click', function() {
+        const itemId = parseInt(this.dataset.id);
+        const galleryItem = galleryItems.find(gi => gi.id === itemId);
+        
+        if (galleryItem) {
+          modalTitle.textContent = galleryItem.title;
+          modalDescription.textContent = galleryItem.description;
+          
+          if (galleryItem.type === 'video') {
+            modalContent.innerHTML = `
+              <div class="aspect-video">
+                <iframe class="w-full h-full rounded-lg" src="${galleryItem.src}" frameborder="0" allowfullscreen></iframe>
+              </div>
+            `;
+          } else {
+            modalContent.innerHTML = `
+              <img src="${galleryItem.src}" alt="${galleryItem.title}" class="w-full rounded-lg" />
+            `;
+          }
+          
+          modal.showModal();
+        }
+      });
+    });
+
+    // Load more functionality (placeholder)
+    const loadMoreBtn = document.getElementById('load-more');
+    loadMoreBtn.addEventListener('click', function() {
+      // In a real implementation, this would load more items from an API
+      this.textContent = 'No hay más elementos para cargar';
+      this.disabled = true;
+      this.classList.add('btn-disabled');
+    });
+  });
+</script>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .gallery-item:hover .card {
+    transform: translateY(-8px);
+  }
+</style>

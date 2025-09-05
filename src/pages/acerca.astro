@@ -1,0 +1,395 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Acerca de FARECOH - Nuestra Historia y Misión" description="Conoce la historia, misión, visión y equipo de FARECOH. Descubre cómo transformamos vidas a través de la música y las artes en Honduras.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[400px] bg-gradient-to-r from-primary to-secondary">
+      <div class="hero-content text-center text-white">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif">Acerca de FARECOH</h1>
+          <p class="mb-5 text-xl">Conoce nuestra historia, misión y el equipo que hace posible la transformación a través de las artes</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="card bg-primary text-primary-content shadow-xl">
+            <div class="card-body">
+              <div class="text-4xl mb-4">🎯</div>
+              <h2 class="card-title text-2xl font-serif mb-4">Nuestra Misión</h2>
+              <p class="text-lg leading-relaxed">
+                Promover el desarrollo integral de niños, jóvenes y adultos a través de la educación musical y artística, 
+                fomentando valores de paz, convivencia, creatividad y compromiso social para contribuir al desarrollo 
+                comunitario de Honduras.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-secondary text-secondary-content shadow-xl">
+            <div class="card-body">
+              <div class="text-4xl mb-4">🌟</div>
+              <h2 class="card-title text-2xl font-serif mb-4">Nuestra Visión</h2>
+              <p class="text-lg leading-relaxed">
+                Ser reconocidos como la organización líder en Honduras en la formación musical y artística integral, 
+                generando un impacto social positivo y sostenible que transforme comunidades y construya un futuro 
+                mejor para las nuevas generaciones.
+              </p>
+            </div>
+          </div>
+
+          <div class="card bg-accent text-accent-content shadow-xl">
+            <div class="card-body">
+              <div class="text-4xl mb-4">💎</div>
+              <h2 class="card-title text-2xl font-serif mb-4">Nuestros Valores</h2>
+              <ul class="text-lg space-y-2">
+                <li>• <strong>Excelencia</strong> en la enseñanza</li>
+                <li>• <strong>Inclusión</strong> y diversidad</li>
+                <li>• <strong>Respeto</strong> mutuo</li>
+                <li>• <strong>Creatividad</strong> e innovación</li>
+                <li>• <strong>Compromiso</strong> social</li>
+                <li>• <strong>Amor</strong> por las artes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-16 bg-gradient-to-br from-base-200 to-base-300">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestra Historia</h2>
+          <div class="w-24 h-1 bg-accent mx-auto"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker bg-primary"></div>
+              <div class="timeline-content">
+                <div class="card bg-white shadow-lg">
+                  <div class="card-body">
+                    <h3 class="card-title text-primary">2010 - Los Inicios</h3>
+                    <p>FARECOH nace como una iniciativa comunitaria con el sueño de brindar oportunidades musicales 
+                    a niños y jóvenes en situación de vulnerabilidad social en Tegucigalpa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker bg-secondary"></div>
+              <div class="timeline-content">
+                <div class="card bg-white shadow-lg">
+                  <div class="card-body">
+                    <h3 class="card-title text-secondary">2012 - Primeros Programas</h3>
+                    <p>Se establecen los primeros programas estructurados: el Coro Infantil "Voces por la Paz" 
+                    y los Talleres de Iniciación Musical, atendiendo a más de 50 niños.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker bg-accent"></div>
+              <div class="timeline-content">
+                <div class="card bg-white shadow-lg">
+                  <div class="card-body">
+                    <h3 class="card-title text-accent">2015 - Expansión</h3>
+                    <p>Creación de la Orquesta Infantil y Juvenil "Armonía para la Vida" y expansión de programas 
+                    a comunidades rurales, alcanzando más de 200 beneficiarios directos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker bg-primary"></div>
+              <div class="timeline-content">
+                <div class="card bg-white shadow-lg">
+                  <div class="card-body">
+                    <h3 class="card-title text-primary">2018 - Reconocimiento</h3>
+                    <p>FARECOH recibe reconocimiento nacional por su labor social y se establecen alianzas 
+                    estratégicas con instituciones educativas y organizaciones internacionales.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker bg-secondary"></div>
+              <div class="timeline-content">
+                <div class="card bg-white shadow-lg">
+                  <div class="card-body">
+                    <h3 class="card-title text-secondary">2020 - Innovación Digital</h3>
+                    <p>Adaptación a la pandemia con programas virtuales y desarrollo de plataformas digitales 
+                    para continuar la educación musical a distancia.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker bg-accent"></div>
+              <div class="timeline-content">
+                <div class="card bg-white shadow-lg">
+                  <div class="card-body">
+                    <h3 class="card-title text-accent">2024 - Presente</h3>
+                    <p>Hoy atendemos a más de 500 estudiantes con 12 programas artísticos diversos, 
+                    consolidándonos como referente en educación musical y desarrollo social en Honduras.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestro Equipo</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Conoce a las personas apasionadas que hacen posible nuestra misión de transformar vidas a través de las artes.
+          </p>
+        </div>
+
+        <!-- Board of Directors -->
+        <div class="mb-16">
+          <h3 class="text-3xl font-bold text-center mb-8 text-secondary">Junta Directiva</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="card bg-white shadow-xl">
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div class="w-32 rounded-full bg-primary text-primary-content flex items-center justify-center text-4xl font-bold">
+                    MA
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body text-center">
+                <h4 class="card-title justify-center text-primary">María Alejandra Soto</h4>
+                <p class="text-secondary font-semibold">Presidenta</p>
+                <p class="text-sm">Licenciada en Música, 15 años de experiencia en educación musical y gestión cultural.</p>
+              </div>
+            </div>
+
+            <div class="card bg-white shadow-xl">
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div class="w-32 rounded-full bg-secondary text-secondary-content flex items-center justify-center text-4xl font-bold">
+                    CR
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body text-center">
+                <h4 class="card-title justify-center text-primary">Carlos Roberto Mejía</h4>
+                <p class="text-secondary font-semibold">Director Ejecutivo</p>
+                <p class="text-sm">Maestro en Administración, especialista en gestión de organizaciones sin fines de lucro.</p>
+              </div>
+            </div>
+
+            <div class="card bg-white shadow-xl">
+              <figure class="px-10 pt-10">
+                <div class="avatar">
+                  <div class="w-32 rounded-full bg-accent text-accent-content flex items-center justify-center text-4xl font-bold">
+                    LF
+                  </div>
+                </div>
+              </figure>
+              <div class="card-body text-center">
+                <h4 class="card-title justify-center text-primary">Lucía Fernández</h4>
+                <p class="text-secondary font-semibold">Directora Artística</p>
+                <p class="text-sm">Directora de orquesta, compositora y pedagoga musical con reconocimiento internacional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching Staff -->
+        <div>
+          <h3 class="text-3xl font-bold text-center mb-8 text-secondary">Equipo Docente</h3>
+          <div class="grid md:grid-cols-4 gap-6">
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center">
+                <div class="avatar mb-4">
+                  <div class="w-20 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold">
+                    JM
+                  </div>
+                </div>
+                <h4 class="font-bold text-primary">Jorge Martínez</h4>
+                <p class="text-sm text-secondary">Director de Coros</p>
+              </div>
+            </div>
+
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center">
+                <div class="avatar mb-4">
+                  <div class="w-20 rounded-full bg-secondary text-secondary-content flex items-center justify-center text-2xl font-bold">
+                    AR
+                  </div>
+                </div>
+                <h4 class="font-bold text-primary">Ana Rodríguez</h4>
+                <p class="text-sm text-secondary">Profesora de Piano</p>
+              </div>
+            </div>
+
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center">
+                <div class="avatar mb-4">
+                  <div class="w-20 rounded-full bg-accent text-accent-content flex items-center justify-center text-2xl font-bold">
+                    MG
+                  </div>
+                </div>
+                <h4 class="font-bold text-primary">Miguel González</h4>
+                <p class="text-sm text-secondary">Instructor de Cuerdas</p>
+              </div>
+            </div>
+
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center">
+                <div class="avatar mb-4">
+                  <div class="w-20 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold">
+                    SP
+                  </div>
+                </div>
+                <h4 class="font-bold text-primary">Sofía Pérez</h4>
+                <p class="text-sm text-secondary">Profesora de Vientos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestro Impacto Social</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Más de una década transformando vidas y comunidades a través del poder de la música y las artes.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="stat-value text-primary text-4xl font-bold">500+</div>
+            <div class="stat-title text-lg">Estudiantes Activos</div>
+            <div class="stat-desc">En todos nuestros programas</div>
+          </div>
+
+          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="stat-value text-secondary text-4xl font-bold">1,200+</div>
+            <div class="stat-title text-lg">Graduados</div>
+            <div class="stat-desc">Desde nuestros inicios</div>
+          </div>
+
+          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="stat-value text-accent text-4xl font-bold">50+</div>
+            <div class="stat-title text-lg">Conciertos Anuales</div>
+            <div class="stat-desc">Presentaciones públicas</div>
+          </div>
+
+          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
+            <div class="stat-value text-primary text-4xl font-bold">15</div>
+            <div class="stat-title text-lg">Comunidades</div>
+            <div class="stat-desc">Beneficiadas directamente</div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="text-3xl mb-4">🎓</div>
+              <h3 class="card-title text-primary">Educación de Calidad</h3>
+              <p>Brindamos educación musical de excelencia, formando no solo músicos, sino ciudadanos íntegros con valores sólidos.</p>
+            </div>
+          </div>
+
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="text-3xl mb-4">🤝</div>
+              <h3 class="card-title text-primary">Inclusión Social</h3>
+              <p>Nuestros programas están abiertos a todos, sin distinción de origen socioeconómico, promoviendo la igualdad de oportunidades.</p>
+            </div>
+          </div>
+
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="text-3xl mb-4">🌱</div>
+              <h3 class="card-title text-primary">Desarrollo Comunitario</h3>
+              <p>Fortalecemos el tejido social de las comunidades, creando espacios de encuentro y crecimiento colectivo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #1e40af, #7c3aed, #f59e0b);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: -1.5rem;
+    top: 1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+  }
+
+  .timeline-content {
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 1rem;
+    }
+    
+    .timeline-marker {
+      left: -0.75rem;
+    }
+    
+    .timeline-content {
+      margin-left: 1rem;
+    }
+  }
+</style>

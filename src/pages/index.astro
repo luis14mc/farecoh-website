@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="FARECOH - Fundación de Artes y Recreación Comunitaria de Honduras">
+  <Header />
+  
+  <main>
+    <!-- Hero Carousel Section -->
+    <section class="carousel w-full h-96 md:h-[500px] relative">
+      <div id="slide1" class="carousel-item relative w-full">
+        <div class="hero min-h-full bg-gradient-to-r from-primary/90 to-secondary/90" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-bold font-serif">FARECOH</h1>
+              <p class="mb-5 text-lg">Transformando vidas a través de la música y las artes en Honduras</p>
+              <a href="/programas" class="btn btn-primary">Conoce Nuestros Programas</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      
+      <div id="slide2" class="carousel-item relative w-full">
+        <div class="hero min-h-full bg-gradient-to-r from-accent/90 to-primary/90" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-4xl font-bold">Coro Voces por la Paz</h1>
+              <p class="mb-5">Niños y jóvenes unidos por la música y la esperanza</p>
+              <a href="/programas/coro-voces-por-la-paz" class="btn btn-accent">Ver Programa</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      
+      <div id="slide3" class="carousel-item relative w-full">
+        <div class="hero min-h-full bg-gradient-to-r from-secondary/90 to-accent/90" style="background-image: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-4xl font-bold">Orquesta Armonía para la Vida</h1>
+              <p class="mb-5">Formando músicos, construyendo futuro</p>
+              <a href="/programas/orquesta-armonia" class="btn btn-secondary">Conocer Más</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Bienvenidos a FARECOH</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Somos una fundación comprometida con el desarrollo integral de niños, jóvenes y adultos a través de la música y las artes, 
+            promoviendo valores, cultura y oportunidades de crecimiento personal y comunitario en Honduras.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4">🎵</div>
+              <h3 class="card-title justify-center text-primary">Nuestra Misión</h3>
+              <p>Transformar vidas a través de la educación musical y artística, fomentando valores de paz, convivencia y desarrollo comunitario.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4">🌟</div>
+              <h3 class="card-title justify-center text-primary">Nuestra Visión</h3>
+              <p>Ser la organización líder en Honduras en la formación musical y artística integral, generando impacto social positivo.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200 shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4">❤️</div>
+              <h3 class="card-title justify-center text-primary">Nuestros Valores</h3>
+              <p>Excelencia, inclusión, respeto, creatividad, compromiso social y amor por las artes como herramientas de transformación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 font-serif text-primary">Explora FARECOH</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <a href="/acerca" class="card bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-2">🏛️</div>
+              <h3 class="font-bold text-primary">Acerca de</h3>
+              <p class="text-sm">Conoce nuestra historia</p>
+            </div>
+          </a>
+          
+          <a href="/programas" class="card bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-2">🎼</div>
+              <h3 class="font-bold text-primary">Programas</h3>
+              <p class="text-sm">Descubre nuestros programas</p>
+            </div>
+          </a>
+          
+          <a href="/eventos" class="card bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-2">🎭</div>
+              <h3 class="font-bold text-primary">Eventos</h3>
+              <p class="text-sm">Próximos conciertos</p>
+            </div>
+          </a>
+          
+          <a href="/galeria" class="card bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-2">📸</div>
+              <h3 class="font-bold text-primary">Galería</h3>
+              <p class="text-sm">Momentos especiales</p>
+            </div>
+          </a>
+          
+          <a href="/contacto" class="card bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-2">📞</div>
+              <h3 class="font-bold text-primary">Contacto</h3>
+              <p class="text-sm">Conecta con nosotros</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6 font-serif">¡Únete a Nuestra Misión!</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Tu apoyo hace posible que más niños y jóvenes tengan acceso a la educación musical y artística. 
+          Juntos construimos un futuro mejor a través de las artes.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/donar" class="btn btn-accent btn-lg">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+            </svg>
+            Apoya FARECOH
+          </a>
+          
+          <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            Inscríbete
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 font-serif text-primary">Nuestro Impacto</h2>
+        
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="stat text-center">
+            <div class="stat-value text-primary">500+</div>
+            <div class="stat-title">Estudiantes Activos</div>
+          </div>
+          
+          <div class="stat text-center">
+            <div class="stat-value text-secondary">12</div>
+            <div class="stat-title">Programas Artísticos</div>
+          </div>
+          
+          <div class="stat text-center">
+            <div class="stat-value text-accent">50+</div>
+            <div class="stat-title">Conciertos Anuales</div>
+          </div>
+          
+          <div class="stat text-center">
+            <div class="stat-value text-primary">14</div>
+            <div class="stat-title">Años de Experiencia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Auto-advance carousel
+  let currentSlide = 1;
+  const totalSlides = 3;
+  
+  setInterval(() => {
+    currentSlide = currentSlide >= totalSlides ? 1 : currentSlide + 1;
+    window.location.hash = `slide${currentSlide}`;
+  }, 5000);
+</script>

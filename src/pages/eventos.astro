@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const upcomingEvents = [
+  {
+    id: 1,
+    title: "Concierto de Primavera 2024",
+    date: "2024-04-15",
+    time: "19:00",
+    venue: "Teatro Nacional Manuel Bonilla",
+    description: "Un espectáculo musical que celebra la llegada de la primavera con interpretaciones de nuestros coros y orquestas.",
+    price: "Entrada libre",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Concierto"
+  },
+  {
+    id: 2,
+    title: "Taller de Composición Musical",
+    date: "2024-04-20",
+    time: "14:00",
+    venue: "Sede FARECOH",
+    description: "Taller dirigido a jóvenes interesados en aprender técnicas básicas de composición musical.",
+    price: "L. 200",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Taller"
+  },
+  {
+    id: 3,
+    title: "Festival de Arpas 'En Armonía'",
+    date: "2024-05-10",
+    time: "16:00",
+    venue: "Centro Cultural de España",
+    description: "Encuentro de arpistas de toda Centroamérica en una celebración de la música tradicional.",
+    price: "L. 150",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Festival"
+  },
+  {
+    id: 4,
+    title: "Concierto Benéfico 'Música por la Educación'",
+    date: "2024-05-25",
+    time: "18:30",
+    venue: "Auditorio Banco Central",
+    description: "Evento especial para recaudar fondos destinados a becas para estudiantes de escasos recursos.",
+    price: "L. 300",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    category: "Benéfico"
+  }
+];
+
+const pastEvents = [
+  {
+    title: "Concierto de Navidad 2023",
+    date: "2023-12-15",
+    venue: "Teatro Nacional Manuel Bonilla",
+    description: "Exitoso concierto navideño con más de 800 asistentes.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    title: "Festival de Coros Infantiles 2023",
+    date: "2023-10-28",
+    venue: "Centro Cultural de España",
+    description: "Participación de 8 coros infantiles de diferentes instituciones.",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    title: "Concierto de Aniversario FARECOH",
+    date: "2023-09-15",
+    venue: "Sede FARECOH",
+    description: "Celebración de 13 años de FARECOH con presentaciones especiales.",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  }
+];
+
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('es-HN', { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+}
+---
+
+<Layout title="Eventos - FARECOH" description="Descubre los próximos conciertos, talleres y festivales de FARECOH. Únete a nuestras presentaciones musicales y eventos culturales en Honduras.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[400px] bg-gradient-to-r from-accent to-primary">
+      <div class="hero-content text-center text-white">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif">Eventos FARECOH</h1>
+          <p class="mb-5 text-xl">Descubre nuestros próximos conciertos, talleres y festivales musicales</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Próximos Eventos</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">No te pierdas nuestras próximas presentaciones y actividades</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          {upcomingEvents.map(event => (
+            <div class="card lg:card-side bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+              <figure class="lg:w-1/2">
+                <img src={event.image} alt={event.title} class="w-full h-64 lg:h-full object-cover" />
+              </figure>
+              <div class="card-body lg:w-1/2">
+                <div class="badge badge-primary mb-2">{event.category}</div>
+                <h3 class="card-title text-lg">{event.title}</h3>
+                <p class="text-sm text-gray-600 mb-4">{event.description}</p>
+                
+                <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-semibold">{formatDate(event.date)}</span>
+                  </div>
+                  
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{event.time} hrs</span>
+                  </div>
+                  
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{event.venue}</span>
+                  </div>
+                  
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.51-1.31c-.562-.649-1.413-1.076-2.353-1.253V5z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-semibold text-accent">{event.price}</span>
+                  </div>
+                </div>
+                
+                <div class="card-actions justify-end mt-4">
+                  <a href="/contacto" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Calendario de Eventos</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">Mantente al día con todas nuestras actividades</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                  <thead>
+                    <tr>
+                      <th>Fecha</th>
+                      <th>Evento</th>
+                      <th>Lugar</th>
+                      <th>Tipo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {upcomingEvents.map(event => (
+                      <tr>
+                        <td>
+                          <div class="font-bold">{new Date(event.date).toLocaleDateString('es-HN')}</div>
+                          <div class="text-sm opacity-50">{event.time} hrs</div>
+                        </td>
+                        <td>
+                          <div class="font-bold">{event.title}</div>
+                          <div class="text-sm opacity-50">{event.description.substring(0, 60)}...</div>
+                        </td>
+                        <td>{event.venue}</td>
+                        <td>
+                          <div class="badge badge-outline">{event.category}</div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events Archive -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Eventos Pasados</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">Revive algunos de nuestros mejores momentos</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {pastEvents.map(event => (
+            <div class="card bg-white shadow-xl hover:shadow-2xl transition-all duration-300">
+              <figure class="h-48">
+                <img src={event.image} alt={event.title} class="w-full h-full object-cover" />
+              </figure>
+              <div class="card-body">
+                <h3 class="card-title text-lg">{event.title}</h3>
+                <p class="text-sm text-gray-600 mb-2">{event.description}</p>
+                
+                <div class="flex justify-between text-sm">
+                  <div class="flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>{formatDate(event.date)}</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-center text-sm mt-2">
+                  <svg class="w-4 h-4 mr-1 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>{event.venue}</span>
+                </div>
+                
+                <div class="card-actions justify-end mt-4">
+                  <a href="/galeria" class="btn btn-outline btn-sm">Ver Fotos</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="/galeria" class="btn btn-primary">Ver Archivo Completo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6 font-serif">¡No te Pierdas Ningún Evento!</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Suscríbete a nuestro boletín y recibe información sobre próximos conciertos, talleres y festivales.
+        </p>
+        
+        <div class="max-w-md mx-auto">
+          <div class="join w-full">
+            <input type="email" placeholder="Tu correo electrónico" class="input input-bordered join-item flex-1" />
+            <button class="btn btn-accent join-item">Suscribirse</button>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Contactar para Eventos
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

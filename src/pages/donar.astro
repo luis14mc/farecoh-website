@@ -1,0 +1,416 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Donar - Apoya FARECOH" description="Apoya la misión de FARECOH con tu donación. Múltiples formas de contribuir: transferencias, PayPal, donaciones en especie y voluntariado.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[500px]" style="background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+      <div class="hero-overlay bg-opacity-70"></div>
+      <div class="hero-content text-center text-white">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif">Apoya FARECOH</h1>
+          <p class="mb-8 text-xl">Tu generosidad hace posible que más niños y jóvenes tengan acceso a la educación musical y artística. Juntos construimos un futuro mejor a través de las artes.</p>
+          <a href="#formas-donar" class="btn btn-accent btn-lg">Donar Ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Tu Donación Transforma Vidas</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Cada contribución, sin importar su tamaño, tiene un impacto directo en la vida de nuestros estudiantes y sus comunidades.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="card bg-primary text-primary-content shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4">🎵</div>
+              <h3 class="card-title justify-center text-2xl mb-4">L. 500</h3>
+              <p class="text-lg">Financia una clase de música para un niño durante un mes</p>
+            </div>
+          </div>
+
+          <div class="card bg-secondary text-secondary-content shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4">🎼</div>
+              <h3 class="card-title justify-center text-2xl mb-4">L. 2,000</h3>
+              <p class="text-lg">Proporciona materiales musicales para un estudiante por un año</p>
+            </div>
+          </div>
+
+          <div class="card bg-accent text-accent-content shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4">🎻</div>
+              <h3 class="card-title justify-center text-2xl mb-4">L. 5,000</h3>
+              <p class="text-lg">Beca completa para un estudiante de escasos recursos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats stats-vertical lg:stats-horizontal shadow w-full">
+          <div class="stat">
+            <div class="stat-title">Estudiantes Becados</div>
+            <div class="stat-value text-primary">150+</div>
+            <div class="stat-desc">En el último año</div>
+          </div>
+          
+          <div class="stat">
+            <div class="stat-title">Instrumentos Donados</div>
+            <div class="stat-value text-secondary">300+</div>
+            <div class="stat-desc">Desde 2020</div>
+          </div>
+          
+          <div class="stat">
+            <div class="stat-title">Familias Beneficiadas</div>
+            <div class="stat-value text-accent">800+</div>
+            <div class="stat-desc">Directamente</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ways to Support -->
+    <section class="py-16 bg-gradient-to-br from-primary/5 to-secondary/5" id="formas-donar">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Formas de Apoyar</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">Elige la forma que mejor se adapte a tus posibilidades</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Monetary Donations -->
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl mr-4">💰</div>
+                <h3 class="card-title text-2xl text-primary">Donaciones Monetarias</h3>
+              </div>
+              
+              <div class="space-y-6">
+                <!-- Bank Transfer -->
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-bold text-lg mb-2">Transferencia Bancaria</h4>
+                  <div class="bg-base-200 p-4 rounded-lg">
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p><strong>Banco:</strong> Banco Atlántida</p>
+                        <p><strong>Cuenta:</strong> 123456789</p>
+                        <p><strong>Tipo:</strong> Cuenta Corriente</p>
+                      </div>
+                      <div>
+                        <p><strong>A nombre de:</strong> FARECOH</p>
+                        <p><strong>RTN:</strong> 08019999999999</p>
+                        <p><strong>SWIFT:</strong> BANHHNXX</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PayPal -->
+                <div class="border-l-4 border-secondary pl-4">
+                  <h4 class="font-bold text-lg mb-2">PayPal</h4>
+                  <p class="mb-4">Donación segura y rápida desde cualquier parte del mundo</p>
+                  <button class="btn btn-secondary">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.26-.93 4.778-4.005 6.41-7.97 6.41h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106h4.608a.641.641 0 0 0 .633-.74l.649-4.11c.082-.518.526-.9 1.05-.9h2.19c3.964 0 7.04-1.632 7.97-6.41.015-.085.028-.184.041-.26a3.35 3.35 0 0 0 .607.541z"/>
+                    </svg>
+                    Donar con PayPal
+                  </button>
+                </div>
+
+                <!-- GoFundMe -->
+                <div class="border-l-4 border-accent pl-4">
+                  <h4 class="font-bold text-lg mb-2">Campañas Especiales</h4>
+                  <p class="mb-4">Participa en nuestras campañas específicas en GoFundMe</p>
+                  <a href="https://gofundme.com/farecoh" target="_blank" class="btn btn-accent">Ver Campañas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Ways to Help -->
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl mr-4">🤝</div>
+                <h3 class="card-title text-2xl text-primary">Otras Formas de Ayudar</h3>
+              </div>
+              
+              <div class="space-y-6">
+                <!-- In-Kind Donations -->
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-bold text-lg mb-2">Donaciones en Especie</h4>
+                  <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Instrumentos musicales (nuevos o usados en buen estado)</li>
+                    <li>Equipos de sonido y amplificación</li>
+                    <li>Materiales de oficina y educativos</li>
+                    <li>Uniformes y vestuario para presentaciones</li>
+                  </ul>
+                </div>
+
+                <!-- Volunteering -->
+                <div class="border-l-4 border-secondary pl-4">
+                  <h4 class="font-bold text-lg mb-2">Voluntariado</h4>
+                  <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Profesores de música y artes</li>
+                    <li>Apoyo administrativo</li>
+                    <li>Organización de eventos</li>
+                    <li>Marketing y comunicaciones</li>
+                    <li>Transporte para estudiantes</li>
+                  </ul>
+                  <a href="/contacto" class="btn btn-outline btn-sm mt-2">Ser Voluntario</a>
+                </div>
+
+                <!-- Sponsorship -->
+                <div class="border-l-4 border-accent pl-4">
+                  <h4 class="font-bold text-lg mb-2">Patrocinio Empresarial</h4>
+                  <p class="text-sm mb-2">Oportunidades de patrocinio para empresas:</p>
+                  <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Patrocinio de conciertos y eventos</li>
+                    <li>Apadrinamiento de programas específicos</li>
+                    <li>Responsabilidad social empresarial</li>
+                  </ul>
+                  <a href="/contacto" class="btn btn-outline btn-sm mt-2">Información Corporativa</a>
+                </div>
+
+                <!-- Student Sponsorship -->
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-bold text-lg mb-2">Apadrinamiento de Estudiantes</h4>
+                  <p class="text-sm mb-2">Apoya directamente a un estudiante específico:</p>
+                  <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Seguimiento personalizado del progreso</li>
+                    <li>Comunicación directa con el estudiante</li>
+                    <li>Invitaciones a presentaciones especiales</li>
+                  </ul>
+                  <a href="/contacto" class="btn btn-outline btn-sm mt-2">Apadrinar Estudiante</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donor Recognition -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Reconocimiento a Nuestros Donantes</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">Agradecemos profundamente a quienes hacen posible nuestra misión</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Major Donors -->
+          <div class="card bg-gradient-to-r from-primary to-secondary text-white shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">🏆</div>
+              <h3 class="card-title justify-center text-xl mb-4">Benefactores Principales</h3>
+              <ul class="space-y-2 text-sm">
+                <li>Fundación Vida</li>
+                <li>Banco de Occidente</li>
+                <li>Grupo TERRA</li>
+                <li>Embajada de España</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Corporate Sponsors -->
+          <div class="card bg-gradient-to-r from-secondary to-accent text-white shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">🏢</div>
+              <h3 class="card-title justify-center text-xl mb-4">Patrocinadores Corporativos</h3>
+              <ul class="space-y-2 text-sm">
+                <li>Supermercados La Colonia</li>
+                <li>Hotel Real InterContinental</li>
+                <li>Cervecería Hondureña</li>
+                <li>COHEP</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Individual Donors -->
+          <div class="card bg-gradient-to-r from-accent to-primary text-white shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">❤️</div>
+              <h3 class="card-title justify-center text-xl mb-4">Donantes Individuales</h3>
+              <p class="text-sm">
+                Más de 500 personas generosas que contribuyen mensualmente para hacer posible nuestros programas.
+              </p>
+              <p class="text-xs mt-4 opacity-75">
+                *Con el consentimiento de nuestros donantes
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <div class="card bg-base-200 shadow-lg max-w-2xl mx-auto">
+            <div class="card-body">
+              <h3 class="card-title justify-center text-primary mb-4">Transparencia y Rendición de Cuentas</h3>
+              <p class="text-sm mb-4">
+                Publicamos anualmente nuestros informes financieros y de impacto para mantener la transparencia 
+                con nuestros donantes y la comunidad.
+              </p>
+              <div class="card-actions justify-center">
+                <a href="/noticias" class="btn btn-outline btn-sm">Ver Informes Anuales</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6 font-serif">¡Tu Apoyo Marca la Diferencia!</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Cada donación, sin importar su tamaño, contribuye a transformar vidas a través de la música y las artes. 
+          Únete a nuestra familia de donantes y sé parte del cambio.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="btn btn-accent btn-lg" onclick="document.getElementById('donation-modal').showModal()">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+            </svg>
+            Donar Ahora
+          </button>
+          
+          <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.12 9l3 3 3-3m-6 0l3 3 3-3"/>
+            </svg>
+            Más Información
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Donation Modal -->
+  <dialog id="donation-modal" class="modal">
+    <div class="modal-box w-11/12 max-w-2xl">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      </form>
+      <h3 class="font-bold text-2xl text-primary mb-6">Realizar Donación</h3>
+      
+      <div class="space-y-6">
+        <!-- Amount Selection -->
+        <div>
+          <label class="label">
+            <span class="label-text font-semibold">Selecciona el monto de tu donación:</span>
+          </label>
+          <div class="grid grid-cols-3 gap-2 mb-4">
+            <button class="btn btn-outline donation-amount" data-amount="500">L. 500</button>
+            <button class="btn btn-outline donation-amount" data-amount="1000">L. 1,000</button>
+            <button class="btn btn-outline donation-amount" data-amount="2000">L. 2,000</button>
+            <button class="btn btn-outline donation-amount" data-amount="5000">L. 5,000</button>
+            <button class="btn btn-outline donation-amount" data-amount="10000">L. 10,000</button>
+            <button class="btn btn-outline donation-amount" data-amount="other">Otro</button>
+          </div>
+          <input type="number" placeholder="Monto personalizado" class="input input-bordered w-full" id="custom-amount" style="display: none;" />
+        </div>
+
+        <!-- Payment Method -->
+        <div>
+          <label class="label">
+            <span class="label-text font-semibold">Método de pago:</span>
+          </label>
+          <div class="space-y-2">
+            <label class="cursor-pointer label">
+              <span class="label-text">Transferencia Bancaria</span>
+              <input type="radio" name="payment-method" value="bank" class="radio radio-primary" checked />
+            </label>
+            <label class="cursor-pointer label">
+              <span class="label-text">PayPal</span>
+              <input type="radio" name="payment-method" value="paypal" class="radio radio-primary" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Donor Information -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="label">
+              <span class="label-text">Nombre completo</span>
+            </label>
+            <input type="text" class="input input-bordered w-full" required />
+          </div>
+          <div>
+            <label class="label">
+              <span class="label-text">Correo electrónico</span>
+            </label>
+            <input type="email" class="input input-bordered w-full" required />
+          </div>
+        </div>
+
+        <div>
+          <label class="label">
+            <span class="label-text">Teléfono (opcional)</span>
+          </label>
+          <input type="tel" class="input input-bordered w-full" />
+        </div>
+
+        <!-- Purpose -->
+        <div>
+          <label class="label">
+            <span class="label-text">Destino de la donación (opcional)</span>
+          </label>
+          <select class="select select-bordered w-full">
+            <option>Uso general</option>
+            <option>Becas estudiantiles</option>
+            <option>Instrumentos musicales</option>
+            <option>Programa específico</option>
+          </select>
+        </div>
+
+        <div class="modal-action">
+          <button type="submit" class="btn btn-primary">Continuar con la Donación</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const donationAmounts = document.querySelectorAll('.donation-amount');
+    const customAmountInput = document.getElementById('custom-amount');
+    
+    donationAmounts.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        donationAmounts.forEach(btn => btn.classList.remove('btn-primary'));
+        donationAmounts.forEach(btn => btn.classList.add('btn-outline'));
+        
+        // Add active class to clicked button
+        this.classList.remove('btn-outline');
+        this.classList.add('btn-primary');
+        
+        // Show/hide custom amount input
+        if (this.dataset.amount === 'other') {
+          customAmountInput.style.display = 'block';
+          customAmountInput.focus();
+        } else {
+          customAmountInput.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,353 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const news = [
+  {
+    id: 1,
+    title: "FARECOH celebra 14 años transformando vidas a través de la música",
+    excerpt: "Nuestra fundación conmemora otro año de éxitos con más de 500 estudiantes activos y múltiples reconocimientos nacionales.",
+    content: "Este mes de septiembre, FARECOH celebra 14 años de trayectoria transformando vidas a través de la música y las artes en Honduras...",
+    date: "2024-03-15",
+    author: "Equipo FARECOH",
+    category: "Institucional",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Nuevo programa de becas para estudiantes de escasos recursos",
+    excerpt: "Gracias al apoyo de nuestros donantes, lanzamos un programa de becas que beneficiará a 50 nuevos estudiantes.",
+    content: "Con gran orgullo anunciamos el lanzamiento de nuestro nuevo programa de becas estudiantiles...",
+    date: "2024-03-10",
+    author: "María Alejandra Soto",
+    category: "Programas",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 3,
+    title: "Concierto benéfico recauda fondos para instrumentos musicales",
+    excerpt: "El evento 'Música por la Educación' logró recaudar L. 150,000 para la compra de nuevos instrumentos.",
+    content: "El pasado sábado se realizó con gran éxito nuestro concierto benéfico anual...",
+    date: "2024-03-05",
+    author: "Carlos Roberto Mejía",
+    category: "Eventos",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 4,
+    title: "Estudiantes de FARECOH participan en festival internacional",
+    excerpt: "Nuestro Coro 'Voces por la Paz' representará a Honduras en el Festival Internacional de Coros Juveniles.",
+    content: "Es un honor anunciar que nuestro Coro Infantil y Juvenil 'Voces por la Paz' ha sido seleccionado...",
+    date: "2024-02-28",
+    author: "Lucía Fernández",
+    category: "Logros",
+    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 5,
+    title: "Alianza estratégica con el Ministerio de Educación",
+    excerpt: "FARECOH firma convenio para implementar programas musicales en escuelas públicas de Tegucigalpa.",
+    content: "Nos complace anunciar la firma de un importante convenio de cooperación...",
+    date: "2024-02-20",
+    author: "Equipo FARECOH",
+    category: "Institucional",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Graduación 2023: 85 nuevos músicos se gradúan de FARECOH",
+    excerpt: "En una emotiva ceremonia, celebramos el logro de nuestros estudiantes que completaron sus programas musicales.",
+    content: "El pasado diciembre fue testigo de una de las ceremonias más emotivas del año...",
+    date: "2024-01-15",
+    author: "María Alejandra Soto",
+    category: "Logros",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    featured: false
+  }
+];
+
+const categories = [...new Set(news.map(n => n.category))];
+
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('es-HN', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+}
+---
+
+<Layout title="Noticias - FARECOH" description="Mantente al día con las últimas noticias, logros y eventos de FARECOH. Descubre nuestros avances en la educación musical en Honduras.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[400px] bg-gradient-to-r from-accent to-secondary">
+      <div class="hero-content text-center text-white">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif">Noticias FARECOH</h1>
+          <p class="mb-5 text-xl">Mantente informado sobre nuestros logros, eventos y el impacto de la música en nuestras comunidades</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+    {news.filter(article => article.featured).map(featured => (
+      <section class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-8">
+            <div class="badge badge-primary badge-lg mb-4">Artículo Destacado</div>
+          </div>
+          
+          <div class="card lg:card-side bg-white shadow-2xl max-w-6xl mx-auto">
+            <figure class="lg:w-1/2">
+              <img src={featured.image} alt={featured.title} class="w-full h-64 lg:h-full object-cover" />
+            </figure>
+            <div class="card-body lg:w-1/2">
+              <div class="badge badge-outline mb-2">{featured.category}</div>
+              <h2 class="card-title text-2xl lg:text-3xl font-serif text-primary mb-4">{featured.title}</h2>
+              <p class="text-lg mb-4">{featured.excerpt}</p>
+              
+              <div class="flex items-center text-sm text-gray-600 mb-4">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                </svg>
+                <span class="mr-4">{formatDate(featured.date)}</span>
+                
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+                <span>{featured.author}</span>
+              </div>
+              
+              <div class="card-actions">
+                <button class="btn btn-primary" onclick={`document.getElementById('article-${featured.id}').showModal()`}>
+                  Leer Artículo Completo
+                </button>
+                <div class="flex gap-2 ml-auto">
+                  <button class="btn btn-ghost btn-sm">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                  </button>
+                  <button class="btn btn-ghost btn-sm">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold mb-4">Filtrar por Categoría</h2>
+          <div class="flex flex-wrap justify-center gap-2" id="category-filters">
+            <button class="btn btn-sm btn-primary filter-btn active" data-category="all">Todas</button>
+            {categories.map(category => (
+              <button class="btn btn-sm btn-outline filter-btn" data-category={category.toLowerCase()}>{category}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="news-grid">
+          {news.filter(article => !article.featured).map(article => (
+            <div class="card bg-white shadow-xl hover:shadow-2xl transition-all duration-300 news-card" data-category={article.category.toLowerCase()}>
+              <figure class="h-48">
+                <img src={article.image} alt={article.title} class="w-full h-full object-cover" />
+              </figure>
+              <div class="card-body">
+                <div class="badge badge-outline mb-2">{article.category}</div>
+                <h3 class="card-title text-lg">{article.title}</h3>
+                <p class="text-sm text-gray-600 mb-4">{article.excerpt}</p>
+                
+                <div class="flex items-center text-xs text-gray-500 mb-4">
+                  <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="mr-3">{formatDate(article.date)}</span>
+                  
+                  <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>{article.author}</span>
+                </div>
+                
+                <div class="card-actions justify-between">
+                  <button class="btn btn-primary btn-sm" onclick={`document.getElementById('article-${article.id}').showModal()`}>
+                    Leer Más
+                  </button>
+                  <div class="flex gap-1">
+                    <button class="btn btn-ghost btn-xs">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                      </svg>
+                    </button>
+                    <button class="btn btn-ghost btn-xs">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6 font-serif">¡Mantente Informado!</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Suscríbete a nuestro boletín y recibe las últimas noticias, eventos y logros de FARECOH directamente en tu correo.
+        </p>
+        
+        <div class="max-w-md mx-auto mb-8">
+          <div class="join w-full">
+            <input type="email" placeholder="Tu correo electrónico" class="input input-bordered join-item flex-1" />
+            <button class="btn btn-accent join-item">Suscribirse</button>
+          </div>
+        </div>
+        
+        <div class="text-white/80 text-sm">
+          <p>📧 También puedes seguirnos en nuestras redes sociales para actualizaciones diarias</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Article Modals -->
+  {news.map(article => (
+    <dialog id={`article-${article.id}`} class="modal">
+      <div class="modal-box w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-10">✕</button>
+        </form>
+        
+        <article class="prose max-w-none">
+          <div class="not-prose mb-6">
+            <img src={article.image} alt={article.title} class="w-full h-64 object-cover rounded-lg" />
+          </div>
+          
+          <div class="not-prose mb-4">
+            <div class="badge badge-primary mb-2">{article.category}</div>
+            <h1 class="text-3xl font-bold font-serif text-primary mb-4">{article.title}</h1>
+            
+            <div class="flex items-center text-sm text-gray-600 mb-6">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+              </svg>
+              <span class="mr-4">{formatDate(article.date)}</span>
+              
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+              </svg>
+              <span>{article.author}</span>
+            </div>
+          </div>
+          
+          <div class="text-lg leading-relaxed">
+            <p>{article.content}</p>
+            <p class="mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p class="mt-4">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          
+          <div class="not-prose mt-8 pt-6 border-t">
+            <div class="flex justify-between items-center">
+              <div class="text-sm text-gray-600">
+                Comparte este artículo:
+              </div>
+              <div class="flex gap-2">
+                <button class="btn btn-ghost btn-sm">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                  </svg>
+                  Twitter
+                </button>
+                <button class="btn btn-ghost btn-sm">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  Facebook
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
+  ))}
+  
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const newsCards = document.querySelectorAll('.news-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const category = this.dataset.category;
+        
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('btn-primary', 'active'));
+        filterButtons.forEach(btn => btn.classList.add('btn-outline'));
+        this.classList.remove('btn-outline');
+        this.classList.add('btn-primary', 'active');
+        
+        // Filter news cards
+        newsCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            card.classList.add('animate-fade-in');
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('animate-fade-in');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

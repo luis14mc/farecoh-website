@@ -1,0 +1,369 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contacto - FARECOH" description="Contáctanos para más información sobre nuestros programas musicales, inscripciones o colaboraciones. Estamos ubicados en Tegucigalpa, Honduras.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[400px] bg-gradient-to-r from-primary to-accent">
+      <div class="hero-content text-center text-white">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif">Contáctanos</h1>
+          <p class="mb-5 text-xl">Estamos aquí para responder tus preguntas y ayudarte a ser parte de la familia FARECOH</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-3 gap-8 mb-12">
+          <div class="card bg-white shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4 text-primary">📧</div>
+              <h3 class="card-title justify-center text-primary mb-4">Correo Electrónico</h3>
+              <div class="space-y-2">
+                <p><strong>General:</strong> info@farecoh.org</p>
+                <p><strong>Inscripciones:</strong> inscripciones@farecoh.org</p>
+                <p><strong>Donaciones:</strong> donaciones@farecoh.org</p>
+                <p><strong>Prensa:</strong> prensa@farecoh.org</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-white shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4 text-primary">📞</div>
+              <h3 class="card-title justify-center text-primary mb-4">Teléfonos</h3>
+              <div class="space-y-2">
+                <p><strong>Principal:</strong> +504 2234-5678</p>
+                <p><strong>WhatsApp:</strong> +504 9876-5432</p>
+                <p><strong>Emergencias:</strong> +504 8765-4321</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-white shadow-xl">
+            <div class="card-body text-center">
+              <div class="text-4xl mb-4 text-primary">📍</div>
+              <h3 class="card-title justify-center text-primary mb-4">Ubicación</h3>
+              <div class="space-y-2">
+                <p><strong>Dirección:</strong></p>
+                <p>Col. Palmira, Avenida República de Chile</p>
+                <p>Casa #1234, Tegucigalpa M.D.C.</p>
+                <p>Francisco Morazán, Honduras</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office Hours -->
+        <div class="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl max-w-2xl mx-auto">
+          <div class="card-body">
+            <h3 class="card-title justify-center text-primary text-2xl mb-6">Horarios de Atención</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-bold text-lg mb-2">Oficina Administrativa</h4>
+                <ul class="space-y-1">
+                  <li><strong>Lunes - Viernes:</strong> 8:00 AM - 5:00 PM</li>
+                  <li><strong>Sábados:</strong> 8:00 AM - 12:00 PM</li>
+                  <li><strong>Domingos:</strong> Cerrado</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg mb-2">Clases y Ensayos</h4>
+                <ul class="space-y-1">
+                  <li><strong>Lunes - Viernes:</strong> 2:00 PM - 8:00 PM</li>
+                  <li><strong>Sábados:</strong> 8:00 AM - 6:00 PM</li>
+                  <li><strong>Domingos:</strong> 2:00 PM - 6:00 PM</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-gradient-to-br from-base-200 to-base-300">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Envíanos un Mensaje</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">Completa el formulario y nos pondremos en contacto contigo pronto</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="card bg-white shadow-xl">
+            <div class="card-body">
+              <form class="space-y-6" id="contact-form">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="label">
+                      <span class="label-text font-semibold">Nombre completo *</span>
+                    </label>
+                    <input type="text" name="name" class="input input-bordered w-full" required />
+                  </div>
+                  
+                  <div>
+                    <label class="label">
+                      <span class="label-text font-semibold">Correo electrónico *</span>
+                    </label>
+                    <input type="email" name="email" class="input input-bordered w-full" required />
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="label">
+                      <span class="label-text font-semibold">Teléfono</span>
+                    </label>
+                    <input type="tel" name="phone" class="input input-bordered w-full" />
+                  </div>
+                  
+                  <div>
+                    <label class="label">
+                      <span class="label-text font-semibold">Asunto *</span>
+                    </label>
+                    <select name="subject" class="select select-bordered w-full" required>
+                      <option value="">Selecciona un asunto</option>
+                      <option value="inscripcion">Inscripción a programas</option>
+                      <option value="informacion">Información general</option>
+                      <option value="donacion">Donaciones y patrocinio</option>
+                      <option value="voluntariado">Voluntariado</option>
+                      <option value="eventos">Eventos y presentaciones</option>
+                      <option value="prensa">Consultas de prensa</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Program Interest (shown when inscription is selected) -->
+                <div id="program-interest" class="hidden">
+                  <label class="label">
+                    <span class="label-text font-semibold">Programa de interés</span>
+                  </label>
+                  <select name="program" class="select select-bordered w-full">
+                    <option value="">Selecciona un programa</option>
+                    <option value="coro-voces-paz">Coro Voces por la Paz</option>
+                    <option value="orquesta-armonia">Orquesta Armonía para la Vida</option>
+                    <option value="iniciacion-musical">Talleres de Iniciación Musical</option>
+                    <option value="clases-individuales">Clases Individuales</option>
+                    <option value="ensambles">Ensambles Musicales</option>
+                    <option value="formacion-comunitaria">Formación Comunitaria</option>
+                    <option value="escuela-arpas">Escuela de Arpas</option>
+                    <option value="inclusion-artistica">Programa Inclusivo</option>
+                    <option value="artes-visuales">Artes Visuales</option>
+                    <option value="jugarte">JugArte</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="label">
+                    <span class="label-text font-semibold">Mensaje *</span>
+                  </label>
+                  <textarea name="message" class="textarea textarea-bordered w-full h-32" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <!-- Age group for inscriptions -->
+                <div id="age-group" class="hidden">
+                  <label class="label">
+                    <span class="label-text font-semibold">Edad del interesado</span>
+                  </label>
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    <label class="cursor-pointer label">
+                      <span class="label-text">0-5 años</span>
+                      <input type="radio" name="age" value="0-5" class="radio radio-primary" />
+                    </label>
+                    <label class="cursor-pointer label">
+                      <span class="label-text">6-9 años</span>
+                      <input type="radio" name="age" value="6-9" class="radio radio-primary" />
+                    </label>
+                    <label class="cursor-pointer label">
+                      <span class="label-text">10-13 años</span>
+                      <input type="radio" name="age" value="10-13" class="radio radio-primary" />
+                    </label>
+                    <label class="cursor-pointer label">
+                      <span class="label-text">14+ años</span>
+                      <input type="radio" name="age" value="14+" class="radio radio-primary" />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                  <input type="checkbox" name="newsletter" class="checkbox checkbox-primary" />
+                  <label class="label-text">Deseo recibir información sobre eventos y noticias de FARECOH</label>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    Enviar Mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestra Ubicación</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-xl text-gray-600">Visítanos en nuestra sede principal en Tegucigalpa</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="card bg-white shadow-xl">
+              <div class="card-body">
+                <h3 class="card-title text-primary mb-4">Cómo Llegar</h3>
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="font-bold mb-2">🚗 En Vehículo Particular</h4>
+                    <p class="text-sm">Desde el centro de Tegucigalpa, tomar la Avenida República de Chile hacia el sur. La sede está ubicada en la Colonia Palmira, casa #1234.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold mb-2">🚌 Transporte Público</h4>
+                    <p class="text-sm">Tomar buses de la ruta "Palmira" desde el centro. Bajar en la parada de Avenida República de Chile y caminar 2 cuadras al este.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 class="font-bold mb-2">🚕 Taxi o Uber</h4>
+                    <p class="text-sm">Solicitar viaje a "FARECOH, Colonia Palmira" o proporcionar la dirección exacta: Avenida República de Chile, Casa #1234.</p>
+                  </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div>
+                  <h4 class="font-bold mb-2">Referencias</h4>
+                  <ul class="text-sm space-y-1">
+                    <li>• Frente al Parque Central de Palmira</li>
+                    <li>• A 2 cuadras de la Iglesia San José</li>
+                    <li>• Cerca del Supermercado La Colonia</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <!-- Google Maps Embed -->
+            <div class="card bg-white shadow-xl">
+              <div class="card-body p-0">
+                <div class="w-full h-96 bg-base-200 rounded-lg flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="text-4xl mb-4">🗺️</div>
+                    <p class="text-lg font-semibold mb-2">Mapa Interactivo</p>
+                    <p class="text-sm text-gray-600 mb-4">Colonia Palmira, Tegucigalpa</p>
+                    <a href="https://maps.google.com/?q=Tegucigalpa,Honduras" target="_blank" class="btn btn-primary btn-sm">
+                      Ver en Google Maps
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6 font-serif">Síguenos en Redes Sociales</h2>
+        <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          Mantente conectado con nosotros y no te pierdas nuestras últimas noticias, eventos y presentaciones.
+        </p>
+        
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://facebook.com/farecoh" target="_blank" class="btn btn-circle btn-lg bg-white/20 hover:bg-white hover:text-primary border-none">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          
+          <a href="https://instagram.com/farecoh" target="_blank" class="btn btn-circle btn-lg bg-white/20 hover:bg-white hover:text-primary border-none">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323C6.001 8.198 7.152 7.708 8.449 7.708s2.448.49 3.323 1.416c.875.926 1.365 2.077 1.365 3.374s-.49 2.448-1.365 3.323c-.875.875-2.026 1.365-3.323 1.365zm7.718 0c-1.297 0-2.448-.49-3.323-1.297-.875-.926-1.365-2.077-1.365-3.374s.49-2.448 1.365-3.323c.875-.926 2.026-1.416 3.323-1.416s2.448.49 3.323 1.416c.875.926 1.365 2.077 1.365 3.374s-.49 2.448-1.365 3.323c-.875.875-2.026 1.365-3.323 1.365z"/>
+            </svg>
+          </a>
+          
+          <a href="https://twitter.com/farecoh" target="_blank" class="btn btn-circle btn-lg bg-white/20 hover:bg-white hover:text-primary border-none">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          
+          <a href="https://youtube.com/farecoh" target="_blank" class="btn btn-circle btn-lg bg-white/20 hover:bg-white hover:text-primary border-none">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="text-white/80">
+          <p class="mb-2">📧 info@farecoh.org | 📞 +504 2234-5678</p>
+          <p>📍 Colonia Palmira, Tegucigalpa, Honduras</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const subjectSelect = document.querySelector('select[name="subject"]');
+    const programInterest = document.getElementById('program-interest');
+    const ageGroup = document.getElementById('age-group');
+    const contactForm = document.getElementById('contact-form');
+    
+    // Show/hide additional fields based on subject selection
+    subjectSelect.addEventListener('change', function() {
+      if (this.value === 'inscripcion') {
+        programInterest.classList.remove('hidden');
+        ageGroup.classList.remove('hidden');
+      } else {
+        programInterest.classList.add('hidden');
+        ageGroup.classList.add('hidden');
+      }
+    });
+    
+    // Handle form submission
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success message
+      const successAlert = document.createElement('div');
+      successAlert.className = 'alert alert-success mt-4';
+      successAlert.innerHTML = `
+        <svg class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.</span>
+      `;
+      
+      this.appendChild(successAlert);
+      this.reset();
+      
+      // Remove success message after 5 seconds
+      setTimeout(() => {
+        successAlert.remove();
+      }, 5000);
+    });
+  });
+</script>

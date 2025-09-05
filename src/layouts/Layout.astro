@@ -1,0 +1,42 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "FARECOH - Fundación de Artes y Recreación Comunitaria de Honduras. Transformando vidas a través de la música y las artes." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" data-theme="farecoh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-base-100">
+    <slot />
+    
+    <script>
+      // Add smooth scrolling behavior
+      document.documentElement.style.scrollBehavior = 'smooth';
+      
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
