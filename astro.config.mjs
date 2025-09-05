@@ -8,5 +8,17 @@ export default defineConfig({
     })
   ],
   output: 'static',
-  site: 'https://farecoh.vercel.app'
+  site: 'https://farecoh-honduras.vercel.app',
+  build: {
+    inlineStylesheets: 'auto'
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name].[hash][extname]'
+        }
+      }
+    }
+  }
 });
