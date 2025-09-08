@@ -1,0 +1,675 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Programa de Inclusión Artística - El alma no tiene discapacidad - FARECOH" description="Programa innovador que demuestra que la música no tiene barreras. Arte inclusivo para personas con discapacidad y diversidad funcional.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[70vh] bg-gradient-to-r from-secondary/90 to-primary/90" style="background-image: url('https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif text-white">Programa de Inclusión Artística</h1>
+          <h2 class="mb-5 text-3xl font-medium text-white/90">"El alma no tiene discapacidad"</h2>
+          <p class="mb-8 text-lg text-white/80">
+            La música como puente universal que trasciende toda barrera física, intelectual o sensorial
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#inscripcion" class="btn btn-accent btn-lg">Únete al Programa</a>
+            <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-secondary">
+              Más Información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Philosophy -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-6 font-serif">Nuestra Filosofía</h2>
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            En FARECOH creemos firmemente que <strong>el alma no tiene discapacidad</strong>. Cada persona, independientemente 
+            de sus características físicas, intelectuales o sensoriales, posee un universo musical único que merece 
+            ser explorado, desarrollado y celebrado.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-secondary mb-6">Más que un Programa, una Misión</h3>
+            <p class="text-lg text-gray-600 mb-6">
+              Nuestro programa de inclusión artística no es solo una actividad educativa, es una declaración de principios: 
+              la música es un derecho humano universal que no entiende de limitaciones.
+            </p>
+            <p class="text-lg text-gray-600 mb-8">
+              A través de metodologías adaptadas, tecnología de apoyo y mucho amor, creamos espacios donde cada participante 
+              puede expresar su esencia musical y descubrir capacidades que tal vez no sabía que tenía.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="stat bg-secondary/10 rounded-lg p-4">
+                <div class="stat-value text-2xl text-secondary">45+</div>
+                <div class="stat-desc">Participantes activos</div>
+              </div>
+              <div class="stat bg-secondary/10 rounded-lg p-4">
+                <div class="stat-value text-2xl text-secondary">100%</div>
+                <div class="stat-desc">Becas disponibles</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Persona con discapacidad tocando instrumento" 
+                 class="rounded-lg shadow-xl" />
+            <div class="absolute -bottom-6 -left-6 bg-accent text-white p-4 rounded-lg shadow-lg">
+              <div class="text-2xl font-bold">6</div>
+              <div class="text-sm">Años transformando vidas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Population -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">¿A Quién Está Dirigido?</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-5xl mb-4">👁️</div>
+              <h3 class="card-title justify-center text-xl mb-4">Discapacidad Visual</h3>
+              <ul class="text-left text-sm space-y-2">
+                <li>• Ceguera total o parcial</li>
+                <li>• Baja visión</li>
+                <li>• Metodología Braille musical</li>
+                <li>• Desarrollo de oído absoluto</li>
+                <li>• Instrumentos táctiles</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-5xl mb-4">👂</div>
+              <h3 class="card-title justify-center text-xl mb-4">Discapacidad Auditiva</h3>
+              <ul class="text-left text-sm space-y-2">
+                <li>• Sordera total o parcial</li>
+                <li>• Hipoacusia</li>
+                <li>• Música vibrotáctil</li>
+                <li>• Percusión adaptada</li>
+                <li>• Lenguaje de señas musical</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-5xl mb-4">🦽</div>
+              <h3 class="card-title justify-center text-xl mb-4">Discapacidad Motriz</h3>
+              <ul class="text-left text-sm space-y-2">
+                <li>• Movilidad reducida</li>
+                <li>• Amputaciones</li>
+                <li>• Parálisis cerebral</li>
+                <li>• Instrumentos adaptados</li>
+                <li>• Tecnología de apoyo</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-5xl mb-4">🧠</div>
+              <h3 class="card-title justify-center text-xl mb-4">Discapacidad Intelectual</h3>
+              <ul class="text-left text-sm space-y-2">
+                <li>• Síndrome de Down</li>
+                <li>• Autismo (TEA)</li>
+                <li>• Discapacidad cognitiva</li>
+                <li>• Metodología simplificada</li>
+                <li>• Enfoque sensorial</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-5xl mb-4">💊</div>
+              <h3 class="card-title justify-center text-xl mb-4">Enfermedades Crónicas</h3>
+              <ul class="text-left text-sm space-y-2">
+                <li>• Cáncer y tratamientos</li>
+                <li>• Enfermedades degenerativas</li>
+                <li>• Trastornos neurológicos</li>
+                <li>• Musicoterapia</li>
+                <li>• Horarios flexibles</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-5xl mb-4">❤️</div>
+              <h3 class="card-title justify-center text-xl mb-4">Diversidad Funcional</h3>
+              <ul class="text-left text-sm space-y-2">
+                <li>• Condiciones múltiples</li>
+                <li>• Trastornos del desarrollo</li>
+                <li>• Neurodivergencia</li>
+                <li>• Enfoque personalizado</li>
+                <li>• Apoyo familiar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Metodología Inclusiva</h2>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold text-secondary mb-6">Adaptación sin Limitación</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">1</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Evaluación Integral</h4>
+                  <p class="text-gray-600">Análisis completo de capacidades, intereses y necesidades específicas de apoyo de cada participante.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">2</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Plan Individual de Apoyo (PIA)</h4>
+                  <p class="text-gray-600">Diseño personalizado que incluye objetivos, metodología, recursos de apoyo y seguimiento.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">3</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Instrumentos y Tecnología Adaptada</h4>
+                  <p class="text-gray-600">Utilización de instrumentos modificados, tecnología de apoyo y recursos especializados.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">4</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Acompañamiento Multidisciplinario</h4>
+                  <p class="text-gray-600">Trabajo conjunto con terapeutas, pedagogos y familias para desarrollo integral.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="card bg-gradient-to-br from-secondary/10 to-accent/10">
+              <div class="card-body">
+                <h4 class="card-title text-secondary">Modalidades de Participación</h4>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li>• <strong>Individual:</strong> Atención personalizada 1:1</li>
+                  <li>• <strong>Pequeños grupos:</strong> 3-5 participantes con necesidades similares</li>
+                  <li>• <strong>Inclusión inversa:</strong> Estudiantes regulares se unen al programa</li>
+                  <li>• <strong>Familiar:</strong> Participación de padres y hermanos</li>
+                  <li>• <strong>Musicoterapia:</strong> Sesiones terapéuticas especializadas</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="card bg-gradient-to-br from-accent/10 to-primary/10">
+              <div class="card-body">
+                <h4 class="card-title text-secondary">Recursos Especializados</h4>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li>• <strong>Instrumentos adaptados:</strong> Modificaciones ergonómicas</li>
+                  <li>• <strong>Tecnología asistiva:</strong> Software y aplicaciones</li>
+                  <li>• <strong>Material didáctico:</strong> Braille, pictográfico, táctil</li>
+                  <li>• <strong>Comunicación aumentativa:</strong> Símbolos, gestos, señas</li>
+                  <li>• <strong>Espacios adaptados:</strong> Accesibilidad universal</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Beneficios del Programa</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-secondary mb-4">🧠</div>
+              <h3 class="card-title justify-center text-lg mb-3">Desarrollo Cognitivo</h3>
+              <p>Estimulación de memoria, atención, concentración y funciones ejecutivas a través de la música.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-secondary mb-4">💪</div>
+              <h3 class="card-title justify-center text-lg mb-3">Motricidad</h3>
+              <p>Mejora de coordinación, motricidad fina y gruesa, equilibrio y control corporal.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-secondary mb-4">🗣️</div>
+              <h3 class="card-title justify-center text-lg mb-3">Comunicación</h3>
+              <p>Desarrollo del lenguaje, comunicación no verbal y habilidades de expresión.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-secondary mb-4">👥</div>
+              <h3 class="card-title justify-center text-lg mb-3">Socialización</h3>
+              <p>Fortalecimiento de vínculos, trabajo en equipo y habilidades sociales.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-secondary mb-4">😊</div>
+              <h3 class="card-title justify-center text-lg mb-3">Bienestar Emocional</h3>
+              <p>Incremento de autoestima, confianza, regulación emocional y calidad de vida.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-secondary mb-4">🎨</div>
+              <h3 class="card-title justify-center text-lg mb-3">Creatividad</h3>
+              <p>Estimulación de creatividad, imaginación y capacidad de expresión artística única.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Historias que Inspiran</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-gradient-to-br from-secondary/5 to-accent/5 shadow-lg">
+            <div class="card-body">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="avatar">
+                  <div class="w-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                    <span class="text-xl">🎹</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-bold">Carlos, 25 años</h3>
+                  <p class="text-sm text-gray-600">Discapacidad visual</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">"Perdí la vista a los 15 años. Pensé que nunca podría hacer música. Hoy toco piano en la orquesta de FARECOH y doy clases a otros jóvenes. La música me devolvió la esperanza."</p>
+              <div class="mt-4 flex justify-between items-center">
+                <div class="badge badge-success">Profesor Asistente</div>
+                <div class="text-xs text-gray-500">2024</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-accent/5 to-primary/5 shadow-lg">
+            <div class="card-body">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="avatar">
+                  <div class="w-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <span class="text-xl">🥁</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-bold">María Elena, 12 años</h3>
+                  <p class="text-sm text-gray-600">Síndrome de Down</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">"María Elena ha desarrollado increíbles habilidades rítmicas. Su alegría es contagiosa y motiva a todo el grupo. Ahora forma parte del ensamble de percusión."</p>
+              <div class="mt-4 flex justify-between items-center">
+                <div class="badge badge-info">Ensamble de Percusión</div>
+                <div class="text-xs text-gray-500">2023</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-primary/5 to-secondary/5 shadow-lg">
+            <div class="card-body">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="avatar">
+                  <div class="w-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span class="text-xl">🎤</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="font-bold">Roberto, 30 años</h3>
+                  <p class="text-sm text-gray-600">Discapacidad auditiva</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">"Soy sordo de nacimiento, pero siento la música a través de las vibraciones. Canto en lenguaje de señas y mi presentación conmovió a cientos de personas."</p>
+              <div class="mt-4 flex justify-between items-center">
+                <div class="badge badge-warning">Intérprete Profesional</div>
+                <div class="text-xs text-gray-500">2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team and Support -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Nuestro Equipo Especializado</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👩‍🏫</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Dra. Patricia Morales</h3>
+              <p class="text-sm text-gray-600">Directora del Programa</p>
+              <ul class="text-xs space-y-1 mt-2">
+                <li>• Musicoterapeuta certificada</li>
+                <li>• Máster en Educación Inclusiva</li>
+                <li>• 12 años de experiencia</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👨‍⚕️</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Lic. Jorge Herrera</h3>
+              <p class="text-sm text-gray-600">Terapeuta Ocupacional</p>
+              <ul class="text-xs space-y-1 mt-2">
+                <li>• Especialista en discapacidad motriz</li>
+                <li>• Certificado en tecnología asistiva</li>
+                <li>• Adaptación de instrumentos</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👩‍🎓</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Lic. Ana Restrepo</h3>
+              <p class="text-sm text-gray-600">Pedagoga Especial</p>
+              <ul class="text-xs space-y-1 mt-2">
+                <li>• Especialista en TEA</li>
+                <li>• Comunicación aumentativa</li>
+                <li>• Metodologías adaptadas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👨‍💻</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Ing. Luis Castillo</h3>
+              <p class="text-sm text-gray-600">Tecnología Adaptiva</p>
+              <ul class="text-xs space-y-1 mt-2">
+                <li>• Desarrollos especializados</li>
+                <li>• Software musical adaptado</li>
+                <li>• Instrumentos electrónicos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Details -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Información del Programa</h2>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="card bg-gradient-to-br from-secondary/10 to-accent/10">
+            <div class="card-body">
+              <h3 class="card-title text-secondary mb-4">📅 Horarios y Modalidades</h3>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Clases individuales:</strong> Lun-Vie, 8:00 AM - 6:00 PM</li>
+                <li><strong>Grupos pequeños:</strong> Mar/Jue, 3:00-4:30 PM</li>
+                <li><strong>Ensambles inclusivos:</strong> Sáb, 9:00-11:00 AM</li>
+                <li><strong>Musicoterapia:</strong> Horarios personalizados</li>
+                <li><strong>Apoyo familiar:</strong> Último sábado del mes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-accent/10 to-primary/10">
+            <div class="card-body">
+              <h3 class="card-title text-secondary mb-4">💰 Inversión y Becas</h3>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Costo del programa:</strong> ¡COMPLETAMENTE GRATUITO!</li>
+                <li><strong>Becas completas:</strong> 100% de los participantes</li>
+                <li><strong>Transporte adaptado:</strong> Disponible según necesidad</li>
+                <li><strong>Materiales:</strong> Incluidos sin costo</li>
+                <li><strong>Apoyo familiar:</strong> Talleres gratuitos</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div class="card-body">
+              <h3 class="card-title text-secondary mb-4">📋 Requisitos de Participación</h3>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Edad:</strong> Sin límite (niños, jóvenes, adultos)</li>
+                <li><strong>Diagnóstico:</strong> Evaluación médica/pedagógica</li>
+                <li><strong>Autorización:</strong> Consentimiento familiar</li>
+                <li><strong>Compromiso:</strong> Asistencia regular</li>
+                <li><strong>Evaluación inicial:</strong> Gratuita y sin compromiso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="inscripcion" class="py-16 bg-gradient-to-r from-secondary to-primary text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-6 font-serif">Únete a Nuestra Familia Inclusiva</h2>
+          <p class="text-xl text-white/90 max-w-3xl mx-auto">
+            Porque creemos que cada persona merece la oportunidad de hacer música, te invitamos a ser parte 
+            de esta experiencia transformadora. <strong>El alma no tiene discapacidad</strong>, y aquí lo demostramos cada día.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6">¿Cómo Participar?</h3>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="bg-accent text-secondary rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Contacto Inicial</h4>
+                  <p class="text-white/80 text-sm">
+                    Llámanos o visítanos para conocer el programa y resolver todas tus dudas. Sin compromiso.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="bg-accent text-secondary rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Evaluación Gratuita</h4>
+                  <p class="text-white/80 text-sm">
+                    Sesión de conocimiento mutuo donde evaluamos intereses, capacidades y necesidades específicas.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="bg-accent text-secondary rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Plan Personalizado</h4>
+                  <p class="text-white/80 text-sm">
+                    Diseñamos juntos el programa ideal: objetivos, metodología, horarios y apoyos necesarios.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="bg-accent text-secondary rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">4</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">¡A Hacer Música!</h4>
+                  <p class="text-white/80 text-sm">
+                    Iniciamos inmediatamente el programa con seguimiento continuo y apoyo integral.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-white/10 rounded-lg">
+              <h4 class="text-xl font-bold mb-4 text-accent">💝 Compromiso FARECOH</h4>
+              <ul class="text-white/90 text-sm space-y-2">
+                <li>• <strong>100% GRATUITO:</strong> Nunca cobraremos por este programa</li>
+                <li>• <strong>Sin discriminación:</strong> Aceptamos a toda persona que quiera participar</li>
+                <li>• <strong>Apoyo integral:</strong> No solo música, también acompañamiento familiar</li>
+                <li>• <strong>Adaptación total:</strong> Modificamos todo lo necesario para tu éxito</li>
+                <li>• <strong>Compromiso a largo plazo:</strong> Te acompañamos todo el tiempo que necesites</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 rounded-lg p-8">
+            <h3 class="text-2xl font-bold mb-6">Solicita Información</h3>
+            <form class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium mb-2">Nombre del participante</label>
+                  <input type="text" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Nombre completo" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">Edad</label>
+                  <input type="number" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Años" />
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Nombre del contacto/familiar</label>
+                <input type="text" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Padre/madre/tutor" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Teléfono</label>
+                <input type="tel" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Número de contacto" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="email@ejemplo.com" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Tipo de discapacidad/condición</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona o describe</option>
+                  <option>Discapacidad visual</option>
+                  <option>Discapacidad auditiva</option>
+                  <option>Discapacidad motriz</option>
+                  <option>Discapacidad intelectual</option>
+                  <option>Trastorno del espectro autista</option>
+                  <option>Enfermedad crónica</option>
+                  <option>Condición múltiple</option>
+                  <option>Otro (especificar en comentarios)</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Experiencia musical previa</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona</option>
+                  <option>Sin experiencia musical</option>
+                  <option>Algo de experiencia musical</option>
+                  <option>Ha participado en otros programas</option>
+                  <option>Formación musical formal</option>
+                  <option>Músico avanzado</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">¿Qué buscas en el programa?</label>
+                <textarea class="textarea textarea-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Cuéntanos tus objetivos, intereses, expectativas o cualquier información que consideres importante..."></textarea>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">¿Necesitas transporte adaptado?</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona</option>
+                  <option>No, puedo llegar por mis medios</option>
+                  <option>Sí, necesito transporte adaptado</option>
+                  <option>No estoy seguro/a</option>
+                </select>
+              </div>
+              
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input type="checkbox" class="checkbox checkbox-accent" />
+                  <span class="label-text text-white/90 text-sm">
+                    Autorizo a FARECOH a contactarme para brindar información sobre el programa de inclusión artística
+                  </span>
+                </label>
+              </div>
+              
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input type="checkbox" class="checkbox checkbox-accent" />
+                  <span class="label-text text-white/90 text-sm">
+                    Acepto que se tomen fotografías/videos para documentar el progreso (uso interno y promocional del programa)
+                  </span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-accent btn-lg w-full">
+                Solicitar Evaluación Gratuita
+              </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+              <p class="text-sm text-white/70 mb-3">
+                <strong>Contacto directo del programa:</strong>
+              </p>
+              <p class="text-white font-bold">
+                Dra. Patricia Morales<br>
+                <span class="text-accent">+504 2234-5678 ext. 123</span><br>
+                <span class="text-accent">inclusion@farecoh.org</span>
+              </p>
+              <p class="text-xs text-white/60 mt-3">
+                Horario de atención: Lunes a Viernes 8:00 AM - 5:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

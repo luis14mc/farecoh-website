@@ -1,0 +1,864 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Programa de Artes Visuales - Colores de Esperanza - FARECOH" description="Donde la música se convierte en colores y los colores en música. Programa integral de artes visuales para complementar la educación musical.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[70vh] bg-gradient-to-r from-accent/90 to-secondary/90" style="background-image: url('https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif text-white">Programa de Artes Visuales</h1>
+          <h2 class="mb-5 text-3xl font-medium text-white/90">"Colores de Esperanza"</h2>
+          <p class="mb-8 text-lg text-white/80">
+            Donde la música se convierte en colores y los colores en música. El arte como lenguaje universal de expresión.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#inscripcion" class="btn btn-accent btn-lg">Inscribirse Ahora</a>
+            <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-secondary">
+              Solicitar Información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-6 font-serif">Arte que Transforma Vidas</h2>
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Nuestro programa "Colores de Esperanza" nace de la convicción de que las artes visuales y la música 
+            son hermanas inseparables. Aquí, cada trazo, cada color, cada textura se convierte en una nota 
+            que resuena en el alma y transforma comunidades enteras.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 class="text-2xl font-bold text-secondary mb-6">Nuestra Filosofía Artística</h3>
+            <p class="text-lg text-gray-600 mb-6">
+              Creemos que el arte no es un privilegio, sino un derecho humano fundamental. A través de las artes visuales, 
+              complementamos nuestra misión musical ofreciendo espacios donde niños, jóvenes y adultos pueden expresar 
+              sus emociones, contar sus historias y soñar con un futuro mejor.
+            </p>
+            <p class="text-lg text-gray-600 mb-8">
+              Cada obra creada en nuestros talleres es mucho más que pigmento sobre papel: es esperanza materializada, 
+              es voz para quien no tiene palabras, es puente entre culturas y generaciones.
+            </p>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="stat bg-accent/10 rounded-lg p-4 text-center">
+                <div class="stat-value text-2xl text-accent">200+</div>
+                <div class="stat-desc">Obras creadas</div>
+              </div>
+              <div class="stat bg-accent/10 rounded-lg p-4 text-center">
+                <div class="stat-value text-2xl text-accent">15</div>
+                <div class="stat-desc">Exposiciones</div>
+              </div>
+              <div class="stat bg-accent/10 rounded-lg p-4 text-center">
+                <div class="stat-value text-2xl text-accent">85%</div>
+                <div class="stat-desc">Becas otorgadas</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Niños pintando en clase de arte" 
+                 class="rounded-lg shadow-xl" />
+            <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-4 rounded-lg shadow-lg">
+              <div class="text-2xl font-bold">5</div>
+              <div class="text-sm">Años transformando<br>vidas con arte</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-accent/10 to-secondary/10 rounded-xl p-8">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-secondary mb-4">La Conexión Arte-Música</h3>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              En FARECOH hemos descubierto que cuando combinamos música y artes visuales, sucede magia. 
+              Nuestros estudiantes no solo aprenden técnicas artísticas, sino que desarrollan una sensibilidad 
+              integral que enriquece toda su experiencia educativa.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="text-4xl text-accent mb-3">🎨</div>
+              <h4 class="font-bold text-lg mb-2">Sinestesia Artística</h4>
+              <p class="text-sm text-gray-600">Los estudiantes aprenden a "ver" la música y "escuchar" los colores</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl text-secondary mb-3">🎭</div>
+              <h4 class="font-bold text-lg mb-2">Expresión Integral</h4>
+              <p class="text-sm text-gray-600">Combinamos técnicas visuales con interpretación musical</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl text-accent mb-3">🌈</div>
+              <h4 class="font-bold text-lg mb-2">Creatividad Sin Límites</h4>
+              <p class="text-sm text-gray-600">Cada sesión es una aventura de descubrimiento artístico</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Areas -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Disciplinas Artísticas</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-5xl text-accent mb-2">🎨</div>
+                <h3 class="card-title justify-center text-xl">Pintura</h3>
+              </div>
+              <ul class="text-sm space-y-2 text-gray-600">
+                <li>• <strong>Acuarela:</strong> Técnicas de transparencia y fluidez</li>
+                <li>• <strong>Acrílico:</strong> Color vibrante y expresivo</li>
+                <li>• <strong>Óleo:</strong> Para estudiantes avanzados</li>
+                <li>• <strong>Técnicas mixtas:</strong> Experimentación libre</li>
+                <li>• <strong>Pintura mural:</strong> Proyectos comunitarios</li>
+              </ul>
+              <div class="mt-4 text-center">
+                <div class="badge badge-accent">Todos los niveles</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-5xl text-secondary mb-2">✏️</div>
+                <h3 class="card-title justify-center text-xl">Dibujo</h3>
+              </div>
+              <ul class="text-sm space-y-2 text-gray-600">
+                <li>• <strong>Lápiz grafito:</strong> Bases del dibujo artístico</li>
+                <li>• <strong>Carboncillo:</strong> Expresión y claroscuro</li>
+                <li>• <strong>Pasteles:</strong> Color y textura</li>
+                <li>• <strong>Plumilla:</strong> Ilustración y detalle</li>
+                <li>• <strong>Dibujo musical:</strong> Interpretación visual de música</li>
+              </ul>
+              <div class="mt-4 text-center">
+                <div class="badge badge-secondary">Desde principiantes</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-5xl text-accent mb-2">🏺</div>
+                <h3 class="card-title justify-center text-xl">Cerámica y Escultura</h3>
+              </div>
+              <ul class="text-sm space-y-2 text-gray-600">
+                <li>• <strong>Modelado en arcilla:</strong> Formas básicas y avanzadas</li>
+                <li>• <strong>Torno cerámico:</strong> Para estudiantes intermedios</li>
+                <li>• <strong>Escultura:</strong> Diferentes materiales</li>
+                <li>• <strong>Instrumentos de arcilla:</strong> Música y cerámica</li>
+                <li>• <strong>Instalaciones:</strong> Proyectos grupales</li>
+              </ul>
+              <div class="mt-4 text-center">
+                <div class="badge badge-warning">Material incluido</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-5xl text-primary mb-2">📷</div>
+                <h3 class="card-title justify-center text-xl">Fotografía</h3>
+              </div>
+              <ul class="text-sm space-y-2 text-gray-600">
+                <li>• <strong>Fotografía básica:</strong> Composición y luz</li>
+                <li>• <strong>Fotografía musical:</strong> Conciertos y eventos</li>
+                <li>• <strong>Retrato artístico:</strong> Capturando emociones</li>
+                <li>• <strong>Edición digital:</strong> Post-producción creativa</li>
+                <li>• <strong>Fotoperiodismo:</strong> Documentando la comunidad</li>
+              </ul>
+              <div class="mt-4 text-center">
+                <div class="badge badge-primary">Equipo disponible</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-5xl text-accent mb-2">✂️</div>
+                <h3 class="card-title justify-center text-xl">Artes y Oficios</h3>
+              </div>
+              <ul class="text-sm space-y-2 text-gray-600">
+                <li>• <strong>Papel maché:</strong> Máscaras y figuras</li>
+                <li>• <strong>Origami:</strong> Arte japonés del papel</li>
+                <li>• <strong>Collage:</strong> Composición y reciclaje</li>
+                <li>• <strong>Macramé:</strong> Textiles y nudos</li>
+                <li>• <strong>Joyería artesanal:</strong> Accesorios únicos</li>
+              </ul>
+              <div class="mt-4 text-center">
+                <div class="badge badge-success">Eco-amigable</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-5xl text-secondary mb-2">💻</div>
+                <h3 class="card-title justify-center text-xl">Arte Digital</h3>
+              </div>
+              <ul class="text-sm space-y-2 text-gray-600">
+                <li>• <strong>Ilustración digital:</strong> Tabletas y software</li>
+                <li>• <strong>Diseño gráfico:</strong> Para proyectos musicales</li>
+                <li>• <strong>Animación:</strong> Videos musicales</li>
+                <li>• <strong>Arte 3D:</strong> Modelado y renderizado</li>
+                <li>• <strong>Visualización musical:</strong> Proyecciones en vivo</li>
+              </ul>
+              <div class="mt-4 text-center">
+                <div class="badge badge-info">Tecnología moderna</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Groups -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Programas por Edades</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-gradient-to-br from-accent/10 to-accent/20 shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">🎨👶</div>
+                <h3 class="card-title justify-center text-xl text-accent">Pequeños Artistas</h3>
+                <p class="text-center text-gray-600">4-7 años</p>
+              </div>
+              <ul class="text-sm space-y-2">
+                <li>• Exploración sensorial de colores y texturas</li>
+                <li>• Juegos artísticos con música de fondo</li>
+                <li>• Desarrollo de motricidad fina</li>
+                <li>• Expresión libre y creativa</li>
+                <li>• 2 sesiones semanales de 45 minutos</li>
+              </ul>
+              <div class="mt-4 flex justify-between items-center">
+                <div class="badge badge-accent">Maternal incluido</div>
+                <div class="text-sm text-gray-500">¡Súper divertido!</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-secondary/10 to-secondary/20 shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">🎭🧒</div>
+                <h3 class="card-title justify-center text-xl text-secondary">Creadores Junior</h3>
+                <p class="text-center text-gray-600">8-12 años</p>
+              </div>
+              <ul class="text-sm space-y-2">
+                <li>• Técnicas básicas de dibujo y pintura</li>
+                <li>• Proyectos temáticos musicales</li>
+                <li>• Introducción a la cerámica</li>
+                <li>• Trabajos grupales y colaborativos</li>
+                <li>• 3 sesiones semanales de 1 hora</li>
+              </ul>
+              <div class="mt-4 flex justify-between items-center">
+                <div class="badge badge-secondary">Material incluido</div>
+                <div class="text-sm text-gray-500">Muy popular</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-primary/10 to-primary/20 shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">🎨👦👧</div>
+                <h3 class="card-title justify-center text-xl text-primary">Artistas en Formación</h3>
+                <p class="text-center text-gray-600">13-17 años</p>
+              </div>
+              <ul class="text-sm space-y-2">
+                <li>• Técnicas avanzadas y estilos artísticos</li>
+                <li>• Portfolio artístico personal</li>
+                <li>• Proyectos de arte comunitario</li>
+                <li>• Preparación para estudios superiores</li>
+                <li>• 4 sesiones semanales de 1.5 horas</li>
+              </ul>
+              <div class="mt-4 flex justify-between items-center">
+                <div class="badge badge-primary">Certificación</div>
+                <div class="text-sm text-gray-500">Pre-universitario</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12">
+          <div class="card bg-gradient-to-r from-accent/10 to-secondary/10 shadow-lg">
+            <div class="card-body">
+              <div class="text-center mb-6">
+                <div class="text-5xl mb-3">👥🎨</div>
+                <h3 class="card-title justify-center text-2xl text-secondary">Programa para Adultos "Arte Sin Límites"</h3>
+                <p class="text-gray-600">18+ años • Horarios flexibles</p>
+              </div>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-bold text-lg mb-3 text-secondary">¿Qué Ofrecemos?</h4>
+                  <ul class="text-sm space-y-2">
+                    <li>• Clases vespertinas y de fin de semana</li>
+                    <li>• Talleres intensivos de técnicas específicas</li>
+                    <li>• Terapia artística para adultos mayores</li>
+                    <li>• Programa especial para padres de familia</li>
+                    <li>• Exposiciones y venta de obras</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg mb-3 text-accent">Beneficios Especiales</h4>
+                  <ul class="text-sm space-y-2">
+                    <li>• Reducción de estrés y ansiedad</li>
+                    <li>• Comunidad artística de apoyo</li>
+                    <li>• Posibilidad de generar ingresos</li>
+                    <li>• Desarrollo personal y profesional</li>
+                    <li>• Becas para madres solteras</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects and Exhibitions -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Proyectos y Exposiciones</h2>
+        
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h3 class="text-2xl font-bold text-secondary mb-6">Proyectos Comunitarios</h3>
+            <div class="space-y-6">
+              <div class="card bg-white shadow-md">
+                <div class="card-body">
+                  <h4 class="card-title text-lg text-accent">Murales de Esperanza</h4>
+                  <p class="text-sm text-gray-600 mb-3">
+                    Transformación de espacios públicos a través del arte mural colaborativo. 
+                    Estudiantes de todas las edades trabajan juntos para crear obras que reflejan 
+                    los valores y sueños de la comunidad.
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <div class="badge badge-success">12 murales completados</div>
+                    <div class="text-xs text-gray-500">2019-2024</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card bg-white shadow-md">
+                <div class="card-body">
+                  <h4 class="card-title text-lg text-secondary">Festival Arte y Música</h4>
+                  <p class="text-sm text-gray-600 mb-3">
+                    Evento anual donde confluyen todas las disciplinas artísticas de FARECOH. 
+                    Exposiciones, conciertos, talleres abiertos y venta de obras estudiantiles.
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <div class="badge badge-primary">500+ visitantes anuales</div>
+                    <div class="text-xs text-gray-500">Cada noviembre</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card bg-white shadow-md">
+                <div class="card-body">
+                  <h4 class="card-title text-lg text-accent">Arte para la Paz</h4>
+                  <p class="text-sm text-gray-600 mb-3">
+                    Programa especial dirigido a jóvenes en riesgo social. El arte como 
+                    herramienta de transformación personal y construcción de paz.
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <div class="badge badge-warning">80 jóvenes atendidos</div>
+                    <div class="text-xs text-gray-500">Programa permanente</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-2xl font-bold text-secondary mb-6">Reconocimientos y Logros</h3>
+            <div class="space-y-4">
+              <div class="bg-gradient-to-r from-accent/20 to-accent/10 p-6 rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="text-3xl">🏆</div>
+                  <div>
+                    <h4 class="font-bold text-lg">Premio Nacional de Arte Comunitario 2023</h4>
+                    <p class="text-sm text-gray-600">Reconocimiento del Ministerio de Cultura por el impacto social del programa</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-gradient-to-r from-secondary/20 to-secondary/10 p-6 rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="text-3xl">🎨</div>
+                  <div>
+                    <h4 class="font-bold text-lg">15 Exposiciones Exitosas</h4>
+                    <p class="text-sm text-gray-600">En galerías nacionales e internacionales, con venta de más de 200 obras</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-gradient-to-r from-primary/20 to-primary/10 p-6 rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="text-3xl">🌟</div>
+                  <div>
+                    <h4 class="font-bold text-lg">3 Artistas Becados en el Extranjero</h4>
+                    <p class="text-sm text-gray-600">Estudiantes que han obtenido becas internacionales de arte</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="bg-gradient-to-r from-accent/20 to-secondary/10 p-6 rounded-lg">
+                <div class="flex items-center gap-4">
+                  <div class="text-3xl">💰</div>
+                  <div>
+                    <h4 class="font-bold text-lg">L. 250,000 en Ventas de Arte</h4>
+                    <p class="text-sm text-gray-600">Ingresos generados por estudiantes a través de la venta de sus obras</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <a href="/galeria" class="btn btn-secondary btn-lg">Ver Galería de Obras</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teachers Team -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Nuestro Equipo Artístico</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👩‍🎨</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Maestra Ana Sofía Valdez</h3>
+              <p class="text-sm text-gray-600 mb-2">Directora del Programa</p>
+              <ul class="text-xs space-y-1">
+                <li>• Licenciada en Artes Visuales, UNAH</li>
+                <li>• Máster en Arte Terapia, España</li>
+                <li>• 15 años de experiencia docente</li>
+                <li>• Especialista en arte comunitario</li>
+              </ul>
+              <div class="mt-4">
+                <div class="badge badge-accent">Coordinadora General</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👨‍🎨</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Maestro Carlos Mendoza</h3>
+              <p class="text-sm text-gray-600 mb-2">Instructor de Pintura</p>
+              <ul class="text-xs space-y-1">
+                <li>• Artista plástico profesional</li>
+                <li>• 8 exposiciones individuales</li>
+                <li>• Especialista en técnicas tradicionales</li>
+                <li>• Premio Nacional de Pintura 2021</li>
+              </ul>
+              <div class="mt-4">
+                <div class="badge badge-secondary">Artista Reconocido</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👩‍💼</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Lic. María Fernanda López</h3>
+              <p class="text-sm text-gray-600 mb-2">Cerámica y Escultura</p>
+              <ul class="text-xs space-y-1">
+                <li>• Ceramista profesional</li>
+                <li>• Formación en Japón y México</li>
+                <li>• Especialista en técnicas ancestrales</li>
+                <li>• Obras en colecciones privadas</li>
+              </ul>
+              <div class="mt-4">
+                <div class="badge badge-primary">Técnica Avanzada</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👨‍💻</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Lic. Roberto Castillo</h3>
+              <p class="text-sm text-gray-600 mb-2">Arte Digital y Fotografía</p>
+              <ul class="text-xs space-y-1">
+                <li>• Diseñador gráfico UNITEC</li>
+                <li>• Fotógrafo de conciertos profesional</li>
+                <li>• Especialista en arte digital</li>
+                <li>• Certificación Adobe Creative Suite</li>
+              </ul>
+              <div class="mt-4">
+                <div class="badge badge-info">Tecnología</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-secondary/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👩‍🏫</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Lic. Sofía Aguilar</h3>
+              <p class="text-sm text-gray-600 mb-2">Arte Infantil y Terapéutico</p>
+              <ul class="text-xs space-y-1">
+                <li>• Psicología con mención en Arte Terapia</li>
+                <li>• Especialista en educación temprana</li>
+                <li>• Trabajo con necesidades especiales</li>
+                <li>• Formación Montessori</li>
+              </ul>
+              <div class="mt-4">
+                <div class="badge badge-success">Educación Especial</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center">
+                <span class="text-3xl">👨‍🏭</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-lg">Maestro Juan Ramírez</h3>
+              <p class="text-sm text-gray-600 mb-2">Artes y Oficios</p>
+              <ul class="text-xs space-y-1">
+                <li>• Artesano tradicional hondureño</li>
+                <li>• 25 años de experiencia</li>
+                <li>• Técnicas ancestrales lencas</li>
+                <li>• Embajador cultural UNESCO</li>
+              </ul>
+              <div class="mt-4">
+                <div class="badge badge-warning">Tradición Ancestral</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 font-serif">Inversión en Arte</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title justify-center text-xl text-accent mb-4">Plan Básico</h3>
+              <div class="text-center mb-6">
+                <div class="text-3xl font-bold text-gray-800">L. 800</div>
+                <div class="text-sm text-gray-600">por mes</div>
+              </div>
+              <ul class="text-sm space-y-2 mb-6">
+                <li>✅ 2 clases semanales (2 horas)</li>
+                <li>✅ 1 disciplina artística a elección</li>
+                <li>✅ Materiales básicos incluidos</li>
+                <li>✅ Participación en exposiciones</li>
+                <li>✅ Certificado de participación</li>
+              </ul>
+              <div class="text-center">
+                <div class="badge badge-accent mb-2">Más Popular</div>
+                <p class="text-xs text-gray-600">Perfecto para comenzar</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-secondary/10 to-secondary/20 shadow-lg border-2 border-secondary">
+            <div class="card-body">
+              <h3 class="card-title justify-center text-xl text-secondary mb-4">Plan Integral</h3>
+              <div class="text-center mb-6">
+                <div class="text-3xl font-bold text-gray-800">L. 1,400</div>
+                <div class="text-sm text-gray-600">por mes</div>
+              </div>
+              <ul class="text-sm space-y-2 mb-6">
+                <li>✅ 4 clases semanales (4 horas)</li>
+                <li>✅ 2 disciplinas artísticas</li>
+                <li>✅ Todos los materiales incluidos</li>
+                <li>✅ Clases de teoría del color</li>
+                <li>✅ Portfolio personalizado</li>
+                <li>✅ Exhibición individual anual</li>
+              </ul>
+              <div class="text-center">
+                <div class="badge badge-secondary mb-2">Recomendado</div>
+                <p class="text-xs text-gray-600">Desarrollo completo</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title justify-center text-xl text-primary mb-4">Plan Premium</h3>
+              <div class="text-center mb-6">
+                <div class="text-3xl font-bold text-gray-800">L. 2,200</div>
+                <div class="text-sm text-gray-600">por mes</div>
+              </div>
+              <ul class="text-sm space-y-2 mb-6">
+                <li>✅ Clases ilimitadas</li>
+                <li>✅ Todas las disciplinas disponibles</li>
+                <li>✅ Materiales premium incluidos</li>
+                <li>✅ Mentorías personalizadas</li>
+                <li>✅ Preparación para estudios superiores</li>
+                <li>✅ Representación en concursos</li>
+              </ul>
+              <div class="text-center">
+                <div class="badge badge-primary mb-2">Nivel Profesional</div>
+                <p class="text-xs text-gray-600">Para artistas serios</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-xl p-8">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-secondary mb-4">💝 Programa de Becas "Arte para Todos"</h3>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+              Creemos que el arte no debe tener barreras económicas. Por eso ofrecemos un programa integral de becas 
+              que ha beneficiado a más del 85% de nuestros estudiantes.
+            </p>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6 text-center">
+              <div class="text-3xl text-accent mb-3">🎓</div>
+              <h4 class="font-bold text-lg mb-2">Becas Académicas</h4>
+              <p class="text-sm text-gray-600">50-100% de descuento por excelencia académica o necesidad económica</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center">
+              <div class="text-3xl text-secondary mb-3">👥</div>
+              <h4 class="font-bold text-lg mb-2">Descuentos Familiares</h4>
+              <p class="text-sm text-gray-600">20% segundo hijo, 40% tercer hijo, 60% cuarto hijo en adelante</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 text-center">
+              <div class="text-3xl text-primary mb-3">🤝</div>
+              <h4 class="font-bold text-lg mb-2">Becas Comunitarias</h4>
+              <p class="text-sm text-gray-600">Para jóvenes en riesgo social o situaciones vulnerables</p>
+            </div>
+          </div>
+          
+          <div class="text-center mt-6">
+            <p class="text-sm text-gray-600">
+              <strong>¿Necesitas una beca?</strong> Contáctanos para evaluar tu situación. 
+              Nadie se queda sin arte por motivos económicos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="inscripcion" class="py-16 bg-gradient-to-r from-accent to-secondary text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-6 font-serif">¡Libera tu Artista Interior!</h2>
+          <p class="text-xl text-white/90 max-w-3xl mx-auto">
+            Da el primer paso hacia un mundo lleno de colores, creatividad y oportunidades. 
+            En FARECOH, tu arte se convierte en tu voz, tu pasión y tu futuro.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6">¿Por Qué Elegir Nuestro Programa?</h3>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="bg-white text-accent rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">✓</div>
+                <p class="text-white/90">
+                  <strong>Metodología integral:</strong> Combinamos técnicas tradicionales con enfoques modernos
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="bg-white text-accent rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">✓</div>
+                <p class="text-white/90">
+                  <strong>Maestros expertos:</strong> Artistas profesionales con experiencia pedagógica
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="bg-white text-accent rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">✓</div>
+                <p class="text-white/90">
+                  <strong>Espacios inspiradores:</strong> Talleres amplios, bien iluminados y completamente equipados
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="bg-white text-accent rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">✓</div>
+                <p class="text-white/90">
+                  <strong>Oportunidades reales:</strong> Exposiciones, concursos y proyección profesional
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="bg-white text-accent rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">✓</div>
+                <p class="text-white/90">
+                  <strong>Comunidad artística:</strong> Redes de apoyo y crecimiento conjunto
+                </p>
+              </div>
+            </div>
+            
+            <div class="bg-white/10 rounded-lg p-6">
+              <h4 class="text-xl font-bold mb-4">🎁 Oferta de Lanzamiento</h4>
+              <ul class="text-white/90 text-sm space-y-2">
+                <li>• <strong>Matrícula GRATIS</strong> (valor L. 300)</li>
+                <li>• <strong>Kit de materiales básicos</strong> (valor L. 500)</li>
+                <li>• <strong>1 mes adicional gratis</strong> al pagar 6 meses adelantados</li>
+                <li>• <strong>Clase muestra gratuita</strong> antes de inscribirte</li>
+              </ul>
+              <p class="text-xs text-white/70 mt-3">*Válido para nuevos estudiantes hasta fin de mes</p>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 rounded-lg p-8">
+            <h3 class="text-2xl font-bold mb-6">Formulario de Inscripción</h3>
+            <form class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium mb-2">Nombre completo</label>
+                  <input type="text" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Tu nombre" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">Edad</label>
+                  <input type="number" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Años" />
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Teléfono</label>
+                <input type="tel" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Número de contacto" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="tu@email.com" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Disciplina artística de mayor interés</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona una opción</option>
+                  <option>Pintura (acuarela, acrílico, óleo)</option>
+                  <option>Dibujo (grafito, carboncillo, pasteles)</option>
+                  <option>Cerámica y escultura</option>
+                  <option>Fotografía</option>
+                  <option>Arte digital</option>
+                  <option>Artes y oficios</option>
+                  <option>No estoy seguro/a, quiero explorar</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Plan de interés</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona un plan</option>
+                  <option>Plan Básico - L. 800/mes</option>
+                  <option>Plan Integral - L. 1,400/mes</option>
+                  <option>Plan Premium - L. 2,200/mes</option>
+                  <option>Necesito información sobre becas</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Horario preferido</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona horario</option>
+                  <option>Mañanas (8:00 AM - 12:00 PM)</option>
+                  <option>Tardes (2:00 PM - 6:00 PM)</option>
+                  <option>Noches (6:00 PM - 9:00 PM)</option>
+                  <option>Fines de semana</option>
+                  <option>Flexible (me adapto)</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Experiencia artística previa</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona nivel</option>
+                  <option>Sin experiencia previa</option>
+                  <option>Principiante con algo de experiencia</option>
+                  <option>Intermedio</option>
+                  <option>Avanzado</option>
+                  <option>Profesional buscando perfeccionamiento</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">¿Qué esperas lograr en el programa?</label>
+                <textarea class="textarea textarea-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Cuéntanos tus objetivos, sueños artísticos, qué te motiva a tomar clases de arte..."></textarea>
+              </div>
+              
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input type="checkbox" class="checkbox checkbox-accent" />
+                  <span class="label-text text-white/90 text-sm">
+                    Deseo recibir información sobre exposiciones, concursos y eventos artísticos
+                  </span>
+                </label>
+              </div>
+              
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input type="checkbox" class="checkbox checkbox-accent" />
+                  <span class="label-text text-white/90 text-sm">
+                    Acepto los términos y condiciones del programa
+                  </span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-accent btn-lg w-full">
+                Inscribirme en Colores de Esperanza
+              </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+              <p class="text-sm text-white/70 mb-2">
+                <strong>¿Dudas?</strong> ¡Contáctanos directamente!
+              </p>
+              <p class="text-white">
+                📞 <span class="text-accent">+504 2234-5678 ext. 105</span><br>
+                ✉️ <span class="text-accent">artes@farecoh.org</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

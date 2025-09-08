@@ -1,0 +1,453 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Talleres de Iniciación Musical - FARECOH" description="Primeros pasos en la música para niños de 4 a 8 años. Descubre el mundo musical a través del juego, la creatividad y la diversión.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[60vh] bg-gradient-to-r from-accent/90 to-primary/90" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif text-white">Talleres de Iniciación Musical</h1>
+          <p class="mb-8 text-lg text-white/80">
+            Los primeros pasos musicales de tus hijos en un ambiente divertido, creativo y educativo
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#inscripcion" class="btn btn-accent btn-lg">Inscríbete Ahora</a>
+            <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-accent">
+              Más Información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-accent mb-6 font-serif">Descubriendo la Música</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Nuestros Talleres de Iniciación Musical están diseñados especialmente para niños de 4 a 8 años, 
+              utilizando metodologías lúdicas que despiertan el amor por la música desde temprana edad.
+            </p>
+            <p class="text-lg text-gray-600 mb-8">
+              A través del juego, el movimiento y la exploración sonora, los pequeños desarrollan habilidades 
+              musicales fundamentales mientras se divierten y socializan con otros niños.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="stat bg-accent/10 rounded-lg p-4">
+                <div class="stat-value text-2xl text-accent">60+</div>
+                <div class="stat-desc">Niños por semestre</div>
+              </div>
+              <div class="stat bg-accent/10 rounded-lg p-4">
+                <div class="stat-value text-2xl text-accent">45min</div>
+                <div class="stat-desc">Duración de clase</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Niños en clase de música" 
+                 class="rounded-lg shadow-xl" />
+            <div class="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg">
+              <div class="text-2xl font-bold">8</div>
+              <div class="text-sm">Años de experiencia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objectives -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Objetivos del Taller</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🎵</div>
+              <h3 class="card-title justify-center text-lg mb-3">Sensibilidad Musical</h3>
+              <p>Desarrollar la percepción auditiva, el sentido del ritmo y la melodía de forma natural e intuitiva.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🤸‍♀️</div>
+              <h3 class="card-title justify-center text-lg mb-3">Coordinación Motriz</h3>
+              <p>Mejorar la coordinación corporal y motricidad fina a través de ejercicios musicales y rítmicos.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🎨</div>
+              <h3 class="card-title justify-center text-lg mb-3">Creatividad</h3>
+              <p>Estimular la imaginación y expresión personal mediante improvisación y creación musical.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">👫</div>
+              <h3 class="card-title justify-center text-lg mb-3">Socialización</h3>
+              <p>Fomentar el trabajo en equipo, la escucha y el respeto mutuo en un ambiente musical.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🧠</div>
+              <h3 class="card-title justify-center text-lg mb-3">Desarrollo Cognitivo</h3>
+              <p>Potenciar la memoria, concentración y capacidades de aprendizaje a través de la música.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">😊</div>
+              <h3 class="card-title justify-center text-lg mb-3">Bienestar Emocional</h3>
+              <p>Promover la autoestima, confianza y expresión emocional saludable mediante la música.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Metodología Lúdica</h2>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold text-accent mb-6">Aprender Jugando</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">🎭</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Cuentos Musicales</h4>
+                  <p class="text-gray-600">Narración de historias acompañadas de música, sonidos e instrumentos sencillos.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">🕺</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Expresión Corporal</h4>
+                  <p class="text-gray-600">Movimiento libre y dirigido al compás de la música para desarrollar el sentido rítmico.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">🥁</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Exploración Instrumental</h4>
+                  <p class="text-gray-600">Contacto directo con instrumentos de percusión, melódicos y cotidiáfonos.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">🎤</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Cantos y Rondas</h4>
+                  <p class="text-gray-600">Repertorio de canciones tradicionales y contemporáneas apropiadas para la edad.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="card bg-gradient-to-br from-accent/10 to-primary/10">
+              <div class="card-body">
+                <h4 class="card-title text-accent">Estructura de Clase (45 min)</h4>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li>• <strong>Saludo Musical (5 min):</strong> Canción de bienvenida y calentamiento</li>
+                  <li>• <strong>Actividad Central (25 min):</strong> Exploración temática principal</li>
+                  <li>• <strong>Momento Creativo (10 min):</strong> Improvisación y expresión libre</li>
+                  <li>• <strong>Cierre (5 min):</strong> Relajación y canción de despedida</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="card bg-gradient-to-br from-primary/10 to-accent/10">
+              <div class="card-body">
+                <h4 class="card-title text-accent">Instrumentos de Exploración</h4>
+                <div class="grid grid-cols-2 gap-2 text-gray-600 text-sm">
+                  <div>
+                    <strong>Percusión:</strong>
+                    <ul class="ml-4">
+                      <li>• Panderos</li>
+                      <li>• Claves</li>
+                      <li>• Maracas</li>
+                      <li>• Triángulos</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <strong>Melódicos:</strong>
+                    <ul class="ml-4">
+                      <li>• Xilófonos</li>
+                      <li>• Metalófonos</li>
+                      <li>• Flautas dulces</li>
+                      <li>• Campanas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Age Groups -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Grupos por Edades</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-6xl mb-4">🌱</div>
+              <h3 class="card-title justify-center text-2xl mb-4">Pequeños Músicos</h3>
+              <div class="badge badge-accent badge-lg mb-4">4-6 años</div>
+              <p class="text-gray-600 mb-4">
+                Primer acercamiento al mundo musical mediante el juego sensorial y la exploración sonora libre.
+              </p>
+              <ul class="text-left text-sm space-y-2 mb-6">
+                <li>• <strong>Horarios:</strong> Martes y Jueves 3:00 PM - 3:45 PM</li>
+                <li>• <strong>Tamaño del grupo:</strong> Máximo 8 niños</li>
+                <li>• <strong>Enfoque:</strong> Juego sensorial y exploración</li>
+                <li>• <strong>Actividades principales:</strong> Cuentos, rondas, movimiento</li>
+                <li>• <strong>Requisitos:</strong> Acompañante adulto (opcional)</li>
+              </ul>
+              <div class="card-actions justify-center">
+                <a href="#inscripcion" class="btn btn-accent">Inscribir</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-6xl mb-4">🎵</div>
+              <h3 class="card-title justify-center text-2xl mb-4">Exploradores Musicales</h3>
+              <div class="badge badge-accent badge-lg mb-4">6-8 años</div>
+              <p class="text-gray-600 mb-4">
+                Desarrollo más estructurado con introducción a conceptos musicales básicos y técnicas instrumentales simples.
+              </p>
+              <ul class="text-left text-sm space-y-2 mb-6">
+                <li>• <strong>Horarios:</strong> Lunes y Miércoles 4:00 PM - 4:45 PM</li>
+                <li>• <strong>Tamaño del grupo:</strong> Máximo 12 niños</li>
+                <li>• <strong>Enfoque:</strong> Fundamentos musicales básicos</li>
+                <li>• <strong>Actividades principales:</strong> Instrumentos, lectura, ensamble</li>
+                <li>• <strong>Requisitos:</strong> Independencia básica</li>
+              </ul>
+              <div class="card-actions justify-center">
+                <a href="#inscripcion" class="btn btn-accent">Inscribir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule and Information -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Información Práctica</h2>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="card bg-gradient-to-br from-accent/10 to-primary/10">
+            <div class="card-body">
+              <h3 class="card-title text-accent mb-4">📅 Cronograma</h3>
+              <ul class="space-y-3 text-sm">
+                <li><strong>Duración del programa:</strong> 4 meses por módulo</li>
+                <li><strong>Inscripciones:</strong> Enero, Mayo y Septiembre</li>
+                <li><strong>Presentación de padres:</strong> Al final de cada módulo</li>
+                <li><strong>Evaluación:</strong> Continua y lúdica</li>
+                <li><strong>Certificado:</strong> Al completar cada nivel</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div class="card-body">
+              <h3 class="card-title text-accent mb-4">💰 Inversión</h3>
+              <ul class="space-y-3 text-sm">
+                <li><strong>Matrícula:</strong> L. 500 (incluye materiales)</li>
+                <li><strong>Mensualidad:</strong> L. 800 por mes</li>
+                <li><strong>Descuento familiar:</strong> 15% segundo hijo</li>
+                <li><strong>Becas disponibles:</strong> 20% de los cupos</li>
+                <li><strong>Incluye:</strong> Material didáctico y seguro</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-secondary/10 to-accent/10">
+            <div class="card-body">
+              <h3 class="card-title text-accent mb-4">📋 Requisitos</h3>
+              <ul class="space-y-3 text-sm">
+                <li><strong>Edad:</strong> 4 a 8 años cumplidos</li>
+                <li><strong>Documentos:</strong> Copia de identidad del niño</li>
+                <li><strong>Salud:</strong> Sin impedimentos auditivos graves</li>
+                <li><strong>Compromiso:</strong> 80% de asistencia mínima</li>
+                <li><strong>Autorización:</strong> Permiso para fotografías</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Lo que Dicen los Padres</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="flex items-center gap-2 mb-4">
+                <div class="rating rating-sm">
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">"Mi hija de 5 años ha florecido musicalmente. Ahora canta todo el día y tiene mucho más confianza en sí misma."</p>
+              <div class="text-sm text-gray-500">- María González, madre de Sofía (5 años)</div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="flex items-center gap-2 mb-4">
+                <div class="rating rating-sm">
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">"El programa ha ayudado enormemente con la coordinación de Diego. Sus maestras han notado mejoras en su concentración."</p>
+              <div class="text-sm text-gray-500">- Carlos Mendoza, padre de Diego (6 años)</div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <div class="flex items-center gap-2 mb-4">
+                <div class="rating rating-sm">
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                  <input type="radio" class="mask mask-star-2 bg-accent" checked />
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">"Las profesoras son excepcionales. Ana espera con ansias cada clase. Es increíble verla tan entusiasmada por aprender."</p>
+              <div class="text-sm text-gray-500">- Laura Rodríguez, madre de Ana (7 años)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="inscripcion" class="py-16 bg-gradient-to-r from-accent to-primary text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-6 font-serif">¡Comienza la Aventura Musical!</h2>
+          <p class="text-xl text-white/90 max-w-2xl mx-auto">
+            Dale a tu hijo la oportunidad de descubrir su potencial musical en un ambiente lleno de alegría y aprendizaje.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6">Próximas Fechas de Inscripción</h3>
+            <div class="space-y-4">
+              <div class="bg-white/10 rounded-lg p-4">
+                <h4 class="font-bold text-lg mb-2">🌟 Módulo de Enero 2025</h4>
+                <ul class="space-y-1 text-sm text-white/80">
+                  <li>• <strong>Inscripciones:</strong> 15-31 de diciembre, 2024</li>
+                  <li>• <strong>Inicio de clases:</strong> 13 de enero, 2025</li>
+                  <li>• <strong>Duración:</strong> Enero - Abril 2025</li>
+                  <li>• <strong>Cupos limitados:</strong> ¡Reserva ya!</li>
+                </ul>
+              </div>
+              
+              <div class="bg-white/10 rounded-lg p-4">
+                <h4 class="font-bold text-lg mb-2">☀️ Módulo de Mayo 2025</h4>
+                <ul class="space-y-1 text-sm text-white/80">
+                  <li>• <strong>Inscripciones:</strong> 15-30 de abril, 2025</li>
+                  <li>• <strong>Inicio de clases:</strong> 5 de mayo, 2025</li>
+                  <li>• <strong>Duración:</strong> Mayo - Agosto 2025</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-white/10 rounded-lg">
+              <h4 class="text-xl font-bold mb-4">🎁 Promoción de Lanzamiento</h4>
+              <p class="text-white/90 mb-4">
+                ¡Las primeras 20 inscripciones para enero 2025 tendrán 50% de descuento en la matrícula!
+              </p>
+              <p class="text-sm text-white/80">
+                Válido hasta el 20 de diciembre, 2024 o hasta agotar cupos.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 rounded-lg p-8">
+            <h3 class="text-2xl font-bold mb-6">Proceso de Inscripción</h3>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="bg-white text-accent rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                <div>
+                  <h4 class="font-bold mb-2">Visita Informativa</h4>
+                  <p class="text-white/80 text-sm">Ven con tu hijo a conocer las instalaciones y metodología. ¡Sin compromiso!</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="bg-white text-accent rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                <div>
+                  <h4 class="font-bold mb-2">Clase de Prueba</h4>
+                  <p class="text-white/80 text-sm">Tu hijo puede participar en una clase sin costo para que veas si le gusta.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="bg-white text-accent rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                <div>
+                  <h4 class="font-bold mb-2">Inscripción Formal</h4>
+                  <p class="text-white/80 text-sm">Llena el formulario, entrega documentos y realizas el pago de matrícula.</p>
+                </div>
+              </div>
+              
+              <div class="flex gap-4">
+                <div class="bg-white text-accent rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">4</div>
+                <div>
+                  <h4 class="font-bold mb-2">¡A Disfrutar!</h4>
+                  <p class="text-white/80 text-sm">Tu hijo comienza su aventura musical con nosotros.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+              <a href="/contacto" class="btn btn-white btn-lg text-accent">Agenda tu Visita</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

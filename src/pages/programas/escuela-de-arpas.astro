@@ -1,0 +1,613 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Escuela de Arpas En Armonía - FARECOH" description="Único programa especializado en enseñanza de arpa en Honduras. Conecta con la tradición musical centroamericana a través del arpa.">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero min-h-[60vh] bg-gradient-to-r from-accent/90 to-secondary/90" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-4xl">
+          <h1 class="mb-5 text-5xl font-bold font-serif text-white">Escuela de Arpas</h1>
+          <h2 class="mb-5 text-3xl font-medium text-white/90">"En Armonía"</h2>
+          <p class="mb-8 text-lg text-white/80">
+            El primer y único programa especializado en enseñanza de arpa en Honduras, conectando tradición y modernidad
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#inscripcion" class="btn btn-accent btn-lg">Únete al Programa</a>
+            <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-accent">
+              Más Información
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-accent mb-6 font-serif">Un Instrumento, Una Tradición</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              La Escuela de Arpas "En Armonía" rescata y promueve el arpa como instrumento fundamental de la música 
+              centroamericana, ofreciendo formación desde nivel iniciación hasta preparación profesional.
+            </p>
+            <p class="text-lg text-gray-600 mb-8">
+              Con instrumentos de alta calidad y metodología especializada, formamos arpistas que perpetúan la tradición 
+              musical de nuestra región mientras exploran nuevas posibilidades expresivas del instrumento.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="stat bg-accent/10 rounded-lg p-4">
+                <div class="stat-value text-2xl text-accent">15</div>
+                <div class="stat-desc">Arpas disponibles</div>
+              </div>
+              <div class="stat bg-accent/10 rounded-lg p-4">
+                <div class="stat-value text-2xl text-accent">1°</div>
+                <div class="stat-desc">Programa en Honduras</div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Estudiante tocando arpa" 
+                 class="rounded-lg shadow-xl" />
+            <div class="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg">
+              <div class="text-2xl font-bold">5</div>
+              <div class="text-sm">Años de trayectoria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types of Harps -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Tipos de Arpa que Enseñamos</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-32 bg-accent/20 rounded-lg flex items-center justify-center">
+                <span class="text-4xl">🪕</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-xl mb-3">Arpa Paraguaya</h3>
+              <p class="text-gray-600 mb-4">
+                Arpa de 36 cuerdas, ideal para música folklórica centroamericana y sudamericana. 
+                Perfecta para principiantes por su tamaño manejable.
+              </p>
+              <ul class="text-sm space-y-1 mb-4">
+                <li>• <strong>Cuerdas:</strong> 36 (nylon)</li>
+                <li>• <strong>Altura:</strong> 1.20 metros</li>
+                <li>• <strong>Repertorio:</strong> Folklórico, popular</li>
+                <li>• <strong>Edad recomendada:</strong> 8+ años</li>
+              </ul>
+              <div class="badge badge-accent">Nivel Iniciación</div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-32 bg-secondary/20 rounded-lg flex items-center justify-center">
+                <span class="text-4xl">🎼</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-xl mb-3">Arpa Celta</h3>
+              <p class="text-gray-600 mb-4">
+                Arpa de 34 cuerdas con levas, permite semitonos y mayor versatilidad harmónica. 
+                Ideal para música celta, jazz y contemporánea.
+              </p>
+              <ul class="text-sm space-y-1 mb-4">
+                <li>• <strong>Cuerdas:</strong> 34 (carbono/nylon)</li>
+                <li>• <strong>Altura:</strong> 1.30 metros</li>
+                <li>• <strong>Repertorio:</strong> Celta, jazz, moderno</li>
+                <li>• <strong>Edad recomendada:</strong> 10+ años</li>
+              </ul>
+              <div class="badge badge-secondary">Nivel Intermedio</div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure class="px-6 pt-6">
+              <div class="w-24 h-32 bg-primary/20 rounded-lg flex items-center justify-center">
+                <span class="text-4xl">👑</span>
+              </div>
+            </figure>
+            <div class="card-body text-center">
+              <h3 class="card-title justify-center text-xl mb-3">Arpa de Concierto</h3>
+              <p class="text-gray-600 mb-4">
+                Arpa de pedales de 47 cuerdas para repertorio clásico y orquestal. 
+                Instrumento profesional para formación avanzada.
+              </p>
+              <ul class="text-sm space-y-1 mb-4">
+                <li>• <strong>Cuerdas:</strong> 47 (gut/nylon/metal)</li>
+                <li>• <strong>Altura:</strong> 1.85 metros</li>
+                <li>• <strong>Repertorio:</strong> Clásico, orquestal</li>
+                <li>• <strong>Edad recomendada:</strong> 12+ años</li>
+              </ul>
+              <div class="badge badge-primary">Nivel Avanzado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objectives -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Objetivos del Programa</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🎵</div>
+              <h3 class="card-title justify-center text-lg mb-3">Técnica Arpística</h3>
+              <p>Desarrollar técnica específica del arpa: digitación, glissandos, armónicos y efectos característicos del instrumento.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🏛️</div>
+              <h3 class="card-title justify-center text-lg mb-3">Preservación Cultural</h3>
+              <p>Rescatar y mantener viva la tradición del arpa en la música centroamericana y latinoamericana.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🌍</div>
+              <h3 class="card-title justify-center text-lg mb-3">Repertorio Diverso</h3>
+              <p>Explorar música folklórica, clásica, contemporánea y popular adaptada para arpa.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">👥</div>
+              <h3 class="card-title justify-center text-lg mb-3">Ensambles de Arpa</h3>
+              <p>Formación de conjuntos de arpas para presentaciones y desarrollo de habilidades grupales.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🎤</div>
+              <h3 class="card-title justify-center text-lg mb-3">Proyección Artística</h3>
+              <p>Preparar arpistas para presentaciones solistas y acompañamiento de otros instrumentos y canto.</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body text-center">
+              <div class="text-4xl text-accent mb-4">🎓</div>
+              <h3 class="card-title justify-center text-lg mb-3">Formación Integral</h3>
+              <p>Incluir teoría musical, historia del arpa, luthería básica y cuidado del instrumento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Metodología Especializada</h2>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold text-accent mb-6">Progresión Sistemática</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">1</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Postura y Colocación</h4>
+                  <p class="text-gray-600">Establecimiento de postura correcta, posición del instrumento y colocación básica de manos.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">2</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Técnica Digital</h4>
+                  <p class="text-gray-600">Desarrollo de digitación específica para arpa, ejercicios de independencia y agilidad.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">3</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Repertorio Progresivo</h4>
+                  <p class="text-gray-600">Estudio de piezas ordenadas por dificultad técnica y musical, desde melodías simples hasta obras complejas.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="bg-accent text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">4</div>
+                <div>
+                  <h4 class="font-bold text-lg mb-2">Técnicas Avanzadas</h4>
+                  <p class="text-gray-600">Glissandos, armónicos, efectos especiales y técnicas extendidas del arpa moderna.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="card bg-gradient-to-br from-accent/10 to-primary/10">
+              <div class="card-body">
+                <h4 class="card-title text-accent">Modalidades de Clase</h4>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li>• <strong>Individual:</strong> 60 minutos de atención personalizada</li>
+                  <li>• <strong>Dúo:</strong> Clases para dos estudiantes de nivel similar</li>
+                  <li>• <strong>Ensamble:</strong> Grupos de 4-6 arpas (semanal)</li>
+                  <li>• <strong>Masterclass:</strong> Clases magistrales mensuales</li>
+                  <li>• <strong>Intensivo:</strong> Cursos vacacionales especiales</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="card bg-gradient-to-br from-primary/10 to-secondary/10">
+              <div class="card-body">
+                <h4 class="card-title text-accent">Recursos y Materiales</h4>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                  <li>• <strong>Instrumentos:</strong> Arpas disponibles para todas las clases</li>
+                  <li>• <strong>Partituras:</strong> Biblioteca especializada en arpa</li>
+                  <li>• <strong>Audio:</strong> Grabaciones de referencia profesionales</li>
+                  <li>• <strong>Afinadores:</strong> Equipo especializado para afinación</li>
+                  <li>• <strong>Accesorios:</strong> Banquillos, púlpitos, metrónomo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Repertoire -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Repertorio y Estilos</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card bg-gradient-to-br from-accent/10 to-primary/10">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">🏛️</div>
+              <h3 class="card-title justify-center text-lg mb-3">Música Clásica</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Bach: Invenciones adaptadas</li>
+                <li>• Mozart: Concierto para flauta y arpa</li>
+                <li>• Debussy: Danzas sacra y profana</li>
+                <li>• Ravel: Introducción y Allegro</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-primary/10 to-secondary/10">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">🌎</div>
+              <h3 class="card-title justify-center text-lg mb-3">Folklórica</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Música paraguaya tradicional</li>
+                <li>• Porro y cumbia colombiana</li>
+                <li>• Joropo venezolano</li>
+                <li>• Música andina</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-secondary/10 to-accent/10">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">🍀</div>
+              <h3 class="card-title justify-center text-lg mb-3">Música Celta</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Airs tradicionales irlandeses</li>
+                <li>• Jigs y reels</li>
+                <li>• Música de película (Celtic Woman)</li>
+                <li>• Adaptaciones modernas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-accent/10 to-secondary/10">
+            <div class="card-body text-center">
+              <div class="text-3xl mb-4">🎵</div>
+              <h3 class="card-title justify-center text-lg mb-3">Popular/Jazz</h3>
+              <ul class="text-sm space-y-1">
+                <li>• Estándares de jazz</li>
+                <li>• Pop contemporáneo</li>
+                <li>• Música de películas</li>
+                <li>• Improvisación básica</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule and Levels -->
+    <section class="py-16 bg-base-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Niveles y Horarios</h2>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-accent justify-center text-xl mb-4">Nivel Principiante</h3>
+              <div class="text-center mb-4">
+                <div class="badge badge-accent badge-lg">0-1 años de experiencia</div>
+              </div>
+              <ul class="space-y-2 text-sm mb-6">
+                <li>• <strong>Duración:</strong> 60 minutos individuales</li>
+                <li>• <strong>Frecuencia:</strong> 1 vez por semana</li>
+                <li>• <strong>Horarios:</strong> Lunes a viernes 2:00-6:00 PM</li>
+                <li>• <strong>Instrumento:</strong> Arpa paraguaya</li>
+                <li>• <strong>Ensamble:</strong> Opcional después de 6 meses</li>
+              </ul>
+              <div class="text-center">
+                <div class="stat bg-accent/10 rounded p-3">
+                  <div class="stat-value text-lg text-accent">L. 1,400</div>
+                  <div class="stat-desc text-xs">Por clase</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg border-2 border-accent">
+            <div class="card-body">
+              <div class="badge badge-accent absolute top-4 right-4">Más Popular</div>
+              <h3 class="card-title text-accent justify-center text-xl mb-4">Nivel Intermedio</h3>
+              <div class="text-center mb-4">
+                <div class="badge badge-secondary badge-lg">1-3 años de experiencia</div>
+              </div>
+              <ul class="space-y-2 text-sm mb-6">
+                <li>• <strong>Duración:</strong> 60 minutos individuales + ensamble</li>
+                <li>• <strong>Frecuencia:</strong> 1 individual + 1 grupal semanal</li>
+                <li>• <strong>Horarios:</strong> Flexible, incluye sábados</li>
+                <li>• <strong>Instrumento:</strong> Arpa celta o paraguaya</li>
+                <li>• <strong>Ensamble:</strong> Obligatorio</li>
+              </ul>
+              <div class="text-center">
+                <div class="stat bg-accent/10 rounded p-3">
+                  <div class="stat-value text-lg text-accent">L. 2,200</div>
+                  <div class="stat-desc text-xs">Paquete semanal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <div class="card-body">
+              <h3 class="card-title text-accent justify-center text-xl mb-4">Nivel Avanzado</h3>
+              <div class="text-center mb-4">
+                <div class="badge badge-primary badge-lg">3+ años de experiencia</div>
+              </div>
+              <ul class="space-y-2 text-sm mb-6">
+                <li>• <strong>Duración:</strong> 90 minutos individuales</li>
+                <li>• <strong>Frecuencia:</strong> 1-2 veces por semana</li>
+                <li>• <strong>Horarios:</strong> Personalizado</li>
+                <li>• <strong>Instrumento:</strong> Arpa de concierto</li>
+                <li>• <strong>Preparación:</strong> Audiciones, concursos</li>
+              </ul>
+              <div class="text-center">
+                <div class="stat bg-accent/10 rounded p-3">
+                  <div class="stat-value text-lg text-accent">L. 1,800</div>
+                  <div class="stat-desc text-xs">Por clase 90min</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <div class="alert alert-info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span><strong>¡Instrumentos incluidos!</strong> No necesitas comprar arpa para comenzar. Tenemos instrumentos disponibles para todos los niveles.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16 bg-base-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-accent mb-12 font-serif">Nuestras Arpas y Estudiantes</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card bg-white shadow-lg">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                   alt="Arpa paraguaya" class="h-48 w-full object-cover" />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-lg">Arpas Paraguayas</h3>
+              <p class="text-sm text-gray-600">Colección de 8 arpas paraguayas de diferentes tamaños</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                   alt="Estudiante joven" class="h-48 w-full object-cover" />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-lg">Ensamble de Arpas Juvenil</h3>
+              <p class="text-sm text-gray-600">Grupo de 6 jóvenes arpistas en formación</p>
+            </div>
+          </div>
+          
+          <div class="card bg-white shadow-lg">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                   alt="Arpa de concierto" class="h-48 w-full object-cover" />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title text-lg">Arpa de Concierto</h3>
+              <p class="text-sm text-gray-600">Único arpa de pedales disponible en Honduras</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="/galeria" class="btn btn-accent btn-lg">Ver Más Momentos Especiales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="inscripcion" class="py-16 bg-gradient-to-r from-accent to-primary text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-6 font-serif">¡Descubre la Magia del Arpa!</h2>
+          <p class="text-xl text-white/90 max-w-2xl mx-auto">
+            Únete al primer programa especializado de arpa en Honduras. Una experiencia musical única te espera.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-6">¿Por qué Elegir el Arpa?</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold mb-2">Instrumento Único</h4>
+                  <p class="text-white/80 text-sm">El arpa es uno de los instrumentos más antiguos y versátiles. Su sonido angelical y técnica específica lo hacen especial.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold mb-2">Oportunidades Profesionales</h4>
+                  <p class="text-white/80 text-sm">Los arpistas tienen alta demanda en orquestas, eventos especiales, terapia musical y como solistas.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold mb-2">Preservación Cultural</h4>
+                  <p class="text-white/80 text-sm">Contribuyes a mantener viva la tradición musical centroamericana y la proyección internacional.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-white flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h4 class="font-bold mb-2">Desarrollo Personal</h4>
+                  <p class="text-white/80 text-sm">El arpa desarrolla coordinación excepcional, concentración y sensibilidad musical única.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-white/10 rounded-lg">
+              <h4 class="text-xl font-bold mb-4">🎁 Oferta de Lanzamiento 2025</h4>
+              <p class="text-white/90 mb-4">
+                ¡Primeros 10 estudiantes nuevos reciben 50% de descuento en el primer mes!
+              </p>
+              <p class="text-sm text-white/80">
+                Incluye clase de prueba gratuita + evaluación personalizada. Válido hasta el 31 de enero 2025.
+              </p>
+            </div>
+          </div>
+          
+          <div class="bg-white/10 rounded-lg p-8">
+            <h3 class="text-2xl font-bold mb-6">Agenda tu Clase de Prueba</h3>
+            <form class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium mb-2">Nombre</label>
+                  <input type="text" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Tu nombre" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">Edad</label>
+                  <input type="number" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Años" />
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Teléfono</label>
+                <input type="tel" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="Tu número" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input type="email" class="input input-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="tu@email.com" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Experiencia Musical</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona tu nivel</option>
+                  <option>Sin experiencia</option>
+                  <option>Toco otro instrumento</option>
+                  <option>He tocado arpa antes</option>
+                  <option>Estudié música formalmente</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Interés Principal</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>¿Qué te atrae más?</option>
+                  <option>Música folklórica</option>
+                  <option>Música clásica</option>
+                  <option>Música popular/contemporánea</option>
+                  <option>Todo tipo de música</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Horario Preferido</label>
+                <select class="select select-bordered w-full bg-white/20 text-white">
+                  <option disabled selected>Selecciona horario</option>
+                  <option>Lunes a Viernes - Tarde</option>
+                  <option>Sábados - Mañana</option>
+                  <option>Sábados - Tarde</option>
+                  <option>Flexible</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Mensaje adicional</label>
+                <textarea class="textarea textarea-bordered w-full bg-white/20 text-white placeholder-white/60" placeholder="¿Qué te inspira del arpa? ¿Tienes alguna pregunta específica?"></textarea>
+              </div>
+              
+              <div class="form-control">
+                <label class="cursor-pointer label justify-start gap-3">
+                  <input type="checkbox" class="checkbox checkbox-accent" />
+                  <span class="label-text text-white/90 text-sm">Acepto recibir información sobre la Escuela de Arpas y eventos de FARECOH</span>
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-white btn-lg w-full text-accent">
+                Agendar Clase de Prueba Gratuita
+              </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+              <p class="text-sm text-white/70">
+                ¿Prefieres visitarnos? <br>
+                <span class="font-bold text-accent">FARECOH - Escuela de Arpas</span><br>
+                <span class="font-bold text-white">+504 2234-5678</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

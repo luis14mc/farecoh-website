@@ -1,18 +1,15 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    })
-  ],
   output: 'static',
   site: 'https://farecoh-honduras.vercel.app',
   build: {
     inlineStylesheets: 'auto'
   },
   vite: {
+    plugins: [tailwindcss()],
     build: {
       rollupOptions: {
         output: {
