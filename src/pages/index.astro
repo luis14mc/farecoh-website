@@ -4,223 +4,177 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="FARECOH - Fundación de Artes y Recreación Comunitaria de Honduras">
+<Layout title="FARECOH - Fundación de Artes Educativas, Coros y Orquestas de Honduras">
   <Header />
   
   <main>
-    <!-- Hero Carousel Section -->
-    <section class="carousel w-full h-screen relative">
-      <div id="slide1" class="carousel-item relative w-full">
-        <div class="hero min-h-full bg-gradient-to-r from-primary/90 to-secondary/90" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
-          <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-4xl">
-              <h1 class="mb-5 text-6xl font-bold font-serif animate-fade-in">FARECOH</h1>
-              <h2 class="mb-5 text-2xl font-medium text-white/90">Fundación de Artes y Recreación Comunitaria de Honduras</h2>
-              <p class="mb-8 text-lg text-white/80 max-w-2xl mx-auto">
-                Transformando vidas a través de la música y las artes, construyendo un Honduras más próspero y en paz
-              </p>
-              <div class="flex flex-wrap justify-center gap-4">
-                <a href="/donar" class="btn btn-accent btn-lg">
-                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
-                  </svg>
-                  Apoya FARECOH
-                </a>
-                <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
-                  Inscríbete
-                </a>
-              </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero min-h-[80vh] lg:min-h-[90vh] bg-base-100">
+      <div class="hero-content text-center px-4">
+        <div class="max-w-4xl">
+          <div class="mb-6 lg:mb-8">
+            <img src="/images/Logo Farecoh.png" alt="FARECOH" class="h-16 sm:h-20 lg:h-24 mx-auto mb-4 lg:mb-6" />
           </div>
-        </div>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" class="btn btn-circle">❮</a>
-          <a href="#slide2" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-      
-      <div id="slide2" class="carousel-item relative w-full">
-        <div class="hero min-h-full bg-gradient-to-r from-accent/90 to-primary/90" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
-          <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-              <h1 class="mb-5 text-4xl font-bold">Coro Voces por la Paz</h1>
-              <p class="mb-5">Niños y jóvenes unidos por la música y la esperanza</p>
-              <a href="/programas/coro-voces-por-la-paz" class="btn btn-accent">Ver Programa</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" class="btn btn-circle">❮</a>
-          <a href="#slide3" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-      
-      <div id="slide3" class="carousel-item relative w-full">
-        <div class="hero min-h-full bg-gradient-to-r from-secondary/90 to-accent/90" style="background-image: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
-          <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-              <h1 class="mb-5 text-4xl font-bold">Orquesta Armonía para la Vida</h1>
-              <p class="mb-5">Formando músicos, construyendo futuro</p>
-              <a href="/programas/orquesta-armonia" class="btn btn-secondary">Conocer Más</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" class="btn btn-circle">❮</a>
-          <a href="#slide1" class="btn btn-circle">❯</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="py-20 bg-base-100">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold font-serif text-primary mb-6">Bienvenidos a FARECOH</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Desde 2003, hemos sido el corazón de la transformación social en Honduras a través de la música y las artes, 
-            impactando miles de vidas con programas innovadores e inclusivos.
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mb-4 lg:mb-6 text-primary">FARECOH</h1>
+          <h2 class="text-lg sm:text-xl lg:text-2xl font-light mb-6 lg:mb-8 text-secondary px-4">Fundación de Artes Educativas, Coros y Orquestas de Honduras</h2>
+          <p class="text-base lg:text-lg mb-8 lg:mb-12 max-w-2xl mx-auto text-base-content opacity-80 px-4">
+            Transformando vidas a través de la música y las artes, construyendo un futuro lleno de armonía y esperanza
           </p>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-8 mb-16">
-          <div class="card bg-gradient-to-br from-primary to-primary/80 text-primary-content shadow-xl">
-            <div class="card-body text-center">
-              <div class="text-4xl mb-4">🎵</div>
-              <h3 class="card-title justify-center text-2xl mb-4">Nuestra Misión</h3>
-              <p>Promover el desarrollo integral de niños, jóvenes y adultos a través de la música y las artes, fomentando valores de paz, convivencia y transformación social.</p>
+          
+          <!-- Stats -->
+          <div class="stats stats-vertical sm:stats-horizontal shadow-lg bg-base-200 mb-8 lg:mb-12 w-full max-w-2xl">
+            <div class="stat place-items-center">
+              <div class="stat-title text-xs sm:text-sm">Beneficiados</div>
+              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-primary">2000+</div>
+            </div>
+            <div class="stat place-items-center">
+              <div class="stat-title text-xs sm:text-sm">Programas</div>
+              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-secondary">12</div>
+            </div>
+            <div class="stat place-items-center">
+              <div class="stat-title text-xs sm:text-sm">Años</div>
+              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-accent">22</div>
+            </div>
+            <div class="stat place-items-center">
+              <div class="stat-title text-xs sm:text-sm">Conciertos</div>
+              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-primary">50+</div>
             </div>
           </div>
           
-          <div class="card bg-gradient-to-br from-secondary to-secondary/80 text-secondary-content shadow-xl">
-            <div class="card-body text-center">
-              <div class="text-4xl mb-4">🌟</div>
-              <h3 class="card-title justify-center text-2xl mb-4">Nuestra Visión</h3>
-              <p>Ser una fundación líder en Honduras en la formación artística y musical, contribuyendo al desarrollo humano y la construcción de una sociedad más justa y pacífica.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <a href="/programas" class="btn btn-primary btn-sm sm:btn-md lg:btn-lg">Ver Programas</a>
+            <a href="/donar" class="btn btn-secondary btn-sm sm:btn-md lg:btn-lg">Hacer Donación</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 lg:py-20 bg-base-200">
+      <div class="container mx-auto px-4 lg:px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-accent">¿Quiénes Somos?</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div class="card bg-base-100 shadow-lg">
+              <div class="card-body text-center p-4 lg:p-6">
+                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-3">Misión</h3>
+                <p class="text-sm lg:text-base">Promover el desarrollo integral a través de la música y las artes, fomentando valores de paz y transformación social.</p>
+              </div>
+            </div>
+            
+            <div class="card bg-base-100 shadow-lg">
+              <div class="card-body text-center p-4 lg:p-6">
+                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-3">Visión</h3>
+                <p class="text-sm lg:text-base">Ser una fundación líder en Honduras en formación artística, contribuyendo a una sociedad más justa y próspera.</p>
+              </div>
+            </div>
+            
+            <div class="card bg-base-100 shadow-lg">
+              <div class="card-body text-center p-4 lg:p-6">
+                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-3">Valores</h3>
+                <p class="text-sm lg:text-base">Excelencia, inclusión, creatividad, compromiso social y desarrollo humano integral.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-16 lg:py-20 bg-base-100">
+      <div class="container mx-auto px-4 lg:px-6">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-accent">Nuestros Programas</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center p-4 lg:p-6">
+                <div class="avatar mx-auto">
+                  <div class="w-12 lg:w-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl lg:text-2xl mb-3 lg:mb-4">
+                    🎻
+                  </div>
+                </div>
+                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-2">Orquesta Armonía</h3>
+                <p class="text-sm lg:text-base mb-3">Formando músicos profesionales y ciudadanos comprometidos.</p>
+                <div class="badge badge-secondary text-xs lg:text-sm">80+ músicos</div>
+              </div>
+            </div>
+            
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center p-4 lg:p-6">
+                <div class="avatar mx-auto">
+                  <div class="w-12 lg:w-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl lg:text-2xl mb-3 lg:mb-4">
+                    🎵
+                  </div>
+                </div>
+                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-2">Voces por la Paz</h3>
+                <p class="text-sm lg:text-base mb-3">Nuestro coro emblemático construyendo esperanza.</p>
+                <div class="badge badge-secondary text-xs lg:text-sm">120+ voces</div>
+              </div>
+            </div>
+            
+            <div class="card bg-base-200 shadow-lg">
+              <div class="card-body text-center p-4 lg:p-6">
+                <div class="avatar mx-auto">
+                  <div class="w-12 lg:w-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl lg:text-2xl mb-3 lg:mb-4">
+                    💝
+                  </div>
+                </div>
+                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-2">Inclusión Artística</h3>
+                <p class="text-sm lg:text-base mb-3">La música trasciende toda barrera.</p>
+                <div class="badge badge-secondary text-xs lg:text-sm">45+ participantes</div>
+              </div>
             </div>
           </div>
           
-          <div class="card bg-gradient-to-br from-accent to-accent/80 text-accent-content shadow-xl">
-            <div class="card-body text-center">
-              <div class="text-4xl mb-4">💫</div>
-              <h3 class="card-title justify-center text-2xl mb-4">Nuestros Valores</h3>
-              <p>Excelencia, inclusión, creatividad, compromiso social y desarrollo humano integral son los pilares que guían nuestro trabajo diario.</p>
-            </div>
+          <div class="text-center mt-8 lg:mt-12">
+            <a href="/programas" class="btn btn-primary btn-sm sm:btn-md lg:btn-lg">Ver Todos los Programas</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quick Links Section -->
-    <section class="py-16 bg-base-200">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-primary mb-12 font-serif">Explora FARECOH</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          <a href="/acerca" class="card bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div class="card-body text-center">
-              <div class="text-4xl text-primary mb-2">🏛️</div>
-              <h3 class="card-title justify-center text-lg">Acerca de</h3>
-              <p class="text-sm opacity-70">Conoce nuestra historia</p>
-            </div>
-          </a>
-          <a href="/programas" class="card bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div class="card-body text-center">
-              <div class="text-4xl text-primary mb-2">🎼</div>
-              <h3 class="card-title justify-center text-lg">Programas</h3>
-              <p class="text-sm opacity-70">Descubre nuestros proyectos</p>
-            </div>
-          </a>
-          <a href="/eventos" class="card bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div class="card-body text-center">
-              <div class="text-4xl text-primary mb-2">�</div>
-              <h3 class="card-title justify-center text-lg">Eventos</h3>
-              <p class="text-sm opacity-70">Próximos conciertos</p>
-            </div>
-          </a>
-          <a href="/galeria" class="card bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div class="card-body text-center">
-              <div class="text-4xl text-primary mb-2">📸</div>
-              <h3 class="card-title justify-center text-lg">Galería</h3>
-              <p class="text-sm opacity-70">Momentos especiales</p>
-            </div>
-          </a>
-          <a href="/contacto" class="card bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div class="card-body text-center">
-              <div class="text-4xl text-primary mb-2">📞</div>
-              <h3 class="card-title justify-center text-lg">Contacto</h3>
-              <p class="text-sm opacity-70">Comunícate con nosotros</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact Stats -->
-    <section class="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-primary mb-16 font-serif">Nuestro Impacto</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center">
-            <div class="text-5xl font-bold text-primary mb-2">2000+</div>
-            <p class="text-lg text-gray-600">Niños y jóvenes beneficiados</p>
+    <!-- News Section -->
+    <section class="py-16 lg:py-20 bg-base-200">
+      <div class="container mx-auto px-4 lg:px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 lg:mb-12 gap-4">
+            <h2 class="text-3xl lg:text-4xl font-bold text-accent">Últimas Noticias</h2>
+            <a href="/noticias" class="link link-primary text-sm lg:text-base self-start sm:self-auto">Ver todas →</a>
           </div>
-          <div class="text-center">
-            <div class="text-5xl font-bold text-secondary mb-2">12</div>
-            <p class="text-lg text-gray-600">Programas activos</p>
-          </div>
-          <div class="text-center">
-            <div class="text-5xl font-bold text-accent mb-2">20+</div>
-            <p class="text-lg text-gray-600">Años transformando vidas</p>
-          </div>
-          <div class="text-center">
-            <div class="text-5xl font-bold text-primary mb-2">50+</div>
-            <p class="text-lg text-gray-600">Conciertos anuales</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Latest News -->
-    <section class="py-16 bg-base-100">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-3xl font-bold text-primary font-serif">Últimas Noticias</h2>
-          <a href="/noticias" class="btn btn-outline btn-primary">Ver todas</a>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
-            <figure><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gran Concierto" /></figure>
-            <div class="card-body">
-              <h3 class="card-title text-lg">Gran Concierto de Fin de Año</h3>
-              <p class="text-sm opacity-70">15 de diciembre, 2024</p>
-              <p>Únete a nosotros en una noche mágica donde nuestros estudiantes mostrarán todo su talento...</p>
-              <div class="card-actions justify-end">
-                <a href="/noticias" class="btn btn-primary btn-sm">Leer más</a>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div class="card bg-base-100 shadow-lg">
+              <figure class="h-24 sm:h-32">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Concierto" class="w-full h-full object-cover" />
+              </figure>
+              <div class="card-body p-4 lg:p-6">
+                <h3 class="card-title text-lg lg:text-xl text-primary">Gran Concierto de Fin de Año</h3>
+                <p class="text-xs lg:text-sm opacity-70">15 de diciembre, 2024</p>
+                <p class="text-sm lg:text-base">Una noche mágica donde nuestros estudiantes mostrarán su talento...</p>
               </div>
             </div>
-          </div>
-          <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
-            <figure><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Nuevo Programa" /></figure>
-            <div class="card-body">
-              <h3 class="card-title text-lg">Nuevo Programa de Arpas</h3>
-              <p class="text-sm opacity-70">10 de diciembre, 2024</p>
-              <p>Inauguramos oficialmente la Escuela de Arpas "En Armonía" con instrumentos de calidad internacional...</p>
-              <div class="card-actions justify-end">
-                <a href="/noticias" class="btn btn-primary btn-sm">Leer más</a>
+            
+            <div class="card bg-base-100 shadow-lg">
+              <figure class="h-24 sm:h-32">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Arpas" class="w-full h-full object-cover" />
+              </figure>
+              <div class="card-body p-4 lg:p-6">
+                <h3 class="card-title text-lg lg:text-xl text-primary">Nuevo Programa de Arpas</h3>
+                <p class="text-xs lg:text-sm opacity-70">10 de diciembre, 2024</p>
+                <p class="text-sm lg:text-base">Inauguramos la Escuela de Arpas "En Armonía"...</p>
               </div>
             </div>
-          </div>
-          <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow">
-            <figure><img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Reconocimiento" /></figure>
-            <div class="card-body">
-              <h3 class="card-title text-lg">Reconocimiento Internacional</h3>
-              <p class="text-sm opacity-70">5 de diciembre, 2024</p>
-              <p>FARECOH recibe premio por su labor social y educativa a nivel latinoamericano...</p>
-              <div class="card-actions justify-end">
-                <a href="/noticias" class="btn btn-primary btn-sm">Leer más</a>
+            
+            <div class="card bg-base-100 shadow-lg">
+              <figure class="h-24 sm:h-32">
+                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Premio" class="w-full h-full object-cover" />
+              </figure>
+              <div class="card-body p-4 lg:p-6">
+                <h3 class="card-title text-lg lg:text-xl text-primary">Reconocimiento Internacional</h3>
+                <p class="text-xs lg:text-sm opacity-70">5 de diciembre, 2024</p>
+                <p class="text-sm lg:text-base">FARECOH recibe premio por su labor social...</p>
               </div>
             </div>
           </div>
@@ -228,24 +182,18 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold mb-6 font-serif">Sé Parte del Cambio</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-          Cada donación, cada inscripción, cada nota musical que apoyamos juntos, 
-          construye un futuro mejor para Honduras
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="/donar" class="btn btn-accent btn-lg">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
-            </svg>
-            Apoya FARECOH
-          </a>
-          <a href="/contacto" class="btn btn-outline btn-lg text-white border-white hover:bg-white hover:text-primary">
-            Inscríbete Ahora
-          </a>
+    <!-- CTA Section -->
+    <section class="py-16 lg:py-20 bg-primary text-primary-content">
+      <div class="container mx-auto px-4 lg:px-6 text-center">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl lg:text-4xl font-bold mb-4 lg:mb-6">Sé Parte del Cambio</h2>
+          <p class="text-lg lg:text-xl mb-6 lg:mb-8 opacity-90 px-4">
+            Cada donación y cada inscripción construye un futuro mejor para Honduras
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <a href="/donar" class="btn btn-secondary btn-sm sm:btn-md lg:btn-lg">Hacer Donación</a>
+            <a href="/contacto" class="btn btn-outline btn-sm sm:btn-md lg:btn-lg">Contactar</a>
+          </div>
         </div>
       </div>
     </section>
@@ -253,14 +201,3 @@ import Footer from '../components/Footer.astro';
   
   <Footer />
 </Layout>
-
-<script>
-  // Auto-advance carousel
-  let currentSlide = 1;
-  const totalSlides = 3;
-  
-  setInterval(() => {
-    currentSlide = currentSlide >= totalSlides ? 1 : currentSlide + 1;
-    window.location.hash = `slide${currentSlide}`;
-  }, 8000);
-</script>

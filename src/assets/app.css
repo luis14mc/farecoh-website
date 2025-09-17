@@ -1,50 +1,39 @@
-/* Google Fonts imports must come first */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
-
-/* Tailwind and DaisyUI */
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Custom animations */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: #00A4DE;
+  --color-primary-content: oklch(98% 0 0);
+  --color-secondary: #484344;
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: #334E88;
+  --color-accent-content: oklch(96% 0.001 286.375);
+  --color-neutral: #260101;
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(45% 0.085 224.283);
+  --color-info-content: oklch(98% 0.002 247.839);
+  --color-success: oklch(64% 0.2 131.684);
+  --color-success-content: oklch(98% 0 0);
+  --color-warning: oklch(90% 0.182 98.111);
+  --color-warning-content: oklch(96% 0.003 264.542);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0 0);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.3125rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 1;
 }
 
-@keyframes slideUp {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(0); }
-}
 
-@keyframes bounceGentle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-/* Custom animation classes */
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.3s ease-out;
-}
-
-.animate-bounce-gentle {
-  animation: bounceGentle 2s infinite;
-}
-
-/* Custom scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom styles */
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-.font-serif {
-  font-family: 'Playfair Display', serif;
-}

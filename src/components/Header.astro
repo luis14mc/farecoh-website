@@ -2,7 +2,7 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="navbar bg-white shadow-lg sticky top-0 z-50">
+<header class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" id="mobile-menu-btn">
@@ -13,26 +13,16 @@ const currentPath = Astro.url.pathname;
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 hidden" id="mobile-menu">
         <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Inicio</a></li>
         <li><a href="/acerca" class={currentPath === '/acerca' ? 'active' : ''}>Acerca de</a></li>
-        <li>
-          <details>
-            <summary>Programas</summary>
-            <ul class="p-2">
-              <li><a href="/programas">Todos los Programas</a></li>
-              <li><a href="/programas/coro-voces-por-la-paz">Coro Voces por la Paz</a></li>
-              <li><a href="/programas/orquesta-armonia">Orquesta Armonía</a></li>
-              <li><a href="/programas/iniciacion-musical">Iniciación Musical</a></li>
-              <li><a href="/programas/clases-individuales">Clases Individuales</a></li>
-            </ul>
-          </details>
-        </li>
+        <li><a href="/programas" class={currentPath === '/programas' ? 'active' : ''}>Programas</a></li>
         <li><a href="/eventos" class={currentPath === '/eventos' ? 'active' : ''}>Eventos</a></li>
         <li><a href="/galeria" class={currentPath === '/galeria' ? 'active' : ''}>Galería</a></li>
         <li><a href="/noticias" class={currentPath === '/noticias' ? 'active' : ''}>Noticias</a></li>
         <li><a href="/contacto" class={currentPath === '/contacto' ? 'active' : ''}>Contacto</a></li>
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost text-xl font-bold text-primary">
-      <span class="font-serif">FARECOH</span>
+    <a href="/" class="btn btn-ghost text-lg lg:text-xl font-bold text-primary flex items-center">
+      <img src="/images/Logo Farecoh VARIANTE.png" alt="FARECOH" class="h-6 lg:h-8 w-auto mr-1 lg:mr-2" />
+      <span class="font-serif hidden sm:inline">FARECOH</span>
     </a>
   </div>
   
@@ -40,26 +30,7 @@ const currentPath = Astro.url.pathname;
     <ul class="menu menu-horizontal px-1">
       <li><a href="/" class={`hover:text-primary ${currentPath === '/' ? 'text-primary font-semibold' : ''}`}>Inicio</a></li>
       <li><a href="/acerca" class={`hover:text-primary ${currentPath === '/acerca' ? 'text-primary font-semibold' : ''}`}>Acerca de</a></li>
-      <li>
-        <details>
-          <summary class="hover:text-primary">Programas</summary>
-          <ul class="p-2 bg-white shadow-lg rounded-lg w-64">
-            <li><a href="/programas" class="hover:bg-primary hover:text-white">Todos los Programas</a></li>
-            <li><a href="/programas/coro-voces-por-la-paz" class="hover:bg-primary hover:text-white">Coro Voces por la Paz</a></li>
-            <li><a href="/programas/orquesta-armonia" class="hover:bg-primary hover:text-white">Orquesta Armonía</a></li>
-            <li><a href="/programas/iniciacion-musical" class="hover:bg-primary hover:text-white">Iniciación Musical</a></li>
-            <li><a href="/programas/clases-individuales" class="hover:bg-primary hover:text-white">Clases Individuales</a></li>
-            <li><a href="/programas/ensambles" class="hover:bg-primary hover:text-white">Ensambles</a></li>
-            <li><a href="/programas/formacion-comunitaria" class="hover:bg-primary hover:text-white">Formación Comunitaria</a></li>
-            <li><a href="/programas/composicion-creatividad" class="hover:bg-primary hover:text-white">Composición y Creatividad</a></li>
-            <li><a href="/programas/escuela-de-arpas" class="hover:bg-primary hover:text-white">Escuela de Arpas</a></li>
-            <li><a href="/programas/orquesta-de-flautas" class="hover:bg-primary hover:text-white">Orquesta de Flautas</a></li>
-            <li><a href="/programas/inclusion-artistica" class="hover:bg-primary hover:text-white">Inclusión Artística</a></li>
-            <li><a href="/programas/artes-visuales" class="hover:bg-primary hover:text-white">Artes Visuales</a></li>
-            <li><a href="/programas/jugarte" class="hover:bg-primary hover:text-white">JugArte</a></li>
-          </ul>
-        </details>
-      </li>
+      <li><a href="/programas" class={`hover:text-primary ${currentPath === '/programas' ? 'text-primary font-semibold' : ''}`}>Programas</a></li>
       <li><a href="/eventos" class={`hover:text-primary ${currentPath === '/eventos' ? 'text-primary font-semibold' : ''}`}>Eventos</a></li>
       <li><a href="/galeria" class={`hover:text-primary ${currentPath === '/galeria' ? 'text-primary font-semibold' : ''}`}>Galería</a></li>
       <li><a href="/noticias" class={`hover:text-primary ${currentPath === '/noticias' ? 'text-primary font-semibold' : ''}`}>Noticias</a></li>
@@ -68,11 +39,11 @@ const currentPath = Astro.url.pathname;
   </div>
   
   <div class="navbar-end">
-    <a href="/donar" class="btn btn-primary btn-sm mr-2">
+    <a href="/donar" class="btn btn-primary btn-sm">
       <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
         <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
       </svg>
-      Donar
+      <span class="hidden sm:inline">Donar</span>
     </a>
   </div>
 </header>

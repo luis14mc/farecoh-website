@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Figura abstracta (persona bailando con estrellas) -->
+  <g transform="translate(10,10)">
+    <!-- Cuerpo principal de la figura -->
+    <path d="M30,60 Q25,45 35,30 Q40,25 45,35 Q50,45 55,55 Q60,65 55,75 Q50,85 45,90 Q35,95 25,85 Q20,75 25,65 Z" 
+          fill="url(#blueGradient)" />
+    
+    <!-- Brazo extendido -->
+    <path d="M55,55 Q65,50 75,45 Q80,40 85,45 Q90,50 85,55 Q80,60 70,62 Q60,60 55,55 Z" 
+          fill="url(#blueGradient)" />
+    
+    <!-- Estrellas -->
+    <g fill="url(#starGradient)">
+      <path d="M75,15 L77,20 L82,20 L79,24 L80,29 L75,26 L70,29 L71,24 L68,20 L73,20 Z" />
+      <path d="M85,25 L87,29 L91,29 L89,32 L90,36 L85,34 L81,36 L82,32 L79,29 L83,29 Z" />
+      <path d="M70,35 L72,39 L76,39 L74,42 L75,46 L70,44 L66,46 L67,42 L64,39 L68,39 Z" />
+      <path d="M90,45 L92,49 L96,49 L94,52 L95,56 L90,54 L86,56 L87,52 L84,49 L88,49 Z" />
+      <path d="M60,55 L62,59 L66,59 L64,62 L65,66 L60,64 L56,66 L57,62 L54,59 L58,59 Z" />
+      <path d="M85,65 L87,69 L91,69 L89,72 L90,76 L85,74 L81,76 L82,72 L79,69 L83,69 Z" />
+    </g>
+  </g>
+  
+  <!-- Texto FARECOH -->
+  <g transform="translate(5,105)" fill="url(#textGradient)">
+    <text x="50" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">FARECOH</text>
+  </g>
+  
+  <!-- Definiciones de gradientes -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
