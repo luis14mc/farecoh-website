@@ -9,332 +9,746 @@ import Footer from '../components/Footer.astro';
   
   <main>
     <!-- Hero Section -->
-    <section class="hero min-h-[400px] bg-gradient-to-r from-primary to-secondary">
-      <div class="hero-content text-center text-white">
-        <div class="max-w-4xl">
-          <h1 class="mb-5 text-5xl font-bold font-serif">Acerca de FARECOH</h1>
-          <p class="mb-5 text-xl">Conoce nuestra historia, misión y el equipo que hace posible la transformación a través de las artes</p>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+          alt="Instrumentos musicales en ambiente oscuro" 
+          class="w-full h-full object-cover"
+        />
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <!-- Gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/20"></div>
+      </div>
+      
+      <!-- Decorative musical elements -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-white/20 animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-24 h-24 rounded-full bg-white/20 animate-pulse animation-delay-1000"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 rounded-full bg-white/20 animate-pulse animation-delay-2000"></div>
+        
+        <!-- Musical notes decorations -->
+        <div class="absolute top-1/4 right-1/4 text-white/10 text-6xl animate-pulse animation-delay-500">♪</div>
+        <div class="absolute bottom-1/3 left-1/5 text-white/10 text-4xl animate-pulse animation-delay-1500">♫</div>
+        <div class="absolute top-3/4 right-1/5 text-white/10 text-5xl animate-pulse animation-delay-2500">♬</div>
+      </div>
+      
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-4 text-center text-white">
+        <div class="max-w-5xl mx-auto">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-white/20">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-sm font-name">Más de 15 años transformando vidas</span>
+          </div>
+          
+          <!-- Main title -->
+          <h1 class="text-5xl md:text-7xl font-title mb-6 leading-tight">
+            <span class="block">Acerca de</span>
+            <span class="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent drop-shadow-lg">FARECOH</span>
+          </h1>
+          
+          <!-- Subtitle -->
+          <p class="text-xl md:text-2xl font-body text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            Conoce nuestra historia, misión y el equipo extraordinario que hace posible la transformación a través de las artes
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#mision" class="btn btn-primary btn-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Conoce Nuestra Misión
+            </a>
+            <a href="#equipo" class="btn btn-outline btn-lg border-white/30 text-white hover:bg-white hover:text-primary shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+              </svg>
+              Nuestro Equipo
+            </a>
+          </div>
+          
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+          </svg>
         </div>
       </div>
     </section>
 
     <!-- Mission, Vision, Values -->
-    <section class="py-16 bg-base-100">
+    <section id="mision" class="py-20 bg-gradient-to-br from-base-100 via-base-200 to-base-100">
       <div class="container mx-auto px-4">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 mb-6">
+            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-sm font-name text-primary">Nuestros Pilares Fundamentales</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-title text-base-content mb-6">
+            Misión, Visión y Valores
+          </h2>
+          <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+            Los principios que guían cada paso de nuestro camino hacia la transformación social
+          </p>
+        </div>
+        
+        <!-- Cards Grid -->
         <div class="grid lg:grid-cols-3 gap-8">
-          <div class="card bg-primary text-primary-content shadow-xl">
-            <div class="card-body">
-              <div class="text-4xl mb-4">🎯</div>
-              <h2 class="card-title text-2xl font-serif mb-4">Nuestra Misión</h2>
-              <p class="text-lg leading-relaxed">
-                Promover el desarrollo integral de niños, jóvenes y adultos a través de la educación musical y artística, 
-                fomentando valores de paz, convivencia, creatividad y compromiso social para contribuir al desarrollo 
-                comunitario de Honduras.
-              </p>
+          
+          <!-- Misión -->
+          <div class="group">
+            <div class="card bg-gradient-to-br from-primary to-primary/80 text-primary-content shadow-2xl transform group-hover:scale-105 transition-all duration-500 border border-primary/20">
+              <div class="card-body p-8">
+                <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:rotate-12 transition-transform duration-500">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-title mb-6">Nuestra Misión</h3>
+                <p class="text-lg leading-relaxed text-primary-content/90">
+                  Promover el desarrollo integral de niños, jóvenes y adultos a través de la educación musical y artística, 
+                  fomentando valores de paz, convivencia, creatividad y compromiso social para contribuir al desarrollo 
+                  comunitario de Honduras.
+                </p>
+                <div class="mt-6 flex items-center gap-2 text-primary-content/70">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                  </svg>
+                  <span class="text-sm font-medium">Transformando vidas</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="card bg-secondary text-secondary-content shadow-xl">
-            <div class="card-body">
-              <div class="text-4xl mb-4">🌟</div>
-              <h2 class="card-title text-2xl font-serif mb-4">Nuestra Visión</h2>
-              <p class="text-lg leading-relaxed">
-                Ser reconocidos como la organización líder en Honduras en la formación musical y artística integral, 
-                generando un impacto social positivo y sostenible que transforme comunidades y construya un futuro 
-                mejor para las nuevas generaciones.
-              </p>
+          <!-- Visión -->
+          <div class="group">
+            <div class="card bg-gradient-to-br from-secondary to-secondary/80 text-secondary-content shadow-2xl transform group-hover:scale-105 transition-all duration-500 border border-secondary/20">
+              <div class="card-body p-8">
+                <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:rotate-12 transition-transform duration-500">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-title mb-6">Nuestra Visión</h3>
+                <p class="text-lg leading-relaxed text-secondary-content/90">
+                  Ser reconocidos como la organización líder en Honduras en la formación musical y artística integral, 
+                  generando un impacto social positivo y sostenible que transforme comunidades y construya un futuro 
+                  mejor para las nuevas generaciones.
+                </p>
+                <div class="mt-6 flex items-center gap-2 text-secondary-content/70">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-sm font-medium">Liderando el cambio</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="card bg-accent text-accent-content shadow-xl">
-            <div class="card-body">
-              <div class="text-4xl mb-4">💎</div>
-              <h2 class="card-title text-2xl font-serif mb-4">Nuestros Valores</h2>
-              <ul class="text-lg space-y-2">
-                <li>• <strong>Excelencia</strong> en la enseñanza</li>
-                <li>• <strong>Inclusión</strong> y diversidad</li>
-                <li>• <strong>Respeto</strong> mutuo</li>
-                <li>• <strong>Creatividad</strong> e innovación</li>
-                <li>• <strong>Compromiso</strong> social</li>
-                <li>• <strong>Amor</strong> por las artes</li>
-              </ul>
+          <!-- Valores -->
+          <div class="group">
+            <div class="card bg-gradient-to-br from-accent to-accent/80 text-accent-content shadow-2xl transform group-hover:scale-105 transition-all duration-500 border border-accent/20">
+              <div class="card-body p-8">
+                <div class="flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-6 group-hover:rotate-12 transition-transform duration-500">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-title mb-6">Nuestros Valores</h3>
+                <div class="space-y-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-accent-content/70 rounded-full"></div>
+                    <span class="text-lg"><strong>Excelencia</strong> en la enseñanza</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-accent-content/70 rounded-full"></div>
+                    <span class="text-lg"><strong>Inclusión</strong> y diversidad</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-accent-content/70 rounded-full"></div>
+                    <span class="text-lg"><strong>Respeto</strong> mutuo</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-accent-content/70 rounded-full"></div>
+                    <span class="text-lg"><strong>Creatividad</strong> e innovación</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-accent-content/70 rounded-full"></div>
+                    <span class="text-lg"><strong>Compromiso</strong> social</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-accent-content/70 rounded-full"></div>
+                    <span class="text-lg"><strong>Amor</strong> por las artes</span>
+                  </div>
+                </div>
+                <div class="mt-6 flex items-center gap-2 text-accent-content/70">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span class="text-sm font-medium">Principios sólidos</span>
+                </div>
+              </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
 
     <!-- History Section -->
-    <section class="py-16 bg-gradient-to-br from-base-200 to-base-300">
+    <section class="py-20 bg-gradient-to-br from-base-200/50 via-base-100 to-base-200/50">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestra Historia</h2>
-          <div class="w-24 h-1 bg-accent mx-auto"></div>
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 mb-6">
+            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M12 2l3.09 6.26L22 9l-5 4.87L18.18 21 12 17.77 5.82 21 7 13.87 2 9l6.91-.74L12 2z"/>
+            </svg>
+            <span class="text-sm font-name text-primary">Nuestro Recorrido</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-title text-primary mb-6">
+            Nuestra Historia
+          </h2>
+          <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+            Un viaje extraordinario de transformación social a través de las artes
+          </p>
         </div>
 
-        <div class="max-w-4xl mx-auto">
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker bg-primary"></div>
+        <div class="max-w-6xl mx-auto">
+          <div class="timeline-container">
+            
+            <!-- 2010 -->
+            <div class="timeline-item group" data-year="2010">
+              <div class="timeline-marker bg-gradient-to-br from-primary to-primary/80 group-hover:scale-125 transition-all duration-500"></div>
               <div class="timeline-content">
-                <div class="card bg-white shadow-lg">
-                  <div class="card-body">
-                    <h3 class="card-title text-primary">2010 - Los Inicios</h3>
-                    <p>FARECOH nace como una iniciativa comunitaria con el sueño de brindar oportunidades musicales 
-                    a niños y jóvenes en situación de vulnerabilidad social en Tegucigalpa.</p>
+                <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-primary/10 group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                  <div class="card-body p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="badge badge-primary badge-lg font-bold px-4 py-3">2010</div>
+                      <h3 class="text-2xl font-bold text-primary">Los Inicios</h3>
+                    </div>
+                    <p class="text-lg text-base-content/80 leading-relaxed">
+                      FARECOH nace como una iniciativa comunitaria con el sueño de brindar oportunidades musicales 
+                      a niños y jóvenes en situación de vulnerabilidad social en Tegucigalpa.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-primary/70">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <span class="text-sm font-medium">El nacimiento de un sueño</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker bg-secondary"></div>
+            <!-- 2012 -->
+            <div class="timeline-item group" data-year="2012">
+              <div class="timeline-marker bg-gradient-to-br from-secondary to-secondary/80 group-hover:scale-125 transition-all duration-500"></div>
               <div class="timeline-content">
-                <div class="card bg-white shadow-lg">
-                  <div class="card-body">
-                    <h3 class="card-title text-secondary">2012 - Primeros Programas</h3>
-                    <p>Se establecen los primeros programas estructurados: el Coro Infantil "Voces por la Paz" 
-                    y los Talleres de Iniciación Musical, atendiendo a más de 50 niños.</p>
+                <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-secondary/10 group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                  <div class="card-body p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="badge badge-secondary badge-lg font-bold px-4 py-3">2012</div>
+                      <h3 class="text-2xl font-bold text-secondary">Primeros Programas</h3>
+                    </div>
+                    <p class="text-lg text-base-content/80 leading-relaxed">
+                      Se establecen los primeros programas estructurados: el Coro Infantil "Voces por la Paz" 
+                      y los Talleres de Iniciación Musical, atendiendo a más de 50 niños.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-secondary/70">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                      </svg>
+                      <span class="text-sm font-medium">50+ niños beneficiados</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker bg-accent"></div>
+            <!-- 2015 -->
+            <div class="timeline-item group" data-year="2015">
+              <div class="timeline-marker bg-gradient-to-br from-accent to-accent/80 group-hover:scale-125 transition-all duration-500"></div>
               <div class="timeline-content">
-                <div class="card bg-white shadow-lg">
-                  <div class="card-body">
-                    <h3 class="card-title text-accent">2015 - Expansión</h3>
-                    <p>Creación de la Orquesta Infantil y Juvenil "Armonía para la Vida" y expansión de programas 
-                    a comunidades rurales, alcanzando más de 200 beneficiarios directos.</p>
+                <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-accent/10 group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                  <div class="card-body p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="badge badge-accent badge-lg font-bold px-4 py-3">2015</div>
+                      <h3 class="text-2xl font-bold text-accent">Expansión</h3>
+                    </div>
+                    <p class="text-lg text-base-content/80 leading-relaxed">
+                      Creación de la Orquesta Infantil y Juvenil "Armonía para la Vida" y expansión de programas 
+                      a comunidades rurales, alcanzando más de 200 beneficiarios directos.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-accent/70">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="text-sm font-medium">200+ beneficiarios directos</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker bg-primary"></div>
+            <!-- 2018 -->
+            <div class="timeline-item group" data-year="2018">
+              <div class="timeline-marker bg-gradient-to-br from-primary to-primary/80 group-hover:scale-125 transition-all duration-500"></div>
               <div class="timeline-content">
-                <div class="card bg-white shadow-lg">
-                  <div class="card-body">
-                    <h3 class="card-title text-primary">2018 - Reconocimiento</h3>
-                    <p>FARECOH recibe reconocimiento nacional por su labor social y se establecen alianzas 
-                    estratégicas con instituciones educativas y organizaciones internacionales.</p>
+                <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-primary/10 group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                  <div class="card-body p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="badge badge-primary badge-lg font-bold px-4 py-3">2018</div>
+                      <h3 class="text-2xl font-bold text-primary">Reconocimiento</h3>
+                    </div>
+                    <p class="text-lg text-base-content/80 leading-relaxed">
+                      FARECOH recibe reconocimiento nacional por su labor social y se establecen alianzas 
+                      estratégicas con instituciones educativas y organizaciones internacionales.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-primary/70">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      <span class="text-sm font-medium">Reconocimiento nacional</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker bg-secondary"></div>
+            <!-- 2020 -->
+            <div class="timeline-item group" data-year="2020">
+              <div class="timeline-marker bg-gradient-to-br from-secondary to-secondary/80 group-hover:scale-125 transition-all duration-500"></div>
               <div class="timeline-content">
-                <div class="card bg-white shadow-lg">
-                  <div class="card-body">
-                    <h3 class="card-title text-secondary">2020 - Innovación Digital</h3>
-                    <p>Adaptación a la pandemia con programas virtuales y desarrollo de plataformas digitales 
-                    para continuar la educación musical a distancia.</p>
+                <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-secondary/10 group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                  <div class="card-body p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="badge badge-secondary badge-lg font-bold px-4 py-3">2020</div>
+                      <h3 class="text-2xl font-bold text-secondary">Innovación Digital</h3>
+                    </div>
+                    <p class="text-lg text-base-content/80 leading-relaxed">
+                      Adaptación a la pandemia con programas virtuales y desarrollo de plataformas digitales 
+                      para continuar la educación musical a distancia.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-secondary/70">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                      </svg>
+                      <span class="text-sm font-medium">Educación virtual</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item">
-              <div class="timeline-marker bg-accent"></div>
+            <!-- 2024 -->
+            <div class="timeline-item group" data-year="2024">
+              <div class="timeline-marker bg-gradient-to-br from-accent to-accent/80 group-hover:scale-125 transition-all duration-500"></div>
               <div class="timeline-content">
-                <div class="card bg-white shadow-lg">
-                  <div class="card-body">
-                    <h3 class="card-title text-accent">2024 - Presente</h3>
-                    <p>Hoy atendemos a más de 500 estudiantes con 12 programas artísticos diversos, 
-                    consolidándonos como referente en educación musical y desarrollo social en Honduras.</p>
+                <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-accent/10 group-hover:shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+                  <div class="card-body p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <div class="badge badge-accent badge-lg font-bold px-4 py-3">2024</div>
+                      <h3 class="text-2xl font-bold text-accent">Presente</h3>
+                    </div>
+                    <p class="text-lg text-base-content/80 leading-relaxed">
+                      Hoy atendemos a más de 500 estudiantes con 12 programas artísticos diversos, 
+                      consolidándonos como referente en educación musical y desarrollo social en Honduras.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-accent/70">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      <span class="text-sm font-medium">500+ estudiantes activos</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-16 bg-base-100">
+    <section id="equipo" class="py-20 bg-gradient-to-br from-base-100 via-base-200/30 to-base-100">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestro Equipo</h2>
-          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conoce a las personas apasionadas que hacen posible nuestra misión de transformar vidas a través de las artes.
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 mb-6">
+            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+            </svg>
+            <span class="text-sm font-medium text-primary">Conoce a nuestro equipo</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold font-serif text-primary mb-6">
+            Nuestro Equipo
+          </h2>
+          <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+            Conoce a las personas apasionadas que hacen posible nuestra misión de transformar vidas a través de las artes
           </p>
         </div>
 
         <!-- Board of Directors -->
-        <div class="mb-16">
-          <h3 class="text-3xl font-bold text-center mb-8 text-secondary">Junta Directiva</h3>
+        <div class="mb-20">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-secondary mb-4">Junta Directiva</h3>
+            <p class="text-lg text-base-content/60">Liderazgo visionario para el crecimiento de FARECOH</p>
+          </div>
+          
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="card bg-white shadow-xl">
-              <figure class="px-10 pt-10">
-                <div class="avatar">
-                  <div class="w-32 rounded-full bg-primary text-primary-content flex items-center justify-center text-4xl font-bold">
-                    MA
+            
+            <!-- Presidenta -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-primary/10 transform group-hover:scale-105 transition-all duration-500">
+                <figure class="px-10 pt-10">
+                  <div class="avatar">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-content flex items-center justify-center text-4xl font-bold shadow-2xl group-hover:shadow-primary/25 transition-all duration-500">
+                      MA
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body text-center p-8">
+                  <h4 class="text-xl font-bold text-primary mb-2">María Alejandra Soto</h4>
+                  <div class="badge badge-primary badge-outline mb-4">Presidenta</div>
+                  <p class="text-sm text-base-content/70 leading-relaxed">
+                    Licenciada en Música, 15 años de experiencia en educación musical y gestión cultural.
+                  </p>
+                  <div class="mt-6 flex justify-center gap-3">
+                    <div class="w-2 h-2 bg-primary rounded-full"></div>
+                    <div class="w-2 h-2 bg-primary/60 rounded-full"></div>
+                    <div class="w-2 h-2 bg-primary/30 rounded-full"></div>
                   </div>
                 </div>
-              </figure>
-              <div class="card-body text-center">
-                <h4 class="card-title justify-center text-primary">María Alejandra Soto</h4>
-                <p class="text-secondary font-semibold">Presidenta</p>
-                <p class="text-sm">Licenciada en Música, 15 años de experiencia en educación musical y gestión cultural.</p>
               </div>
             </div>
 
-            <div class="card bg-white shadow-xl">
-              <figure class="px-10 pt-10">
-                <div class="avatar">
-                  <div class="w-32 rounded-full bg-secondary text-secondary-content flex items-center justify-center text-4xl font-bold">
-                    CR
+            <!-- Director Ejecutivo -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-secondary/10 transform group-hover:scale-105 transition-all duration-500">
+                <figure class="px-10 pt-10">
+                  <div class="avatar">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-secondary to-secondary/80 text-secondary-content flex items-center justify-center text-4xl font-bold shadow-2xl group-hover:shadow-secondary/25 transition-all duration-500">
+                      CR
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body text-center p-8">
+                  <h4 class="text-xl font-bold text-secondary mb-2">Carlos Roberto Mejía</h4>
+                  <div class="badge badge-secondary badge-outline mb-4">Director Ejecutivo</div>
+                  <p class="text-sm text-base-content/70 leading-relaxed">
+                    Maestro en Administración, especialista en gestión de organizaciones sin fines de lucro.
+                  </p>
+                  <div class="mt-6 flex justify-center gap-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    <div class="w-2 h-2 bg-secondary/60 rounded-full"></div>
+                    <div class="w-2 h-2 bg-secondary/30 rounded-full"></div>
                   </div>
                 </div>
-              </figure>
-              <div class="card-body text-center">
-                <h4 class="card-title justify-center text-primary">Carlos Roberto Mejía</h4>
-                <p class="text-secondary font-semibold">Director Ejecutivo</p>
-                <p class="text-sm">Maestro en Administración, especialista en gestión de organizaciones sin fines de lucro.</p>
               </div>
             </div>
 
-            <div class="card bg-white shadow-xl">
-              <figure class="px-10 pt-10">
-                <div class="avatar">
-                  <div class="w-32 rounded-full bg-accent text-accent-content flex items-center justify-center text-4xl font-bold">
-                    LF
+            <!-- Directora Artística -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-accent/10 transform group-hover:scale-105 transition-all duration-500">
+                <figure class="px-10 pt-10">
+                  <div class="avatar">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-accent to-accent/80 text-accent-content flex items-center justify-center text-4xl font-bold shadow-2xl group-hover:shadow-accent/25 transition-all duration-500">
+                      LF
+                    </div>
+                  </div>
+                </figure>
+                <div class="card-body text-center p-8">
+                  <h4 class="text-xl font-bold text-accent mb-2">Lucía Fernández</h4>
+                  <div class="badge badge-accent badge-outline mb-4">Directora Artística</div>
+                  <p class="text-sm text-base-content/70 leading-relaxed">
+                    Directora de orquesta, compositora y pedagoga musical con reconocimiento internacional.
+                  </p>
+                  <div class="mt-6 flex justify-center gap-3">
+                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                    <div class="w-2 h-2 bg-accent/60 rounded-full"></div>
+                    <div class="w-2 h-2 bg-accent/30 rounded-full"></div>
                   </div>
                 </div>
-              </figure>
-              <div class="card-body text-center">
-                <h4 class="card-title justify-center text-primary">Lucía Fernández</h4>
-                <p class="text-secondary font-semibold">Directora Artística</p>
-                <p class="text-sm">Directora de orquesta, compositora y pedagoga musical con reconocimiento internacional.</p>
               </div>
             </div>
+            
           </div>
         </div>
 
         <!-- Teaching Staff -->
         <div>
-          <h3 class="text-3xl font-bold text-center mb-8 text-secondary">Equipo Docente</h3>
-          <div class="grid md:grid-cols-4 gap-6">
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center">
-                <div class="avatar mb-4">
-                  <div class="w-20 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold">
-                    JM
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-secondary mb-4">Equipo Docente</h3>
+            <p class="text-lg text-base-content/60">Maestros talentosos dedicados a la excelencia educativa</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Jorge -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-base-200/50 to-base-100 shadow-lg border border-primary/5 transform group-hover:scale-105 transition-all duration-300">
+                <div class="card-body text-center p-6">
+                  <div class="avatar mb-4">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-content flex items-center justify-center text-2xl font-bold shadow-lg group-hover:shadow-primary/25 transition-all duration-300">
+                      JM
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-primary text-lg mb-1">Jorge Martínez</h4>
+                  <div class="badge badge-primary badge-sm mb-3">Director de Coros</div>
+                  <div class="flex justify-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-primary/50 rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-primary/25 rounded-full"></div>
                   </div>
                 </div>
-                <h4 class="font-bold text-primary">Jorge Martínez</h4>
-                <p class="text-sm text-secondary">Director de Coros</p>
               </div>
             </div>
 
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center">
-                <div class="avatar mb-4">
-                  <div class="w-20 rounded-full bg-secondary text-secondary-content flex items-center justify-center text-2xl font-bold">
-                    AR
+            <!-- Ana -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-base-200/50 to-base-100 shadow-lg border border-secondary/5 transform group-hover:scale-105 transition-all duration-300">
+                <div class="card-body text-center p-6">
+                  <div class="avatar mb-4">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-secondary to-secondary/80 text-secondary-content flex items-center justify-center text-2xl font-bold shadow-lg group-hover:shadow-secondary/25 transition-all duration-300">
+                      AR
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-secondary text-lg mb-1">Ana Rodríguez</h4>
+                  <div class="badge badge-secondary badge-sm mb-3">Profesora de Piano</div>
+                  <div class="flex justify-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-secondary rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-secondary/50 rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-secondary/25 rounded-full"></div>
                   </div>
                 </div>
-                <h4 class="font-bold text-primary">Ana Rodríguez</h4>
-                <p class="text-sm text-secondary">Profesora de Piano</p>
               </div>
             </div>
 
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center">
-                <div class="avatar mb-4">
-                  <div class="w-20 rounded-full bg-accent text-accent-content flex items-center justify-center text-2xl font-bold">
-                    MG
+            <!-- Miguel -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-base-200/50 to-base-100 shadow-lg border border-accent/5 transform group-hover:scale-105 transition-all duration-300">
+                <div class="card-body text-center p-6">
+                  <div class="avatar mb-4">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-accent to-accent/80 text-accent-content flex items-center justify-center text-2xl font-bold shadow-lg group-hover:shadow-accent/25 transition-all duration-300">
+                      MG
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-accent text-lg mb-1">Miguel González</h4>
+                  <div class="badge badge-accent badge-sm mb-3">Instructor de Cuerdas</div>
+                  <div class="flex justify-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-accent rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-accent/50 rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-accent/25 rounded-full"></div>
                   </div>
                 </div>
-                <h4 class="font-bold text-primary">Miguel González</h4>
-                <p class="text-sm text-secondary">Instructor de Cuerdas</p>
               </div>
             </div>
 
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center">
-                <div class="avatar mb-4">
-                  <div class="w-20 rounded-full bg-primary text-primary-content flex items-center justify-center text-2xl font-bold">
-                    SP
+            <!-- Sofía -->
+            <div class="group">
+              <div class="card bg-gradient-to-br from-base-200/50 to-base-100 shadow-lg border border-primary/5 transform group-hover:scale-105 transition-all duration-300">
+                <div class="card-body text-center p-6">
+                  <div class="avatar mb-4">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-content flex items-center justify-center text-2xl font-bold shadow-lg group-hover:shadow-primary/25 transition-all duration-300">
+                      SP
+                    </div>
+                  </div>
+                  <h4 class="font-bold text-primary text-lg mb-1">Sofía Pérez</h4>
+                  <div class="badge badge-primary badge-sm mb-3">Profesora de Vientos</div>
+                  <div class="flex justify-center gap-2">
+                    <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-primary/50 rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-primary/25 rounded-full"></div>
                   </div>
                 </div>
-                <h4 class="font-bold text-primary">Sofía Pérez</h4>
-                <p class="text-sm text-secondary">Profesora de Vientos</p>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
     </section>
 
     <!-- Impact Section -->
-    <section class="py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold font-serif text-primary mb-4">Nuestro Impacto Social</h2>
-          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Más de una década transformando vidas y comunidades a través del poder de la música y las artes.
+    <section class="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
+      
+      <!-- Background decorations -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-10 left-10 w-64 h-64 rounded-full bg-primary animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-secondary animate-pulse animation-delay-1000"></div>
+        <div class="absolute top-1/2 left-1/3 w-32 h-32 rounded-full bg-accent animate-pulse animation-delay-2000"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 mb-6">
+            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/>
+            </svg>
+            <span class="text-sm font-medium text-primary">Resultados que nos enorgullecen</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold font-serif text-primary mb-6">
+            Nuestro Impacto Social
+          </h2>
+          <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+            Más de una década transformando vidas y comunidades a través del poder de la música y las artes
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
-            <div class="stat-value text-primary text-4xl font-bold">500+</div>
-            <div class="stat-title text-lg">Estudiantes Activos</div>
-            <div class="stat-desc">En todos nuestros programas</div>
+        <!-- Statistics Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          
+          <!-- Stat 1 -->
+          <div class="group">
+            <div class="stat bg-gradient-to-br from-white to-base-50 rounded-2xl shadow-xl border border-primary/10 p-8 text-center transform group-hover:scale-105 group-hover:shadow-2xl transition-all duration-500">
+              <div class="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-primary mb-2">500+</div>
+              <div class="text-lg font-semibold text-base-content mb-1">Estudiantes Activos</div>
+              <div class="text-sm text-base-content/60">En todos nuestros programas</div>
+            </div>
           </div>
 
-          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
-            <div class="stat-value text-secondary text-4xl font-bold">1,200+</div>
-            <div class="stat-title text-lg">Graduados</div>
-            <div class="stat-desc">Desde nuestros inicios</div>
+          <!-- Stat 2 -->
+          <div class="group">
+            <div class="stat bg-gradient-to-br from-white to-base-50 rounded-2xl shadow-xl border border-secondary/10 p-8 text-center transform group-hover:scale-105 group-hover:shadow-2xl transition-all duration-500">
+              <div class="flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-2xl mx-auto mb-4 group-hover:bg-secondary/20 transition-colors duration-300">
+                <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-secondary mb-2">1,200+</div>
+              <div class="text-lg font-semibold text-base-content mb-1">Graduados</div>
+              <div class="text-sm text-base-content/60">Desde nuestros inicios</div>
+            </div>
           </div>
 
-          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
-            <div class="stat-value text-accent text-4xl font-bold">50+</div>
-            <div class="stat-title text-lg">Conciertos Anuales</div>
-            <div class="stat-desc">Presentaciones públicas</div>
+          <!-- Stat 3 -->
+          <div class="group">
+            <div class="stat bg-gradient-to-br from-white to-base-50 rounded-2xl shadow-xl border border-accent/10 p-8 text-center transform group-hover:scale-105 group-hover:shadow-2xl transition-all duration-500">
+              <div class="flex items-center justify-center w-16 h-16 bg-accent/10 rounded-2xl mx-auto mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-accent mb-2">50+</div>
+              <div class="text-lg font-semibold text-base-content mb-1">Conciertos Anuales</div>
+              <div class="text-sm text-base-content/60">Presentaciones públicas</div>
+            </div>
           </div>
 
-          <div class="stat bg-white rounded-lg shadow-lg p-6 text-center">
-            <div class="stat-value text-primary text-4xl font-bold">15</div>
-            <div class="stat-title text-lg">Comunidades</div>
-            <div class="stat-desc">Beneficiadas directamente</div>
+          <!-- Stat 4 -->
+          <div class="group">
+            <div class="stat bg-gradient-to-br from-white to-base-50 rounded-2xl shadow-xl border border-primary/10 p-8 text-center transform group-hover:scale-105 group-hover:shadow-2xl transition-all duration-500">
+              <div class="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div class="text-4xl font-bold text-primary mb-2">15</div>
+              <div class="text-lg font-semibold text-base-content mb-1">Comunidades</div>
+              <div class="text-sm text-base-content/60">Beneficiadas directamente</div>
+            </div>
           </div>
+          
         </div>
 
+        <!-- Impact Cards -->
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="card bg-white shadow-xl">
-            <div class="card-body">
-              <div class="text-3xl mb-4">🎓</div>
-              <h3 class="card-title text-primary">Educación de Calidad</h3>
-              <p>Brindamos educación musical de excelencia, formando no solo músicos, sino ciudadanos íntegros con valores sólidos.</p>
+          
+          <!-- Card 1 -->
+          <div class="group">
+            <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-primary/10 transform group-hover:scale-105 transition-all duration-500">
+              <div class="card-body p-8">
+                <div class="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 group-hover:rotate-12 transition-all duration-500">
+                  <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-primary mb-4">Educación de Calidad</h3>
+                <p class="text-base-content/80 leading-relaxed">
+                  Brindamos educación musical de excelencia, formando no solo músicos, sino ciudadanos íntegros con valores sólidos.
+                </p>
+                <div class="mt-6 flex items-center gap-2 text-primary/70">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span class="text-sm font-medium">Formación integral</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="card bg-white shadow-xl">
-            <div class="card-body">
-              <div class="text-3xl mb-4">🤝</div>
-              <h3 class="card-title text-primary">Inclusión Social</h3>
-              <p>Nuestros programas están abiertos a todos, sin distinción de origen socioeconómico, promoviendo la igualdad de oportunidades.</p>
+          <!-- Card 2 -->
+          <div class="group">
+            <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-secondary/10 transform group-hover:scale-105 transition-all duration-500">
+              <div class="card-body p-8">
+                <div class="flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-2xl mb-6 group-hover:bg-secondary/20 group-hover:rotate-12 transition-all duration-500">
+                  <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary mb-4">Inclusión Social</h3>
+                <p class="text-base-content/80 leading-relaxed">
+                  Nuestros programas están abiertos a todos, sin distinción de origen socioeconómico, promoviendo la igualdad de oportunidades.
+                </p>
+                <div class="mt-6 flex items-center gap-2 text-secondary/70">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                  </svg>
+                  <span class="text-sm font-medium">Igualdad de oportunidades</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="card bg-white shadow-xl">
-            <div class="card-body">
-              <div class="text-3xl mb-4">🌱</div>
-              <h3 class="card-title text-primary">Desarrollo Comunitario</h3>
-              <p>Fortalecemos el tejido social de las comunidades, creando espacios de encuentro y crecimiento colectivo.</p>
+          <!-- Card 3 -->
+          <div class="group">
+            <div class="card bg-gradient-to-br from-white to-base-50 shadow-xl border border-accent/10 transform group-hover:scale-105 transition-all duration-500">
+              <div class="card-body p-8">
+                <div class="flex items-center justify-center w-16 h-16 bg-accent/10 rounded-2xl mb-6 group-hover:bg-accent/20 group-hover:rotate-12 transition-all duration-500">
+                  <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-accent mb-4">Desarrollo Comunitario</h3>
+                <p class="text-base-content/80 leading-relaxed">
+                  Fortalecemos el tejido social de las comunidades, creando espacios de encuentro y crecimiento colectivo.
+                </p>
+                <div class="mt-6 flex items-center gap-2 text-accent/70">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-sm font-medium">Fortaleciendo comunidades</span>
+                </div>
+              </div>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
@@ -344,52 +758,123 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
-  .timeline {
+  /* Timeline Styles */
+  .timeline-container {
     position: relative;
     padding-left: 2rem;
   }
 
-  .timeline::before {
+  .timeline-container::before {
     content: '';
     position: absolute;
     left: 1rem;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #1e40af, #7c3aed, #f59e0b);
+    width: 3px;
+    background: linear-gradient(
+      to bottom, 
+      #00A4DE 0%, 
+      #484344 50%, 
+      #334E88 100%
+    );
+    border-radius: 9999px;
   }
 
   .timeline-item {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .timeline-marker {
     position: absolute;
-    left: -1.5rem;
-    top: 1rem;
-    width: 1rem;
-    height: 1rem;
+    left: -1.75rem;
+    top: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    border: 4px solid white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 10;
   }
 
   .timeline-content {
-    margin-left: 2rem;
+    margin-left: 3rem;
   }
 
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .timeline-item {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+  .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+  .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+  .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+  .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+  .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Responsive Timeline */
   @media (max-width: 768px) {
-    .timeline {
-      padding-left: 1rem;
+    .timeline-container {
+      padding-left: 1.5rem;
+    }
+    
+    .timeline-container::before {
+      left: 0.75rem;
+      width: 2px;
     }
     
     .timeline-marker {
-      left: -0.75rem;
+      left: -0.5rem;
+      width: 1rem;
+      height: 1rem;
+      border-width: 3px;
     }
     
     .timeline-content {
-      margin-left: 1rem;
+      margin-left: 2rem;
     }
+  }
+
+  /* Scroll animations */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Hero background pattern */
+  .hero-pattern {
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(255,255,255,0.1) 2px, transparent 0),
+      radial-gradient(circle at 75px 75px, rgba(255,255,255,0.1) 2px, transparent 0);
+    background-size: 100px 100px;
   }
 </style>

@@ -7,12 +7,38 @@ export default {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
         'serif': ['Playfair Display', 'serif'],
       },
-      colors: {
-        'farecoh-blue': '#1e40af',
-        'farecoh-light': '#3b82f6',
-        'farecoh-dark': '#1e3a8a',
+      backdropBlur: {
+        xs: '2px',
       }
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        farecoh: {
+          "primary": "#00A4DE",
+          "primary-content": "#ffffff",
+          "secondary": "#484344", 
+          "secondary-content": "#ffffff",
+          "accent": "#334E88",
+          "accent-content": "#ffffff",
+          "neutral": "#1e293b",
+          "neutral-content": "#f1f5f9",
+          "base-100": "#0f172a",
+          "base-200": "#1e293b", 
+          "base-300": "#334155",
+          "base-content": "#f8fafc",
+          "info": "#0ea5e9",
+          "success": "#10b981",
+          "warning": "#f59e0b",
+          "error": "#ef4444",
+        },
+      },
+    ],
+    darkTheme: "farecoh",
+    base: true,
+    styled: true,
+    utils: true,
+  },
 }

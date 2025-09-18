@@ -8,72 +8,293 @@ import Footer from '../components/Footer.astro';
   <Header />
   
   <main>
-    <!-- Hero Section -->
-    <section class="hero min-h-[80vh] lg:min-h-[90vh] bg-base-100">
-      <div class="hero-content text-center px-4">
-        <div class="max-w-4xl">
-          <div class="mb-6 lg:mb-8">
-            <img src="/images/Logo Farecoh.png" alt="FARECOH" class="h-16 sm:h-20 lg:h-24 mx-auto mb-4 lg:mb-6" />
-          </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif mb-4 lg:mb-6 text-primary">FARECOH</h1>
-          <h2 class="text-lg sm:text-xl lg:text-2xl font-light mb-6 lg:mb-8 text-secondary px-4">Fundación de Artes Educativas, Coros y Orquestas de Honduras</h2>
-          <p class="text-base lg:text-lg mb-8 lg:mb-12 max-w-2xl mx-auto text-base-content opacity-80 px-4">
-            Transformando vidas a través de la música y las artes, construyendo un futuro lleno de armonía y esperanza
-          </p>
-          
-          <!-- Stats -->
-          <div class="stats stats-vertical sm:stats-horizontal shadow-lg bg-base-200 mb-8 lg:mb-12 w-full max-w-2xl">
-            <div class="stat place-items-center">
-              <div class="stat-title text-xs sm:text-sm">Beneficiados</div>
-              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-primary">2000+</div>
+    <!-- Banner Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-base-100 via-base-200 to-base-300 overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
+      <div class="absolute inset-0 opacity-20">
+        <div class="w-full h-full bg-gradient-to-br from-primary/5 to-transparent"></div>
+      </div>
+      
+      <!-- Animated floating elements -->
+      <div class="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/3 w-48 h-48 bg-secondary/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+      
+      <div class="relative hero min-h-screen flex items-center">
+        <div class="hero-content text-center px-4 w-full max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+            
+            <!-- Left Content -->
+            <div class="text-left lg:text-left order-2 lg:order-1">
+              <!-- Logo Badge -->
+              <div class="inline-block p-4 bg-base-100/80 backdrop-blur-sm rounded-2xl shadow-2xl border border-base-300/50 mb-8">
+                <img src="/images/Logo Farecoh.png" alt="FARECOH" class="h-16 sm:h-20" />
+              </div>
+              
+              <!-- Main Title -->
+              <h1 class="text-4xl sm:text-5xl lg:text-7xl font-title mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
+                Transformando Vidas a Través de la Música
+              </h1>
+              
+              <!-- Subtitle -->
+              <h2 class="text-xl lg:text-2xl font-name mb-6 text-base-content/80 leading-relaxed">
+                Fundación de Artes Educativas, Coros y Orquestas de Honduras
+              </h2>
+              
+              <!-- Description -->
+              <p class="text-lg lg:text-xl mb-10 font-body text-base-content/70 leading-relaxed max-w-2xl">
+                Desde hace 22 años construimos un futuro lleno de armonía y esperanza, 
+                formando ciudadanos comprometidos con el desarrollo de Honduras.
+              </p>
+              
+              <!-- CTA Buttons -->
+              <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                <a href="/programas" class="btn btn-primary btn-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
+                  <svg class="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+                  </svg>
+                  Nuestros Programas
+                </a>
+                <a href="/donar" class="btn btn-outline btn-secondary btn-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
+                  <svg class="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                  </svg>
+                  Hacer Donación
+                </a>
+              </div>
+              
+              <!-- Quick Stats -->
+              <div class="grid grid-cols-3 gap-6 max-w-md">
+                <div class="text-center">
+                  <div class="text-2xl lg:text-3xl font-title text-primary mb-1">22</div>
+                  <div class="text-xs lg:text-sm font-body text-base-content/60">Años</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl lg:text-3xl font-title text-secondary mb-1">2000+</div>
+                  <div class="text-xs lg:text-sm font-body text-base-content/60">Beneficiados</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl lg:text-3xl font-title text-accent mb-1">15+</div>
+                  <div class="text-xs lg:text-sm font-body text-base-content/60">Programas</div>
+                </div>
+              </div>
             </div>
-            <div class="stat place-items-center">
-              <div class="stat-title text-xs sm:text-sm">Programas</div>
-              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-secondary">12</div>
+            
+            <!-- Right Visual Content -->
+            <div class="order-1 lg:order-2">
+              <div class="relative">
+                <!-- Main Visual Card with improved design -->
+                <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-2xl overflow-hidden">
+                  <div class="card-body p-0">
+                    <!-- Hero Visual with musical theme -->
+                    <div class="h-80 lg:h-96 bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/20 relative overflow-hidden">
+                      
+                      <!-- Background dots pattern -->
+                      <div class="absolute inset-0 opacity-20">
+                        <div class="w-full h-full" style="background-image: radial-gradient(circle at 25% 25%, currentColor 1px, transparent 1px), radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px); background-size: 40px 40px; background-position: 0 0, 20px 20px;" class="text-primary/30"></div>
+                      </div>
+                      
+                      <!-- Central content -->
+                      <div class="relative z-10 h-full flex flex-col items-center justify-center p-8 text-center">
+                        
+                        <!-- Main icon -->
+                        <div class="w-24 h-24 mb-6 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                          <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+                          </svg>
+                        </div>
+                        
+                        <!-- Title -->
+                        <h3 class="text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                          Música que Inspira
+                        </h3>
+                        
+                        <!-- Description -->
+                        <p class="text-base-content/70 mb-6 max-w-xs">
+                          Cada nota cuenta una historia de esperanza y transformación social
+                        </p>
+                        
+                        <!-- Stats mini grid -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                          <div class="text-center p-3 bg-base-100/30 backdrop-blur-sm rounded-lg">
+                            <div class="text-xl font-bold text-primary">15+</div>
+                            <div class="text-xs text-base-content/60">Instrumentos</div>
+                          </div>
+                          <div class="text-center p-3 bg-base-100/30 backdrop-blur-sm rounded-lg">
+                            <div class="text-xl font-bold text-secondary">200+</div>
+                            <div class="text-xs text-base-content/60">Estudiantes</div>
+                          </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <a href="/galeria" class="btn btn-primary btn-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                          </svg>
+                          Ver Galería
+                        </a>
+                      </div>
+                      
+                      <!-- Floating musical elements -->
+                      <div class="absolute top-6 left-6 text-2xl text-primary/30 animate-bounce delay-300">♪</div>
+                      <div class="absolute top-12 right-8 text-xl text-secondary/30 animate-bounce delay-700">♫</div>
+                      <div class="absolute bottom-8 left-8 text-lg text-accent/30 animate-bounce delay-1000">♬</div>
+                      <div class="absolute bottom-12 right-6 text-2xl text-primary/30 animate-bounce delay-500">♩</div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Floating Stats Cards -->
+                <div class="absolute -top-6 -right-6 card bg-primary text-primary-content shadow-xl w-24 h-24 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold">50+</div>
+                    <div class="text-xs">Conciertos</div>
+                  </div>
+                </div>
+                
+                <div class="absolute -bottom-6 -left-6 card bg-secondary text-secondary-content shadow-xl w-24 h-24 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold">12</div>
+                    <div class="text-xs">Programas</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="stat place-items-center">
-              <div class="stat-title text-xs sm:text-sm">Años</div>
-              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-accent">22</div>
-            </div>
-            <div class="stat place-items-center">
-              <div class="stat-title text-xs sm:text-sm">Conciertos</div>
-              <div class="stat-value text-lg sm:text-2xl lg:text-3xl text-primary">50+</div>
-            </div>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-            <a href="/programas" class="btn btn-primary btn-sm sm:btn-md lg:btn-lg">Ver Programas</a>
-            <a href="/donar" class="btn btn-secondary btn-sm sm:btn-md lg:btn-lg">Hacer Donación</a>
+            
           </div>
         </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-base-content/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="py-16 lg:py-20 bg-base-200">
-      <div class="container mx-auto px-4 lg:px-6">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-accent">¿Quiénes Somos?</h2>
+    <section class="py-16 lg:py-24 bg-base-200/50 relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+      
+      <div class="container mx-auto px-4 lg:px-6 relative">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-12 lg:mb-20">
+            <div class="inline-block p-2 bg-primary/10 rounded-full mb-4">
+              <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+              </svg>
+            </div>
+            <h2 class="text-3xl lg:text-5xl font-title mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              ¿Quiénes Somos?
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+            <p class="text-lg lg:text-xl font-body text-base-content/70 max-w-3xl mx-auto leading-relaxed">
+              Una fundación comprometida con el desarrollo integral a través de las artes
+            </p>
+          </div>
           
+          <!-- Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <div class="card bg-base-100 shadow-lg">
-              <div class="card-body text-center p-4 lg:p-6">
-                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-3">Misión</h3>
-                <p class="text-sm lg:text-base">Promover el desarrollo integral a través de la música y las artes, fomentando valores de paz y transformación social.</p>
+            <!-- Misión -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+              <div class="card-body p-6 lg:p-8 text-center">
+                <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-title text-primary mb-4">Misión</h3>
+                <p class="text-sm lg:text-base text-base-content/80 leading-relaxed">
+                  Promover el desarrollo integral a través de la música y las artes, fomentando valores de paz y transformación social.
+                </p>
+                <div class="mt-4 pt-4 border-t border-base-300/30">
+                  <div class="flex items-center justify-center space-x-2 text-primary">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                    </svg>
+                    <span class="text-xs font-medium">Transformación Social</span>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <div class="card bg-base-100 shadow-lg">
-              <div class="card-body text-center p-4 lg:p-6">
-                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-3">Visión</h3>
-                <p class="text-sm lg:text-base">Ser una fundación líder en Honduras en formación artística, contribuyendo a una sociedad más justa y próspera.</p>
+            <!-- Visión -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+              <div class="card-body p-6 lg:p-8 text-center">
+                <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-title text-secondary mb-4">Visión</h3>
+                <p class="text-sm lg:text-base text-base-content/80 leading-relaxed">
+                  Ser una fundación líder en Honduras en formación artística, contribuyendo a una sociedad más justa y próspera.
+                </p>
+                <div class="mt-4 pt-4 border-t border-base-300/30">
+                  <div class="flex items-center justify-center space-x-2 text-secondary">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-xs font-medium">Liderazgo Nacional</span>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <div class="card bg-base-100 shadow-lg">
-              <div class="card-body text-center p-4 lg:p-6">
-                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-3">Valores</h3>
-                <p class="text-sm lg:text-base">Excelencia, inclusión, creatividad, compromiso social y desarrollo humano integral.</p>
+            <!-- Valores -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+              <div class="card-body p-6 lg:p-8 text-center">
+                <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl lg:text-2xl font-title text-accent mb-4">Valores</h3>
+                <p class="text-sm lg:text-base text-base-content/80 leading-relaxed">
+                  Excelencia, inclusión, creatividad, compromiso social y desarrollo humano integral.
+                </p>
+                <div class="mt-4 pt-4 border-t border-base-300/30">
+                  <div class="flex items-center justify-center space-x-2 text-accent">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                    </svg>
+                    <span class="text-xs font-medium">Desarrollo Integral</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Additional Info Card -->
+          <div class="mt-12 lg:mt-16">
+            <div class="card bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-sm border border-base-300/50 shadow-2xl">
+              <div class="card-body p-8 lg:p-12 text-center">
+                <div class="flex flex-col lg:flex-row items-center justify-center space-y-6 lg:space-y-0 lg:space-x-12">
+                  <div class="text-center">
+                    <div class="text-4xl lg:text-6xl font-title text-primary mb-2">22</div>
+                    <div class="text-lg font-name text-base-content/70">Años</div>
+                    <div class="text-sm font-body text-base-content/50">de experiencia</div>
+                  </div>
+                  <div class="hidden lg:block w-px h-20 bg-base-300/50"></div>
+                  <div class="text-center">
+                    <div class="text-4xl lg:text-6xl font-title text-secondary mb-2">2000+</div>
+                    <div class="text-lg font-name text-base-content/70">Vidas</div>
+                    <div class="text-sm font-body text-base-content/50">transformadas</div>
+                  </div>
+                  <div class="hidden lg:block w-px h-20 bg-base-300/50"></div>
+                  <div class="text-center">
+                    <div class="text-4xl lg:text-6xl font-title text-accent mb-2">15+</div>
+                    <div class="text-lg text-base-content/70 font-medium">Programas</div>
+                    <div class="text-sm text-base-content/50">activos</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -82,99 +303,396 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- Programs Section -->
-    <section class="py-16 lg:py-20 bg-base-100">
-      <div class="container mx-auto px-4 lg:px-6">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 lg:mb-16 text-accent">Nuestros Programas</h2>
+    <section class="py-16 lg:py-24 bg-base-100/50 relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-20 right-10 w-72 h-72 bg-secondary/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      
+      <div class="container mx-auto px-4 lg:px-6 relative">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-12 lg:mb-20">
+            <div class="inline-block p-2 bg-secondary/10 rounded-full mb-4">
+              <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+              </svg>
+            </div>
+            <h2 class="text-3xl lg:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+              Nuestros Programas
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6"></div>
+            <p class="text-lg lg:text-xl text-base-content/70 max-w-3xl mx-auto leading-relaxed">
+              Formando talentos y transformando vidas a través de la música
+            </p>
+          </div>
           
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center p-4 lg:p-6">
-                <div class="avatar mx-auto">
-                  <div class="w-12 lg:w-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl lg:text-2xl mb-3 lg:mb-4">
-                    🎻
+          <!-- Programs Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
+            <!-- Orquesta Armonía -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105">
+              <div class="card-body p-6 lg:p-8 text-center">
+                <!-- Icon with gradient background -->
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+                  <div class="text-3xl">🎻</div>
+                  <div class="absolute inset-0 bg-primary/5 rounded-full animate-pulse"></div>
+                </div>
+                
+                <h3 class="text-xl lg:text-2xl font-bold text-primary mb-3 group-hover:text-primary/80 transition-colors">
+                  Orquesta Armonía
+                </h3>
+                <p class="text-sm lg:text-base text-base-content/80 leading-relaxed mb-4">
+                  Formando músicos profesionales y ciudadanos comprometidos con el desarrollo de Honduras.
+                </p>
+                
+                <!-- Stats -->
+                <div class="flex justify-center space-x-4 mb-4">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">80+</div>
+                    <div class="text-xs text-base-content/60">Músicos</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-secondary">15</div>
+                    <div class="text-xs text-base-content/60">Años</div>
                   </div>
                 </div>
-                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-2">Orquesta Armonía</h3>
-                <p class="text-sm lg:text-base mb-3">Formando músicos profesionales y ciudadanos comprometidos.</p>
-                <div class="badge badge-secondary text-xs lg:text-sm">80+ músicos</div>
+                
+                <!-- Features -->
+                <div class="space-y-2 mb-6">
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Formación Profesional</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Instrumentos Clásicos</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Conciertos Regulares</span>
+                  </div>
+                </div>
+                
+                <a href="/programas/orquesta-armonia" class="btn btn-primary btn-sm w-full group-hover:btn-secondary transition-all duration-300">
+                  Conocer Más
+                </a>
               </div>
             </div>
             
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center p-4 lg:p-6">
-                <div class="avatar mx-auto">
-                  <div class="w-12 lg:w-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl lg:text-2xl mb-3 lg:mb-4">
-                    🎵
+            <!-- Voces por la Paz -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105">
+              <div class="card-body p-6 lg:p-8 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+                  <div class="text-3xl">🎵</div>
+                  <div class="absolute inset-0 bg-secondary/5 rounded-full animate-pulse"></div>
+                </div>
+                
+                <h3 class="text-xl lg:text-2xl font-bold text-secondary mb-3 group-hover:text-secondary/80 transition-colors">
+                  Voces por la Paz
+                </h3>
+                <p class="text-sm lg:text-base text-base-content/80 leading-relaxed mb-4">
+                  Nuestro coro emblemático construyendo esperanza a través del poder de la música coral.
+                </p>
+                
+                <!-- Stats -->
+                <div class="flex justify-center space-x-4 mb-4">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-secondary">120+</div>
+                    <div class="text-xs text-base-content/60">Voces</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-accent">10</div>
+                    <div class="text-xs text-base-content/60">Años</div>
                   </div>
                 </div>
-                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-2">Voces por la Paz</h3>
-                <p class="text-sm lg:text-base mb-3">Nuestro coro emblemático construyendo esperanza.</p>
-                <div class="badge badge-secondary text-xs lg:text-sm">120+ voces</div>
+                
+                <!-- Features -->
+                <div class="space-y-2 mb-6">
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Música Coral</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Valores de Paz</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Impacto Social</span>
+                  </div>
+                </div>
+                
+                <a href="/programas/coro-voces-por-la-paz" class="btn btn-secondary btn-sm w-full group-hover:btn-accent transition-all duration-300">
+                  Conocer Más
+                </a>
               </div>
             </div>
             
-            <div class="card bg-base-200 shadow-lg">
-              <div class="card-body text-center p-4 lg:p-6">
-                <div class="avatar mx-auto">
-                  <div class="w-12 lg:w-16 rounded-full bg-primary text-primary-content flex items-center justify-center text-xl lg:text-2xl mb-3 lg:mb-4">
-                    💝
+            <!-- Inclusión Artística -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105">
+              <div class="card-body p-6 lg:p-8 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-accent/20 to-accent/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+                  <div class="text-3xl">💝</div>
+                  <div class="absolute inset-0 bg-accent/5 rounded-full animate-pulse"></div>
+                </div>
+                
+                <h3 class="text-xl lg:text-2xl font-bold text-accent mb-3 group-hover:text-accent/80 transition-colors">
+                  Inclusión Artística
+                </h3>
+                <p class="text-sm lg:text-base text-base-content/80 leading-relaxed mb-4">
+                  La música trasciende toda barrera, creando oportunidades para todos sin excepción.
+                </p>
+                
+                <!-- Stats -->
+                <div class="flex justify-center space-x-4 mb-4">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-accent">45+</div>
+                    <div class="text-xs text-base-content/60">Participantes</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-primary">5</div>
+                    <div class="text-xs text-base-content/60">Años</div>
                   </div>
                 </div>
-                <h3 class="card-title justify-center text-lg lg:text-xl text-primary mb-2">Inclusión Artística</h3>
-                <p class="text-sm lg:text-base mb-3">La música trasciende toda barrera.</p>
-                <div class="badge badge-secondary text-xs lg:text-sm">45+ participantes</div>
+                
+                <!-- Features -->
+                <div class="space-y-2 mb-6">
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Educación Inclusiva</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Adaptaciones Especiales</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2 text-xs text-base-content/70">
+                    <svg class="w-3 h-3 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Integración Social</span>
+                  </div>
+                </div>
+                
+                <a href="/programas" class="btn btn-accent btn-sm w-full group-hover:btn-primary transition-all duration-300">
+                  Conocer Más
+                </a>
               </div>
             </div>
           </div>
           
-          <div class="text-center mt-8 lg:mt-12">
-            <a href="/programas" class="btn btn-primary btn-sm sm:btn-md lg:btn-lg">Ver Todos los Programas</a>
+          <!-- CTA -->
+          <div class="text-center">
+            <div class="card bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-sm border border-base-300/50 shadow-xl inline-block">
+              <div class="card-body p-8 lg:p-10">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  ¿Listo para formar parte?
+                </h3>
+                <p class="text-base-content/70 mb-6 max-w-2xl">
+                  Explora todos nuestros programas y encuentra el que mejor se adapte a tus intereses y habilidades
+                </p>
+                <a href="/programas" class="btn btn-primary btn-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Ver Todos los Programas
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- News Section -->
-    <section class="py-16 lg:py-20 bg-base-200">
-      <div class="container mx-auto px-4 lg:px-6">
-        <div class="max-w-4xl mx-auto">
-          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 lg:mb-12 gap-4">
-            <h2 class="text-3xl lg:text-4xl font-bold text-accent">Últimas Noticias</h2>
-            <a href="/noticias" class="link link-primary text-sm lg:text-base self-start sm:self-auto">Ver todas →</a>
+    <section class="py-16 lg:py-24 bg-base-200/50 relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-0 right-1/3 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-1/3 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+      
+      <div class="container mx-auto px-4 lg:px-6 relative">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12 lg:mb-16 gap-6">
+            <div>
+              <div class="inline-block p-2 bg-accent/10 rounded-full mb-4">
+                <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <h2 class="text-3xl lg:text-5xl font-bold font-serif mb-4 bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                Últimas Noticias
+              </h2>
+              <div class="w-24 h-1 bg-gradient-to-r from-accent to-primary mb-4"></div>
+              <p class="text-lg text-base-content/70 max-w-2xl">
+                Mantente al día con las últimas actividades y logros de nuestra fundación
+              </p>
+            </div>
+            <a href="/noticias" class="btn btn-outline btn-accent hover:btn-accent group transition-all duration-300">
+              <span>Ver todas</span>
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
           </div>
           
+          <!-- News Grid -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <div class="card bg-base-100 shadow-lg">
-              <figure class="h-24 sm:h-32">
-                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Concierto" class="w-full h-full object-cover" />
+            <!-- News Card 1 -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105">
+              <figure class="relative h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                     alt="Concierto" 
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute top-4 right-4">
+                  <div class="badge badge-primary shadow-lg">
+                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                    </svg>
+                    Evento
+                  </div>
+                </div>
               </figure>
-              <div class="card-body p-4 lg:p-6">
-                <h3 class="card-title text-lg lg:text-xl text-primary">Gran Concierto de Fin de Año</h3>
-                <p class="text-xs lg:text-sm opacity-70">15 de diciembre, 2024</p>
-                <p class="text-sm lg:text-base">Una noche mágica donde nuestros estudiantes mostrarán su talento...</p>
+              
+              <div class="card-body p-6">
+                <div class="flex items-center text-xs text-base-content/60 mb-3">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                  </svg>
+                  15 de diciembre, 2024
+                </div>
+                
+                <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-primary/80 transition-colors line-clamp-2">
+                  Gran Concierto de Fin de Año
+                </h3>
+                
+                <p class="text-sm text-base-content/80 leading-relaxed mb-4 line-clamp-3">
+                  Una noche mágica donde nuestros estudiantes mostrarán su talento y dedicación en un espectáculo inolvidable para toda la familia...
+                </p>
+                
+                <div class="flex items-center justify-between pt-4 border-t border-base-300/30">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-primary rounded-full"></div>
+                    <span class="text-xs text-base-content/60 font-medium">Concierto</span>
+                  </div>
+                  <button class="btn btn-ghost btn-xs text-primary hover:bg-primary/10">
+                    Leer más
+                    <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
             
-            <div class="card bg-base-100 shadow-lg">
-              <figure class="h-24 sm:h-32">
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Arpas" class="w-full h-full object-cover" />
+            <!-- News Card 2 -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105">
+              <figure class="relative h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                     alt="Arpas" 
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute top-4 right-4">
+                  <div class="badge badge-secondary shadow-lg">
+                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
+                    </svg>
+                    Nuevo Programa
+                  </div>
+                </div>
               </figure>
-              <div class="card-body p-4 lg:p-6">
-                <h3 class="card-title text-lg lg:text-xl text-primary">Nuevo Programa de Arpas</h3>
-                <p class="text-xs lg:text-sm opacity-70">10 de diciembre, 2024</p>
-                <p class="text-sm lg:text-base">Inauguramos la Escuela de Arpas "En Armonía"...</p>
+              
+              <div class="card-body p-6">
+                <div class="flex items-center text-xs text-base-content/60 mb-3">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                  </svg>
+                  10 de diciembre, 2024
+                </div>
+                
+                <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-secondary/80 transition-colors line-clamp-2">
+                  Nuevo Programa de Arpas
+                </h3>
+                
+                <p class="text-sm text-base-content/80 leading-relaxed mb-4 line-clamp-3">
+                  Inauguramos la Escuela de Arpas "En Armonía", un espacio dedicado a preservar y promover este hermoso instrumento tradicional...
+                </p>
+                
+                <div class="flex items-center justify-between pt-4 border-t border-base-300/30">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span class="text-xs text-base-content/60 font-medium">Programa</span>
+                  </div>
+                  <button class="btn btn-ghost btn-xs text-secondary hover:bg-secondary/10">
+                    Leer más
+                    <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
             
-            <div class="card bg-base-100 shadow-lg">
-              <figure class="h-24 sm:h-32">
-                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Premio" class="w-full h-full object-cover" />
+            <!-- News Card 3 -->
+            <div class="card bg-base-100/60 backdrop-blur-sm border border-base-300/50 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:scale-105">
+              <figure class="relative h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                     alt="Premio" 
+                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute top-4 right-4">
+                  <div class="badge badge-accent shadow-lg">
+                    <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    Premio
+                  </div>
+                </div>
               </figure>
-              <div class="card-body p-4 lg:p-6">
-                <h3 class="card-title text-lg lg:text-xl text-primary">Reconocimiento Internacional</h3>
-                <p class="text-xs lg:text-sm opacity-70">5 de diciembre, 2024</p>
-                <p class="text-sm lg:text-base">FARECOH recibe premio por su labor social...</p>
+              
+              <div class="card-body p-6">
+                <div class="flex items-center text-xs text-base-content/60 mb-3">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                  </svg>
+                  5 de diciembre, 2024
+                </div>
+                
+                <h3 class="text-xl font-bold text-accent mb-3 group-hover:text-accent/80 transition-colors line-clamp-2">
+                  Reconocimiento Internacional
+                </h3>
+                
+                <p class="text-sm text-base-content/80 leading-relaxed mb-4 line-clamp-3">
+                  FARECOH recibe premio por su labor social y contribución al desarrollo cultural de Honduras en ceremonia internacional...
+                </p>
+                
+                <div class="flex items-center justify-between pt-4 border-t border-base-300/30">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                    <span class="text-xs text-base-content/60 font-medium">Premio</span>
+                  </div>
+                  <button class="btn btn-ghost btn-xs text-accent hover:bg-accent/10">
+                    Leer más
+                    <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -183,16 +701,78 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 lg:py-20 bg-primary text-primary-content">
-      <div class="container mx-auto px-4 lg:px-6 text-center">
-        <div class="max-w-2xl mx-auto">
-          <h2 class="text-3xl sm:text-4xl lg:text-4xl font-bold mb-4 lg:mb-6">Sé Parte del Cambio</h2>
-          <p class="text-lg lg:text-xl mb-6 lg:mb-8 opacity-90 px-4">
-            Cada donación y cada inscripción construye un futuro mejor para Honduras
+    <section class="py-16 lg:py-24 relative overflow-hidden">
+      <!-- Animated background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-black/20"></div>
+      
+      <!-- Animated elements -->
+      <div class="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+      <div class="absolute bottom-10 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      
+      <div class="container mx-auto px-4 lg:px-6 relative">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <!-- Icon -->
+          <div class="inline-block p-4 bg-white/10 backdrop-blur-sm rounded-full mb-8">
+            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+            </svg>
+          </div>
+          
+          <!-- Content -->
+          <h2 class="text-3xl sm:text-4xl lg:text-6xl font-bold font-serif mb-6 lg:mb-8">
+            Sé Parte del Cambio
+          </h2>
+          <p class="text-lg lg:text-2xl mb-8 lg:mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
+            Cada donación y cada inscripción construye un futuro mejor para Honduras. 
+            Únete a nuestra misión de transformar vidas a través de la música.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-            <a href="/donar" class="btn btn-secondary btn-sm sm:btn-md lg:btn-lg">Hacer Donación</a>
-            <a href="/contacto" class="btn btn-outline btn-sm sm:btn-md lg:btn-lg">Contactar</a>
+          
+          <!-- Stats highlight -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16 max-w-2xl mx-auto">
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold mb-2">22</div>
+              <div class="text-sm lg:text-base text-white/80">Años de impacto</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold mb-2">2000+</div>
+              <div class="text-sm lg:text-base text-white/80">Vidas transformadas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold mb-2">15+</div>
+              <div class="text-sm lg:text-base text-white/80">Programas activos</div>
+            </div>
+          </div>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center px-4">
+            <a href="/donar" class="btn btn-lg bg-white text-primary hover:bg-white/90 border-none shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 group">
+              <svg class="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+              </svg>
+              Hacer Donación
+            </a>
+            <a href="/contacto" class="btn btn-outline btn-lg border-white text-white hover:bg-white hover:text-primary shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
+              <svg class="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              Contactar
+            </a>
+          </div>
+          
+          <!-- Additional CTA -->
+          <div class="mt-12 lg:mt-16 pt-8 border-t border-white/20">
+            <p class="text-lg lg:text-xl text-white/80 mb-6">
+              ¿Listo para formar parte de nuestra comunidad musical?
+            </p>
+            <a href="/programas" class="btn btn-ghost text-white border-white/30 hover:bg-white/10 hover:border-white transition-all duration-300">
+              Explorar Programas
+              <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

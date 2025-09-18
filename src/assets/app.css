@@ -36,4 +36,32 @@
   --noise: 1;
 }
 
+/* Tipografías según manual de marca FARECOH */
+/* Montserrat Semibold para logotipo */
+.font-logo {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600; /* semibold */
+}
 
+/* Montserrat Medium para nombres */
+.font-name {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500; /* medium */
+}
+
+/* Montserrat Regular para cuerpos de texto */
+.font-body {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400; /* regular */
+}
+
+/* Montserrat Bold para títulos */
+.font-title {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700; /* bold */
+}
+
+/* Montserrat base para uso general */
+.font-montserrat {
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
